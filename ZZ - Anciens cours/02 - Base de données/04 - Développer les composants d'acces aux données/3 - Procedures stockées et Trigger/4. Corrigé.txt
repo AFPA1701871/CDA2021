@@ -1,0 +1,8 @@
+Ecrire une procedure stockée qui met les noms et prénoms des etudiants et des enseignants en majuscule
+DELIMITER $$
+CREATE  PROCEDURE `Maintenance`()
+BEGIN
+UPDATE etudiants SET `nomEtudiant` = UCASE(`nomEtudiant`) , prenomEtudiant=UCASE(prenomEtudiant);
+update enseignants set nomEnseignant = UCASE(nomEnseignant), prenomEnseignant=UCASE(prenomEnseignant);
+END$$
+DELIMITER ;

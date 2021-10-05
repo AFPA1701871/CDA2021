@@ -1,0 +1,26 @@
+# creation de la vue
+CREATE  VIEW etuepre  AS  select e.*,a.note ,ep.*,a.idAvoirNote  
+from avoir_note a 
+INNER join etudiants e on a.idEtudiant = e.idEtudiant 
+INNER join epreuves ep on a.idEpreuve = ep.idEpreuve ;
+
+# requete sans vue
+SELECT e.nomEtudiant, e.prenomEtudiant, a.note, ep.libelleEpreuve, m.nomMatiere
+FROM avoir_note as a
+INNER JOIN etudiants as e ON a.idEtudiant=e.idEtudiant
+INNER JOIN epreuves as ep ON a.idEpreuve=ep.idEpreuve
+INNER JOIN matieres as m ON ep.idMatiereEpreuve=m.idMatiere
+
+
+#requete avec vue et jointure
+SELECT
+    nomEtudiant,
+    prenomEtudiant,
+    note,
+    libelleEpreuve,
+    m.nomMatiere
+FROM
+    etuepre
+INNER JOIN matieres AS m
+ON
+    etuepre.idMatiereEpreuve = m.idMatiere

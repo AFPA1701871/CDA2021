@@ -1,0 +1,1 @@
+Ecrire une procedure stockée qui met les noms et prénoms des etudiants et des enseignants en majuscule

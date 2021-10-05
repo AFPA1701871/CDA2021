@@ -1,0 +1,68 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title></title><link rel="stylesheet" href="/css/highlight/monokai-sublime.css"><link rel="stylesheet" href="/css/highlight/sunburst.css"><link rel="stylesheet" href="/css/markdown.css"><link rel="stylesheet" href="/css/menu-markdown.css"><script src="/js/highlight.js"></script><script src="/js/jquery.js"></script></head><body class="markdown-body"><div class="markdown-body"><h1 id="cr-er-la-base-de-donn-es-utilisateurs-et-droits">Créer la base de données : utilisateurs et droits</h1>
+<h2 id="cr-ation-d-un-utilisateur">Création d&#39;un utilisateur</h2>
+<p>Création d&#39;un utilisateur autorisé à se connecter depuis une machine (via l&#39;adresse IP) via le mot de passe renseigné :  </p>
+<pre><code class="lang-sql">CREATE USER &#39;nom_utilisateur&#39;@&#39;adresse_ip&#39; IDENTIFIED BY &#39;mot_de_passe&#39;;
+</code></pre>
+<p><em>exemple : </em></p>
+<pre><code class="lang-sql">CREATE USER &#39;dave_loper&#39;@&#39;123.45.67.89&#39; IDENTIFIED BY &#39;1Ksable&#39;;
+</code></pre>
+<blockquote>
+<p><em>adresse_ip</em> peut être remplacé par le caractère <em>%</em> pour spécifier toutes les adresses.</p>
+</blockquote>
+<p>Ici, l&#39;utilisateur nommé <em>dave_loper</em> est autorisé à se connecter depuis le PC ayant l&#39;adresse IP <em>123.45.67.89</em> avec le mot de passe <em>1Ksable</em>.   </p>
+<h2 id="suppression-d-un-utilisateur">Suppression d&#39;un utilisateur</h2>
+<pre><code class="lang-sql">DROP USER &#39;nom_utilisateur&#39;@&#39;adresse_ip&#39;;
+</code></pre>
+<h2 id="cr-ation-de-privil-ges">Création de privilèges</h2>
+<p>Les privilèges sont des droits accordés à un utilisateur sur une base de données. Ils participent donc à la sécurité. </p>
+<p>On peut ainsi autoriser ou interdire à un utilisateur :</p>
+<ul>
+<li>de lire, insérer, modifier ou supprimer des données sur certaines tables,  </li>
+<li>d&#39;effectuer des actions sur le schéma (structure des tables, colonnes, relations) d&#39;une base</li>
+<li>d&#39;exécuter, créer, modifier ou supprimer des vues, procédures stockées, déclencheurs, transactions </li>
+<li>de gérer d&#39;autres utilisateurs et leurs privilèges.    </li>
+</ul>
+<p>Les privilèges se manipulent avec la commande <code>GRANT</code> (&#39;accorder&#39; en anglais) :</p>
+<p>L&#39;instruction suivante permet d&#39;ajouter un utilisateur ayant tous les droits sur une base de données :</p>
+<pre><code class="lang-sql">GRANT ALL PRIVILEGES ON nom_de_la_base.* TO &#39;utilisateur&#39;@&#39;adresse_ip&#39; 
+IDENTIFIED BY &#39;mot_de_passe&#39;;
+</code></pre>
+<p><em>Exemple</em> :</p>
+<pre><code class="lang-sql">GRANT ALL PRIVILEGES ON papyrus.* TO &#39;dave_loper&#39;@&#39;%&#39; 
+IDENTIFIED BY &#39;1Ksable&#39;;
+</code></pre>
+<p>Ici, l&#39;utilisateur <em>dave_loper</em> peut se connecter depuis n&#39;importe quelle machine (spécifié par le joker <em>%</em>) sur la base <em>papyrus</em> en utilisant le mot de passe <em>1Ksable</em></p>
+<p>Par défaut aucun droit n&#39;est défini à un utilisateur nouvellement créé, il faut donc spécifier les autorisations. </p>
+<h2 id="affecter-de-droits">Affecter de droits</h2>
+<pre><code class="lang-sql">GRANT privilege 
+ON objet 
+TO utilisateur;
+</code></pre>
+<ul>
+<li><strong>privilege</strong> = SELECT, INSERT, DELETE, UPDATE, CREATE, DROP...</li>
+<li><strong>objet</strong> = <em>nom_base.nomtable</em> (exemple: <em>papyrus.fournis</em>)</li>
+<li><strong>utilisateur</strong> = nom de l&#39;utilisateur</li>
+</ul>
+<p><em>Exemple 1 :</em></p>
+<pre><code class="lang-sql">GRANT select 
+ON papyrus.fournis 
+TO dave_loper
+IDENTIFIED BY &#39;1Ksable&#39;;
+</code></pre>
+<p>Ici, l&#39;utilisateur <em>dave_loper</em> pourra seulement lire la table <em>fournis</em> de la base <em>papyrus</em> : cette commande désactive toutes les autres possibilités (<code>INSERT</code>, <code>UPDATE</code>...). </p>
+<p><em>Exemple 2 : accorder plusieurs privilèges :</em></p>
+<pre><code class="lang-sql">GRANT SELECT, INSERT, UPDATE 
+ON papyrus.vente
+TO dave_loper
+IDENTIFIED BY &#39;1Ksable&#39;;
+</code></pre>
+<p>Ici, l&#39;utilisateur <em>dave_loper</em> pourra afficher, insérer ou modifier des données.</p>
+<h2 id="exercices">Exercices</h2>
+<ol>
+<li>Créez trois utilisateurs <em>util1</em>, <em>util2</em>, <em>util3</em> pour la base <em>papyrus</em></li>
+<li><em>util1</em> doit pouvoir effectuer toutes les actions</li>
+<li><em>util2</em> ne peut que sélectionner les informations dans la base</li>
+<li><em>util3</em> n&#39;a aucun droit sur la base de données, sauf d&#39;afficher la table <em>fournis</em></li>
+</ol>
+<p>Une fois les utilisateurs créés, testez en vous connectant et en envoyant les requêtes adaptées.</p>
+</div><div class="menu-markdown"><img src="/images/menu.png"></div></body></html><script>hljs.initHighlightingOnLoad();</script><script src="/js/menu-markdown.js"></script>

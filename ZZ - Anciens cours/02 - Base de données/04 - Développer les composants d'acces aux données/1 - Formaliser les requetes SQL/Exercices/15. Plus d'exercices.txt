@@ -1,0 +1,4 @@
+pour plus d'exercices avec les corrigés, reportez vous à la section 5 de ce site
+
+http://www.grappa.univ-lille3.fr/polys/reseaux-2004/index.html
+https://developpement-informatique.com/article/45/exercices-corriges-de-langage-sql
