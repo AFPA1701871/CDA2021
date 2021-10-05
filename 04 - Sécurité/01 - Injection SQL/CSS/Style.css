@@ -1,0 +1,120 @@
+:root {
+	--BordureBouton	: #1b5337;
+	--FondPage		: #25a59f;
+	--CouleurTexte	: #131312;
+}
+
+/****  GENERAL ****/
+body {
+	min-height: 100%;
+	background: var(--FondPage);
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+div,
+header,
+footer,
+nav,
+article,
+form {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+}
+
+img,
+video {
+	width: 100%;
+}
+
+.colonne,
+form {
+	flex-direction: column;
+}
+
+.titre {
+	flex: 5;
+}
+
+a {
+	color: var(--CouleurTexte);
+	text-decoration: none
+}
+
+.centre {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.espaceHor {
+	flex: none;
+	height: 1em;
+}
+
+.espaceHaut {
+	flex: none;
+	height: 4em;
+}
+
+.demi {
+	flex: 0.5;
+}
+
+.mini {
+	flex: 0.2;
+}
+
+.moyen {
+	flex: 1.5;
+}
+
+.double {
+	flex: 2;
+}
+
+.triple {
+	flex: 3;
+}
+
+.grande {
+	flex: 5;
+}
+
+.info {
+	margin: 0.3em;
+}
+
+input,
+.case,select {
+	border: 1px solid var(--BordureBouton);
+	background-color: Transparent;
+	padding: 0.5em 1em;
+	color: var(--CouleurTexte);
+}
+
+/******* Boutons ********/
+.bouton {
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	border-radius: 0.5em;
+	border: 2px solid var(--BordureBouton);
+	cursor: pointer;
+	padding: 0.5em 1em;
+	color: var(--CouleurTexte);
+	transition: 0.2s;
+}
+
+.bouton:hover {
+	border: 2px solid var(--CouleurTexte);
+	color: var(--BordureBouton);
+}
+
+button:disabled {
+	border: solid var(--CouleurOmbre) 2px;
+}

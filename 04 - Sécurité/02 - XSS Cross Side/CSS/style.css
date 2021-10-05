@@ -1,0 +1,236 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../Images/fond_gris.jpg");
+    background-size: cover;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(67, 69, 71, 0.5);
+    border-radius: 50px;
+    width: 40vw;
+    padding: 3vw;
+    background-color: rgba(95, 96, 99,0.5);
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 3vw;
+    color: white;
+}
+
+#boutonStyle{
+    position: absolute;
+    margin-left: 22vw;
+    width: 5vw;
+    height: 2vw;
+    background-color: white;
+    border: 1px solid rgba(95, 96, 99,0.5);
+}
+
+#ligne1{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 1vw;
+    margin-left: 5vw;
+}
+
+#allRadio{
+    display: flex;
+    margin-left: 3vw;
+}
+
+.input{
+    width: 11vw;
+    min-width: 11vw;
+    max-width: 11vw;
+    margin-left: 2vw;
+}
+
+
+.inputLabel{
+    display: flex;
+    width: 5vw;
+}
+
+#comment{
+        width: 11vw;
+        min-width: 11vw;
+        max-width: 11vw;
+        margin-left: 2vw;
+}
+
+.genre{
+    color: white;
+}
+
+#genres{
+    margin-left: -3.5vw;
+}
+label {
+    display: inline-block;
+    text-align: left;
+    width: 12vw;
+    color: white;
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+.ligne {
+    margin-bottom: 1vw;
+    display: flex;
+}
+
+.boutonVert ,.boutonRouge{
+    position: absolute;
+    visibility: hidden;
+    width: 1vw;
+    height: 1vw;
+    margin-left: 23.5vw;
+}
+#oeil
+ {
+    position: absolute;
+    visibility: hidden;
+    width: 1vw;
+    height: 1vw;
+    margin-left: 20vw;
+    margin-top: 2px;
+}
+
+.message{
+    margin-left: 4vw;
+    color: white;
+    font-size: 1.2vw;
+    width: 11.5vw;
+}
+
+#date{
+    width: 9.4vw;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    margin-left: 3vw; /*c'était à 4vw*/
+}
+
+.interrogation{
+    position: absolute;
+    visibility: visible;
+    width: 1vw;
+    height: 1vw;
+    margin-left: 22vw;
+}
+
+.derniereLigne{
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    /*margin-left: auto;
+    margin-right: auto;*/
+}
+
+.checkbox{
+    width: 15vw;
+}
+
+.bouton{
+    display:flex;
+    justify-content: center;
+    width: 35vw;
+}
+button{
+    width: 60px;
+    height: 34px;
+    margin-left: 1vw;
+    border-radius: 34px;
+    border: none;
+    background-color: #2196F3;
+    color: white;
+}
+button[disabled] {
+	border: 2px solid #999;
+	background-color: #ddd;
+}
+
+@media screen and (max-width: 1300px){
+    img {
+        width: 100%;
+        height: 100%;
+        margin-left: 4.5vw; /*c'était à 4vw*/
+    }
+
+    #comment{
+    margin-left: 1.9vw;
+    width: 14vw;
+    }
+
+    form{
+        width: 30vw;
+    }
+    
+    .message{
+        margin-left: 4vw;
+        color: white;
+        font-size: 1.2vw;
+        width: 12.3vw;
+    }
+
+    .input{
+        width: 11vw;
+        min-width: 11vw;
+        max-width: 11vw;
+        margin-left: 2vw;
+    }
+
+    label {
+        display: inline-block;
+        text-align: left;
+        width: 17vw;
+        color: white;
+        font-size: 1.1vw;
+        text-align: center;
+    }
+
+    #ligne1{
+        display: flex;
+        justify-content: start;
+        margin-bottom: 1vw;
+        margin-left: -1vw;
+    }
+
+    #allRadio{
+        display: flex;
+        margin-left: 1vw;
+    }
+
+    #genres{
+        margin-left: 2vw;
+    }
+
+    #date.input{
+        width: 11vw;
+        min-width: 11vw;
+        max-width: 11vw;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        border: 2px solid rgba(67, 69, 71, 0.5);
+        border-radius: 50px;
+        width: 40vw;
+        padding: 3vw;
+        background-color: rgba(95, 96, 99,0.5);
+    }
+}
