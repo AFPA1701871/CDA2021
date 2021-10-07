@@ -1,0 +1,36 @@
+DROP DATABASE IF EXISTS CDA;
+CREATE DATABASE  CDA DEFAULT CARACTER SET utf8;
+Use CDA;
+-- 
+-- Table Produits
+--
+CREATE TABLE Produits(
+   IdProduit INT AUTO_INCREMENT PRIMARY KEY,
+   LibelleProduit VARCHAR(100) 
+)ENGINE=InnoDB;
+
+-- 
+-- Table Clients
+--
+CREATE TABLE Clients(
+   IdClient INT AUTO_INCREMENT PRIMARY KEY,
+   LibelleClient VARCHAR(100) 
+)ENGINE=InnoDB;
+
+-- 
+-- Table Commandes
+--
+CREATE TABLE Commandes(
+   IdCommande INT AUTO_INCREMENT PRIMARY KEY,
+   IdProduit INT,
+   IdClient INT,
+   
+)ENGINE=InnoDB;
+
+
+ALTER TABLE Commandes 
+	ADD CONSTRAINT FK_Commandes_Produits
+	FOREIGN KEY(IdProduit) REFERENCES Produits(IdProduit),
+	
+	ADD CONSTRAINT FK_Commandes_Clients
+	FOREIGN KEY(IdClient) REFERENCES Clients(IdClient);
