@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title></title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/css/highlight/sunburst.css"><link rel="stylesheet" href="/css/highlight/line-number.css"><link rel="stylesheet" href="/css/markdown.css"><link rel="stylesheet" href="/css/markdown_foad.css"><link rel="stylesheet" href="/css/menu-markdown.css"><script src="/js/highlight.js"></script><script src="/js/highlightjs-line-numbers.min.js"></script><script src="/js/jquery.js"></script></head><body class="markdown-body"><div class="markdown-body"><p><strong>Exercice d&#39;application n°1</strong></p>
+<p>Soit le modèle relationnel suivant relatif à une base de données sur des représentations musicales :</p>
+<pre><code>REPRESENTATION (id, titre, lieu) 
+</code></pre><p>Questions :<br>
+1 - Donner la liste des titres des représentations.<br>
+2 - Donner la liste des titres des représentations ayant lieu à l&#39;opéra Bastille.</p>
+<p><strong>Exercice d&#39;application n°2</strong> </p>
+<p>Soit le modèle relationnel suivant relatif à la gestion des notes annuelles d&#39;une promotion d&#39;étudiants :</p>
+<pre><code>ETUDIANT (id, Nom, Prenom) 
+MATIERE (id, Libellé, Coeff) 
+EVALUER (id_Etudiant, id_Matiere, Date, Note)
+</code></pre><ul>
+<li>Quel est le nombre total d&#39;étudiants ?</li>
+<li>Quelles sont, parmi l&#39;ensemble des notes, la note la plus haute et la note la plus basse ?</li>
+<li>Quelles sont les moyennes de chaque étudiant dans chacune des matières ?</li>
+<li>Quelles sont les moyennes par matière ?</li>
+<li>Quelle est la moyenne générale de chaque étudiant ?</li>
+<li>Quelle est la moyenne générale de la promotion ?</li>
+<li>Quels sont les étudiants qui ont une moyenne générale supérieure ou égale à la moyenne générale de la promotion ?</li>
+</ul>
+<p><strong>Exercice d&#39;application n°3</strong></p>
+<p>Soit le modèle relationnel suivant relatif à la gestion simplifiée des étapes du Tour de France, dont une des étapes de type &quot;contre la montre individuel&quot; se déroula à Saint-Etienne :</p>
+<pre><code>EQUIPE (id , NomEquipe, DirecteurSportif) 
+COUREUR (id , NomCoureur, id_Equipe, id_Pays) 
+PAYS (id , NomPays) 
+TYPE_ETAPE (id , LibelléType) 
+ETAPE (id, DateEtape, VilleDép, VilleArr, NbKm, id_Type_Etape) 
+PARTICIPER (id_Coureur, id_Etape, TempsRéalisé) 
+ATTRIBUER_BONIFICATION (id_Etape, km, Rang, NbSecondes, id_Coureur)
+</code></pre><ul>
+<li>Quelle est la composition de l&#39;équipe Festina (Numéro, nom et pays des coureurs) ?</li>
+<li>Quel est le nombre de kilomètres total du Tour de France 97 ?</li>
+<li>Quel est le nombre de kilomètres total des étapes de type &quot;Haute Montagne&quot; ?</li>
+<li>Quel est le classement général des coureurs (nom, code équipe, code pays et temps des coureurs)?</li>
+</ul>
+</div><div class="menu-markdown"><img src="/images/menu.png"></div></body></html><script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script><script src="/js/menu-markdown.js"></script>
