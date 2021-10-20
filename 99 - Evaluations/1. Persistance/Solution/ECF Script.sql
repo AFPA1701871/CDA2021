@@ -16,14 +16,14 @@ CREATE TABLE Enfants(
 
 CREATE TABLE Lutins(
     IdLutin INT AUTO_INCREMENT PRIMARY KEY,
-    NumeroLutin VARCHAR(10),
+    NumeroLutin VARCHAR(10) UNIQUE,
     NomLutin VARCHAR(100),
     PrenomLutin VARCHAR(100)
 ) ENGINE = InnoDB;
 
 CREATE TABLE Traineaux(
     IdTraineau INT AUTO_INCREMENT PRIMARY KEY,
-    NumeroTraineau VARCHAR(10),
+    NumeroTraineau VARCHAR(10) UNIQUE,
     TailleTraineau INT,
     DateMiseEnService DATE,
     DateDerniereRevision DATE
@@ -38,7 +38,7 @@ CREATE TABLE Rennes(
 
 CREATE TABLE Tournees(
     IdTournee INT AUTO_INCREMENT PRIMARY KEY,
-    NumeroTournee VARCHAR(10),
+    NumeroTournee VARCHAR(10) UNIQUE,
     HeureDepart TIME,
     IdLutin INT NOT NULL,
     IdTraineau INT NOT NULL
@@ -46,7 +46,7 @@ CREATE TABLE Tournees(
 
 CREATE TABLE Cadeaux(
     IdCadeau INT AUTO_INCREMENT PRIMARY KEY,
-    NumeroCadeau VARCHAR(10),
+    NumeroCadeau VARCHAR(10) UNIQUE,
     Designation VARCHAR(100),
     IdTournee INT NOT NULL,
     IdEnfant INT NOT NULL
