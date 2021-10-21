@@ -1,0 +1,28 @@
+CREATE VIEW TOUSEtudiantsETepreuves as
+SELECT
+	e.idEtudiant,
+    e.nomEtudiant,
+    e.prenomEtudiant,
+    e.adresseEtudiant,
+    e.villeEtudiant,
+    e.codePostalEtudiant,
+    e.telephoneEtudiant,
+    e.dateEntreeEtudiant,
+    e.anneeEtudiant,
+    e.remarqueEtudiant,
+    e.sexeEtudiant,
+    e.dateNaissanceEtudiant,
+    e.HOBBY,
+    a.idAvoirNote,
+    a.note,
+    ep.idEpreuve,
+    ep.libelleEpreuve,
+    ep.idEnseignantEpreuve,
+    ep.idMatiereEpreuve,
+    ep.dateEpreuve,
+    ep.CoefficientEpreuve,
+    ep.anneeEpreuve
+FROM etudiants AS e
+    
+LEFT JOIN avoir_note AS a ON     a.idEtudiant = e.idEtudiant
+RIGHT JOIN epreuves as ep ON a.idEpreuve = ep.idEpreuve
