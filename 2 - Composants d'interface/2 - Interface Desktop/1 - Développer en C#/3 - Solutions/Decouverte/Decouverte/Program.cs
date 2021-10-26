@@ -6,11 +6,25 @@ namespace Decouverte
     {
         static void Main(string[] args)
         {
-            int a = 3;
-            Console.WriteLine("Hello World!");
-            Console.WriteLine(a);
+            String chaineSaisie;
+            int entier;
+           
+            Console.Write("Saisir un entier : ");
 
-            Console.Read();
+            chaineSaisie = Console.ReadLine().ToUpper();
+
+            try
+            {
+                entier = Convert.ToInt32(chaineSaisie);
+                Console.Write("Votre entier est : " + entier);
+            }
+            catch (Exception e)
+            {
+                Console.Write("Votre entier n'est pas un entier");
+                Console.WriteLine("L'erreur généré est " + e);
+                
+            }
+            
         }
     }
 }
