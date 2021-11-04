@@ -1,0 +1,16 @@
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\bin\Debug\net5.0\POO.exe
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\bin\Debug\net5.0\POO.deps.json
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\bin\Debug\net5.0\POO.runtimeconfig.json
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\bin\Debug\net5.0\POO.runtimeconfig.dev.json
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\bin\Debug\net5.0\POO.dll
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\bin\Debug\net5.0\ref\POO.dll
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\bin\Debug\net5.0\POO.pdb
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\obj\Debug\net5.0\POO.csproj.AssemblyReference.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\obj\Debug\net5.0\POO.GeneratedMSBuildEditorConfig.editorconfig
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\obj\Debug\net5.0\POO.AssemblyInfoInputs.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\obj\Debug\net5.0\POO.AssemblyInfo.cs
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\obj\Debug\net5.0\POO.csproj.CoreCompileInputs.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\obj\Debug\net5.0\POO.dll
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\obj\Debug\net5.0\ref\POO.dll
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\obj\Debug\net5.0\POO.pdb
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\POO\POO\obj\Debug\net5.0\POO.genruntimeconfig.cache
