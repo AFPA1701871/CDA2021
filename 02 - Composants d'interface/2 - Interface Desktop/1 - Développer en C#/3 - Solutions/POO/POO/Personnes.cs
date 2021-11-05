@@ -13,7 +13,7 @@ namespace POO
         private string prenom;
         private int age;
         private string adresse;
-
+        public int Note { get; set;  }
 
         // Constructeurs
         public Personnes()
