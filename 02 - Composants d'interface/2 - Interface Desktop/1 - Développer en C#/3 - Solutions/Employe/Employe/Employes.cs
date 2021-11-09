@@ -57,24 +57,56 @@ namespace Employe
             }
         }
 
-        public static int Classement(Employes a, Employes b)
+        public static int ClassementNom(Employes a, Employes b)
         {
             if (a.Nom.CompareTo(b.Nom) > 0)
             {
                 return 1;
-            }
-            else if (a.Nom.CompareTo(b.Nom) < 0)
+            }else if(a.Nom.CompareTo(b.Nom) < 0)
             {
                 return -1;
-            }
-            else if (a.Prenom.CompareTo(b.Nom) > 0)
+            }else if(a.Prenom.CompareTo(b.Prenom) > 0) // les noms sont égaux, on compare les prenoms
             {
                 return 1;
+            }else if (a.Prenom.CompareTo(b.Prenom) < 0)
+            {
+                return -1;
             }
             else
             {
+                return 0; // noms et prenoms egaux
+            }
+        }
+        public static int ClassementService(Employes a, Employes b)
+        {
+            if (a.Service.CompareTo(b.Service) > 0)
+            {
+                return 1;
+            }
+            else if (a.Service.CompareTo(b.Service) < 0)
+            {
                 return -1;
             }
+            return ClassementNom(a, b); // si les services sont égaux, on renvoi la comparaison par Nom
+        }
+
+        public double MasseSalariale()
+        {
+            return this.Salaire + this.Prime();
+        }
+
+        public override string ToString()
+        {
+            
+            string reponse =
+            "****_INFORMATION_SUR_L'EMPLOYES_****" +
+            "\n|Nom                : " + this.Nom +
+            "\n|Prenom           : " + this.Prenom +
+            "\n|Date Embauche    : " + this.DateEmbauche.ToString("dd/MM/yyyy") +  // on formate la date avant l'affichage
+            "\n|Fonction         : " + this.Fonction +
+            "\n|Salaire          : " + this.Salaire +
+            "\n|Service          : " + this.Service;
+            return reponse;
         }
     }
 }

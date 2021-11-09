@@ -7,11 +7,11 @@ namespace Employe
     {
         static void Main(string[] args)
         {
-            Employes bruno = new Employes("Bruno", "MAYEUX", new DateTime(2000, 10, 15), "Chef de projet", 45500, "Front-End");
-            Employes pierre = new Employes("Pierre", "COURQUIN", new DateTime(2020, 5, 1), "Developpeur", 67500, "Front-End");
-            Employes martine = new Employes("Martine", "POIX", new DateTime(2021, 11, 01), "Stagiaire", 0, "Café");
-            Employes quentin = new Employes("Quentin", "BALAIR", new DateTime(2017, 02, 15), "Developpeur", 0, "Back-End");
-            Employes maxence = new Employes("Maxence", "THACKER", new DateTime(2021, 11, 01), "Stagiaire", -1000, "Menage");
+            Employes bruno = new Employes("MAYEUX","Bruno",  new DateTime(2000, 10, 15), "Chef de projet", 45500, "Front-End");
+            Employes pierre = new Employes("COURQUIN","Pierre",  new DateTime(2020, 5, 1), "Developpeur", 67500, "Front-End");
+            Employes martine = new Employes("POIX","Martine",  new DateTime(2021, 11, 01), "Stagiaire", 0, "Café");
+            Employes quentin = new Employes("BALAIR","Quentin",  new DateTime(2017, 02, 15), "Developpeur", 0, "Back-End");
+            Employes maxence = new Employes("THACKER","Maxence",  new DateTime(2021, 11, 01), "Stagiaire", -1000, "Menage");
 
             Console.WriteLine(bruno.Prime());
 
@@ -25,7 +25,28 @@ namespace Employe
 
             Console.WriteLine("Nombre d'employer dans la societe : " + listeEmployes.Count);
 
-            listeEmployes.Sort(Employes.Classement);
+            Console.WriteLine("\n Avant TRI\n");
+            foreach (var item in listeEmployes)
+            {
+                Console.WriteLine(item);
+            }
+
+            listeEmployes.Sort(Employes.ClassementService); // tri de la liste en utilisant la methode de comparaison Classement
+
+            Console.WriteLine("\n APRES TRI\n");
+            foreach (var item in listeEmployes)
+            {
+                Console.WriteLine(item);
+            }
+
+
+            /* Masse salariale*/
+            double masseSalarialeAnnuelle=0;
+            foreach (var item in listeEmployes)
+            {
+                masseSalarialeAnnuelle += item.MasseSalariale();
+            }
+            Console.WriteLine("La masse salariale annuelle est de " + masseSalarialeAnnuelle);
         }
     }
 }
