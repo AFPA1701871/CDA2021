@@ -6,5 +6,5 @@ build_property.ProjectTypeGuids =
 build_property.PublishSingleFile = 
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
-build_property.RootNamespace = ExercicesPOO
-build_property.ProjectDir = U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\ExercicesPOO\ExercicesPOO\
+build_property.RootNamespace = Employe
+build_property.ProjectDir = U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\Employe\Employe\
