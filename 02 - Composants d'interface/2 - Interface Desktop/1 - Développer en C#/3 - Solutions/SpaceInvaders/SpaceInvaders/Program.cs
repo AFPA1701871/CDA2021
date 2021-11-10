@@ -8,7 +8,7 @@ namespace SpaceInvaders
         {
             Space s = new Space(4, 10);
             s.Afficher();
-
+            s.Tirer(2);
         }
     }
 }
