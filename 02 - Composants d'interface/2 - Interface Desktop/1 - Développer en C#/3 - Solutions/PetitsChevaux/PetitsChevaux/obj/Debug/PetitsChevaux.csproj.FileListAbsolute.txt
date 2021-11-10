@@ -1,0 +1,19 @@
+U:\GRP-57\Reference\PetitsChevaux\PetitsChevaux\bin\Debug\PetitsChevaux.exe.config
+U:\GRP-57\Reference\PetitsChevaux\PetitsChevaux\obj\Debug\PetitsChevaux.csprojResolveAssemblyReference.cache
+U:\GRP-57\Reference\PetitsChevaux\PetitsChevaux\bin\Debug\PetitsChevaux.exe
+U:\GRP-57\Reference\PetitsChevaux\PetitsChevaux\bin\Debug\PetitsChevaux.pdb
+U:\GRP-57\Reference\PetitsChevaux\PetitsChevaux\obj\Debug\PetitsChevaux.exe
+U:\GRP-57\Reference\PetitsChevaux\PetitsChevaux\obj\Debug\PetitsChevaux.pdb
+C:\Users\1701871\Desktop\PetitsChevaux\PetitsChevaux\bin\Debug\PetitsChevaux.exe.config
+C:\Users\1701871\Desktop\PetitsChevaux\PetitsChevaux\obj\Debug\PetitsChevaux.exe
+C:\Users\1701871\Desktop\PetitsChevaux\PetitsChevaux\obj\Debug\PetitsChevaux.pdb
+C:\Users\1701871\Desktop\PetitsChevaux\PetitsChevaux\bin\Debug\PetitsChevaux.exe
+C:\Users\1701871\Desktop\PetitsChevaux\PetitsChevaux\bin\Debug\PetitsChevaux.pdb
+C:\Users\1701871\Desktop\PetitsChevaux\PetitsChevaux\obj\Debug\PetitsChevaux.csprojResolveAssemblyReference.cache
+C:\Users\1701871\Documents\Mes_sources\C#\VS Projets\PetitsChevaux\PetitsChevaux\bin\Debug\PetitsChevaux.exe.config
+C:\Users\1701871\Documents\Mes_sources\C#\VS Projets\PetitsChevaux\PetitsChevaux\bin\Debug\PetitsChevaux.exe
+C:\Users\1701871\Documents\Mes_sources\C#\VS Projets\PetitsChevaux\PetitsChevaux\bin\Debug\PetitsChevaux.pdb
+C:\Users\1701871\Documents\Mes_sources\C#\VS Projets\PetitsChevaux\PetitsChevaux\obj\Debug\PetitsChevaux.csproj.AssemblyReference.cache
+C:\Users\1701871\Documents\Mes_sources\C#\VS Projets\PetitsChevaux\PetitsChevaux\obj\Debug\PetitsChevaux.csproj.CoreCompileInputs.cache
+C:\Users\1701871\Documents\Mes_sources\C#\VS Projets\PetitsChevaux\PetitsChevaux\obj\Debug\PetitsChevaux.exe
+C:\Users\1701871\Documents\Mes_sources\C#\VS Projets\PetitsChevaux\PetitsChevaux\obj\Debug\PetitsChevaux.pdb

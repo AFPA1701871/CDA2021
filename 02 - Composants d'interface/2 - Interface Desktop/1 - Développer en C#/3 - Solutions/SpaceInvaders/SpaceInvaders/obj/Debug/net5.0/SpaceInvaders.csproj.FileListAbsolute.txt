@@ -1,0 +1,16 @@
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\bin\Debug\net5.0\SpaceInvaders.exe
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\bin\Debug\net5.0\SpaceInvaders.deps.json
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\bin\Debug\net5.0\SpaceInvaders.runtimeconfig.json
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\bin\Debug\net5.0\SpaceInvaders.runtimeconfig.dev.json
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\bin\Debug\net5.0\SpaceInvaders.dll
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\bin\Debug\net5.0\ref\SpaceInvaders.dll
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\bin\Debug\net5.0\SpaceInvaders.pdb
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.csproj.AssemblyReference.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.GeneratedMSBuildEditorConfig.editorconfig
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.AssemblyInfoInputs.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.AssemblyInfo.cs
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.csproj.CoreCompileInputs.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.dll
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\ref\SpaceInvaders.dll
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.pdb
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\SpaceInvaders\SpaceInvaders\obj\Debug\net5.0\SpaceInvaders.genruntimeconfig.cache
