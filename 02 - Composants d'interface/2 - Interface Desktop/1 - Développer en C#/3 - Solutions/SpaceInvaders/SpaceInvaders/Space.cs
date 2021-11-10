@@ -10,7 +10,8 @@ namespace SpaceInvaders
     {
         public int NbLignes { get; set; }
         public int NbColonnes { get; set; }
-        public char[,] Grille { get; set; }
+        // Q5 public char[,] Grille { get; set; }
+        public Invader[,] Grille { get; set; }
 
         public Space(int nbLignes, int nbColonnes)
         {
@@ -21,33 +22,44 @@ namespace SpaceInvaders
 
         private void  CreerListe()
         {
-            Grille = new char[this.NbLignes, this.NbColonnes];
+           // Q5 Grille = new char[this.NbLignes, this.NbColonnes];
+            Grille = new Invader[this.NbLignes, this.NbColonnes];
             for (int ligne =0; ligne< this.NbLignes;ligne++)
             {
                 for (int colonne = 0; colonne < this.NbColonnes; colonne++)
                 {
-                    Grille[ligne, colonne] = ' ';
+                    //Q5  Grille[ligne, colonne] = ' ';
+                    if (ligne == 0)
+                    {
+                        Grille[ligne, colonne] = new Invader();
+                    }
+                    else
+                    {
+                        Grille[ligne, colonne] = new Invader(' ');
+                    }
                 }
             }
         }
 
-        public void AfficherGrille()
+        public override string ToString()
         {
+            string aff = "";  // cette variable permet de construire au fur et à mesure les éléments à afficher
             for (int ligne = 0; ligne < this.NbLignes; ligne++)
             {
                 for (int colonne = 0; colonne < this.NbColonnes; colonne++)
                 {
-                    Console.Write(Grille[ligne, colonne]);
+                    aff += (Grille[ligne, colonne]);
                 }
             }
-            Console.WriteLine();
+            aff += "\n";
+            return aff;
         }
 
         public  void Afficher()
         {
             Console.WriteLine("nbLignes : " + NbLignes + "\n");
             Console.WriteLine("nbColonnes : " + NbColonnes + "\n");
-            AfficherGrille();
+            Console.WriteLine(  this.ToString());
         }
     }
 }
