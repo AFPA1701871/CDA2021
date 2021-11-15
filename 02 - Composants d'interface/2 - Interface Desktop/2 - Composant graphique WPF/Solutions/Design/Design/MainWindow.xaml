@@ -8,18 +8,30 @@
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
         <SolidColorBrush x:Key="grenat" Color="#FFA62222"/>
-     </Window.Resources>
+    </Window.Resources>
     <Grid>
-        <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="535,186,0,0" VerticalAlignment="Top" Width="75" Background="{DynamicResource grenat}"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="94" Margin="129,112,0,0" VerticalAlignment="Top" Width="154" Source="{DynamicResource Croissant}"/>
-        <Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="183*"/>
+            <RowDefinition Height="169*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="12*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="382*"/>
+            <ColumnDefinition Width="270*"/>
+            <ColumnDefinition Width="107*"/>
+            <ColumnDefinition Width="33*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button2" Content="Button" HorizontalAlignment="Left"  VerticalAlignment="Top"  Background="{DynamicResource grenat}" Grid.Column="0" Grid.Row="1"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="94"  VerticalAlignment="Top"  Source="{DynamicResource Croissant}" />
+        <Button Grid.Column="2">
             <Button.Background>
                 <ImageBrush ImageSource="{DynamicResource Croissant}" Stretch="None"/>
             </Button.Background>
-            
+
 
         </Button>
-        <ComboBox x:Name="comboBox" Height="65" Width="195" Margin="451,271,146,83">
+        <ComboBox x:Name="comboBox"  Grid.Column="1" Grid.Row="1">
             <Label Content="valeur1" />
             <Label Content="valeur2"/>
             <StackPanel Orientation="Horizontal">
@@ -28,5 +40,10 @@
             </StackPanel>
 
         </ComboBox>
+        <TextBox Grid.Column="2" Grid.Row="1" Text="TEST" >
+            <TextBox.Effect>
+                <DropShadowEffect ShadowDepth="4" Direction="330" Color="Black" Opacity="0.5" BlurRadius="4" />
+            </TextBox.Effect>
+        </TextBox>
     </Grid>
 </Window>

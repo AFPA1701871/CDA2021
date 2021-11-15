@@ -1,0 +1,32 @@
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\bin\Debug\WpfTest.exe.config
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\bin\Debug\WpfTest.exe
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\bin\Debug\WpfTest.pdb
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\obj\Debug\WpfTest.csproj.AssemblyReference.cache
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\obj\Debug\MainWindow.g.cs
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\obj\Debug\App.g.cs
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\obj\Debug\WpfTest_MarkupCompile.cache
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\obj\Debug\WpfTest_MarkupCompile.lref
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\obj\Debug\MainWindow.baml
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\obj\Debug\WpfTest.g.resources
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\obj\Debug\WpfTest.Properties.Resources.resources
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\obj\Debug\WpfTest.csproj.GenerateResource.cache
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\obj\Debug\WpfTest.csproj.CoreCompileInputs.cache
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\obj\Debug\WpfTest.exe
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\obj\Debug\WpfTest.pdb
+U:\59011-07-05\CDA\05 - C#\WpfTest\WpfTest\obj\Debug\App.baml
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\bin\Debug\WpfTest.exe.config
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\bin\Debug\WpfTest.exe
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\bin\Debug\WpfTest.pdb
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\obj\Debug\WpfTest.csproj.AssemblyReference.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\obj\Debug\MainWindow.g.cs
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\obj\Debug\App.g.cs
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\obj\Debug\WpfTest_MarkupCompile.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\obj\Debug\WpfTest_MarkupCompile.lref
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\obj\Debug\App.baml
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\obj\Debug\MainWindow.baml
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\obj\Debug\WpfTest.g.resources
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\obj\Debug\WpfTest.Properties.Resources.resources
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\obj\Debug\WpfTest.csproj.GenerateResource.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\obj\Debug\WpfTest.csproj.CoreCompileInputs.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\obj\Debug\WpfTest.exe
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Composant graphique WPF\Solutions\Calculatrice\WpfTest\obj\Debug\WpfTest.pdb
