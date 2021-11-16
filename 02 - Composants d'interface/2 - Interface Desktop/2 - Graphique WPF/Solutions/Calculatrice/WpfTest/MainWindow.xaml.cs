@@ -38,12 +38,12 @@ namespace WpfTest
             tbxResultat.Text = "";
         }
 
-        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        /*private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
            double w= Application.Current.MainWindow.Width;
             double h = Application.Current.MainWindow.Height;
             tbxResultat.Text = "w " + w + ", h " + h;
             btn1.FontSize = h/20 ;
-        }
+        }*/
     }
 }
