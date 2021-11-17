@@ -1,0 +1,22 @@
+c:\users\1701871\documents\visual studio 2015\Projects\Gestion des fichiers\Gestion des fichiers\bin\Debug\Gestion des fichiers.exe.config
+c:\users\1701871\documents\visual studio 2015\Projects\Gestion des fichiers\Gestion des fichiers\obj\Debug\Gestion des fichiers.csprojResolveAssemblyReference.cache
+c:\users\1701871\documents\visual studio 2015\Projects\Gestion des fichiers\Gestion des fichiers\bin\Debug\Gestion des fichiers.exe
+c:\users\1701871\documents\visual studio 2015\Projects\Gestion des fichiers\Gestion des fichiers\bin\Debug\Gestion des fichiers.pdb
+c:\users\1701871\documents\visual studio 2015\Projects\Gestion des fichiers\Gestion des fichiers\obj\Debug\Gestion des fichiers.exe
+c:\users\1701871\documents\visual studio 2015\Projects\Gestion des fichiers\Gestion des fichiers\obj\Debug\Gestion des fichiers.pdb
+C:\Users\1701871\Documents\Mes sources\VS Projets\Gestion des fichiers\Gestion des fichiers\bin\Debug\Gestion des fichiers.exe.config
+C:\Users\1701871\Documents\Mes sources\VS Projets\Gestion des fichiers\Gestion des fichiers\obj\Debug\Gestion des fichiers.exe
+C:\Users\1701871\Documents\Mes sources\VS Projets\Gestion des fichiers\Gestion des fichiers\obj\Debug\Gestion des fichiers.pdb
+C:\Users\1701871\Documents\Mes sources\VS Projets\Gestion des fichiers\Gestion des fichiers\bin\Debug\Gestion des fichiers.exe
+C:\Users\1701871\Documents\Mes sources\VS Projets\Gestion des fichiers\Gestion des fichiers\bin\Debug\Gestion des fichiers.pdb
+C:\Users\1701871\Documents\Mes sources\VS Projets\Gestion des fichiers\Gestion des fichiers\obj\Debug\Gestion des fichiers.csprojResolveAssemblyReference.cache
+C:\Users\1701871\Documents\Mes_sources\VS Projets\Gestion des fichiers\Gestion des fichiers\bin\Debug\Gestion des fichiers.exe.config
+C:\Users\1701871\Documents\Mes_sources\VS Projets\Gestion des fichiers\Gestion des fichiers\obj\Debug\Gestion des fichiers.exe
+C:\Users\1701871\Documents\Mes_sources\VS Projets\Gestion des fichiers\Gestion des fichiers\obj\Debug\Gestion des fichiers.pdb
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\Gestion des fichiers\Gestion des fichiers\bin\Debug\Gestion des fichiers.exe.config
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\Gestion des fichiers\Gestion des fichiers\bin\Debug\Gestion des fichiers.exe
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\Gestion des fichiers\Gestion des fichiers\bin\Debug\Gestion des fichiers.pdb
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\Gestion des fichiers\Gestion des fichiers\obj\Debug\Gestion des fichiers.csproj.AssemblyReference.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\Gestion des fichiers\Gestion des fichiers\obj\Debug\Gestion des fichiers.csproj.CoreCompileInputs.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\Gestion des fichiers\Gestion des fichiers\obj\Debug\Gestion des fichiers.exe
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\1 - Développer en C#\3 - Solutions\Gestion des fichiers\Gestion des fichiers\obj\Debug\Gestion des fichiers.pdb

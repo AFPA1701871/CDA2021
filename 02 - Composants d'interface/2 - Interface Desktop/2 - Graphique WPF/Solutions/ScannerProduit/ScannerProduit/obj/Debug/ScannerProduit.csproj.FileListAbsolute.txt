@@ -1,0 +1,45 @@
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.csprojResolveAssemblyReference.cache
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\obj\Debug\MainWindow.g.cs
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\obj\Debug\App.g.cs
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit_MarkupCompile.cache
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit_MarkupCompile.lref
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\bin\Debug\ScannerProduit.exe.config
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\bin\Debug\ScannerProduit.exe
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\bin\Debug\ScannerProduit.pdb
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\obj\Debug\MainWindow.baml
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.g.resources
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.Properties.Resources.resources
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.csproj.GenerateResource.cache
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.csproj.CoreCompileInputs.cache
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.exe
+c:\users\1701871\source\repos\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.pdb
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\bin\Debug\ScannerProduit.exe.config
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\bin\Debug\ScannerProduit.exe
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\bin\Debug\ScannerProduit.pdb
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.csprojAssemblyReference.cache
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\obj\Debug\MainWindow.g.cs
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\obj\Debug\App.g.cs
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit_MarkupCompile.cache
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit_MarkupCompile.lref
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\obj\Debug\MainWindow.baml
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.g.resources
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.Properties.Resources.resources
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.csproj.GenerateResource.cache
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.csproj.CoreCompileInputs.cache
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.exe
+C:\Users\1701871\Documents\Mes_sources\VS Projets\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.pdb
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\bin\Debug\ScannerProduit.exe.config
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\bin\Debug\ScannerProduit.exe
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\bin\Debug\ScannerProduit.pdb
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.csproj.AssemblyReference.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\obj\Debug\MainWindow.g.cs
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\obj\Debug\App.g.cs
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit_MarkupCompile.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit_MarkupCompile.lref
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\obj\Debug\MainWindow.baml
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.g.resources
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.Properties.Resources.resources
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.csproj.GenerateResource.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.csproj.CoreCompileInputs.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.exe
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\ScannerProduit\ScannerProduit\obj\Debug\ScannerProduit.pdb

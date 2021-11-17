@@ -1,0 +1,17 @@
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\bin\Debug\Datasource.exe.config
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\bin\Debug\Datasource.exe
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\bin\Debug\Datasource.pdb
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\obj\Debug\Datasource.csproj.AssemblyReference.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\obj\Debug\MainWindow.g.cs
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\obj\Debug\App.g.cs
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\obj\Debug\Datasource_MarkupCompile.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\obj\Debug\Datasource_MarkupCompile.lref
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\obj\Debug\MainWindow.baml
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\obj\Debug\Datasource.g.resources
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\obj\Debug\Datasource.Properties.Resources.resources
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\obj\Debug\Datasource.csproj.GenerateResource.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\obj\Debug\Datasource.csproj.CoreCompileInputs.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\obj\Debug\Datasource.exe
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\obj\Debug\Datasource.pdb
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\bin\Debug\Newtonsoft.Json.dll
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\Datasource\Datasource\bin\Debug\Newtonsoft.Json.xml
