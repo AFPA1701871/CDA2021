@@ -1,0 +1,72 @@
+[
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Produit1",
+    "Quantite": 2
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Produit2",
+    "Quantite": 4
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Produit3",
+    "Quantite": 6
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Produit4",
+    "Quantite": 8
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Produit5",
+    "Quantite": 10
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Produit6",
+    "Quantite": 12
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Produit7",
+    "Quantite": 14
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Produit8",
+    "Quantite": 16
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Produit9",
+    "Quantite": 18
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Produit10",
+    "Quantite": 20
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Produit11",
+    "Quantite": 22
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Produit12",
+    "Quantite": 24
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Produit13",
+    "Quantite": 26
+  },
+  {
+    "IdProduit": 1,
+    "LibelleProduit": "Produit14",
+    "Quantite": 28
+  }
+]

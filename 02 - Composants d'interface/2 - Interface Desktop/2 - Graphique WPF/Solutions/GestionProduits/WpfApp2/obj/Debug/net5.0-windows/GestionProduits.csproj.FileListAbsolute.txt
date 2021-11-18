@@ -43,3 +43,27 @@ C:\Users\1701871\source\repos\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\G
 C:\Users\1701871\source\repos\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\ref\GestionProduits.dll
 C:\Users\1701871\source\repos\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\GestionProduits.pdb
 C:\Users\1701871\source\repos\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\GestionProduits.genruntimeconfig.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\bin\Debug\net5.0-windows\GestionProduits.exe
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\bin\Debug\net5.0-windows\GestionProduits.deps.json
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\bin\Debug\net5.0-windows\GestionProduits.runtimeconfig.json
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\bin\Debug\net5.0-windows\GestionProduits.runtimeconfig.dev.json
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\bin\Debug\net5.0-windows\GestionProduits.dll
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\bin\Debug\net5.0-windows\ref\GestionProduits.dll
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\bin\Debug\net5.0-windows\GestionProduits.pdb
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\GestionProduits.csproj.AssemblyReference.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\MainWindow.g.cs
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\App.g.cs
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\GestionProduits_MarkupCompile.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\GestionProduits_MarkupCompile.lref
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\App.baml
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\MainWindow.baml
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\GestionProduits.g.resources
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\GestionProduits.GeneratedMSBuildEditorConfig.editorconfig
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\GestionProduits.AssemblyInfoInputs.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\GestionProduits.AssemblyInfo.cs
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\GestionProduits.csproj.CoreCompileInputs.cache
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\GestionProduits.dll
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\ref\GestionProduits.dll
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\GestionProduits.pdb
+U:\GRP-07\Reference\02 - Composants d'interface\2 - Interface Desktop\2 - Graphique WPF\Solutions\GestionProduits\WpfApp2\obj\Debug\net5.0-windows\GestionProduits.genruntimeconfig.cache

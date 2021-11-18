@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "viCxDcwXC+kuIBqVVzpHoQ3Toaf7zGdg4B5zTYRogA61Q9s6V+86xVw3pfGtx9CAbUA2epyZMxyNJv693d7z0Q==",
+  "dgSpecHash": "D4kUBZ/EBK3EXI2QEb2f0Q0Buhh2vdiMlh8NM6x9t9sWCaj/q9CTrbyg1PC1RF+HnePMK3QKWaorXa65EbNQag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\1701871\\source\\repos\\GestionProduits\\WpfApp2\\GestionProduits.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\2 - Interface Desktop\\2 - Graphique WPF\\Solutions\\GestionProduits\\WpfApp2\\GestionProduits.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\1701871\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
