@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "U:\\GRP-07\\Reference\\02 - Composants d'interface\\2 - Interface Desktop\\2 - Graphique WPF\\Solutions\\GestionProduits\\WpfApp2\\GestionProduits.csproj": {}
+    "U:\\GRP-07\\Reference\\02 - Composants d'interface\\2 - Interface Desktop\\2 - Graphique WPF\\Solutions\\MultiFenetre\\MultiFenetre\\MultiFenetre.csproj": {}
   },
   "projects": {
-    "U:\\GRP-07\\Reference\\02 - Composants d'interface\\2 - Interface Desktop\\2 - Graphique WPF\\Solutions\\GestionProduits\\WpfApp2\\GestionProduits.csproj": {
+    "U:\\GRP-07\\Reference\\02 - Composants d'interface\\2 - Interface Desktop\\2 - Graphique WPF\\Solutions\\MultiFenetre\\MultiFenetre\\MultiFenetre.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\2 - Interface Desktop\\2 - Graphique WPF\\Solutions\\GestionProduits\\WpfApp2\\GestionProduits.csproj",
-        "projectName": "GestionProduits",
-        "projectPath": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\2 - Interface Desktop\\2 - Graphique WPF\\Solutions\\GestionProduits\\WpfApp2\\GestionProduits.csproj",
+        "projectUniqueName": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\2 - Interface Desktop\\2 - Graphique WPF\\Solutions\\MultiFenetre\\MultiFenetre\\MultiFenetre.csproj",
+        "projectName": "MultiFenetre",
+        "projectPath": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\2 - Interface Desktop\\2 - Graphique WPF\\Solutions\\MultiFenetre\\MultiFenetre\\MultiFenetre.csproj",
         "packagesPath": "C:\\Users\\1701871\\.nuget\\packages\\",
-        "outputPath": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\2 - Interface Desktop\\2 - Graphique WPF\\Solutions\\GestionProduits\\WpfApp2\\obj\\",
+        "outputPath": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\2 - Interface Desktop\\2 - Graphique WPF\\Solutions\\MultiFenetre\\MultiFenetre\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,12 +42,6 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "dependencies": {
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

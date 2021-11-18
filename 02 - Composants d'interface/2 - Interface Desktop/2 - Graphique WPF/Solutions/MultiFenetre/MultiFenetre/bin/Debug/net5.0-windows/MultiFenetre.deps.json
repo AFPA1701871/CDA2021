@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "MultiFenetre/1.0.0": {
+        "runtime": {
+          "MultiFenetre.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MultiFenetre/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
