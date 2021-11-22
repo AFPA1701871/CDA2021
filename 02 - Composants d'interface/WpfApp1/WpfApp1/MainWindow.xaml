@@ -97,5 +97,13 @@
             <ComboBoxItem Content="4"/>
             <ComboBoxItem Content="5"/>
         </ComboBox>
+
+        <ListBox Grid.Row="2" Grid.Column="2">
+            <ListBoxItem Content="1"/>
+            <ListBoxItem Content="2"/>
+            <ListBoxItem Content="3"/>
+            <ListBoxItem Content="4"/>
+        </ListBox>
+       
     </Grid>
 </Window>
