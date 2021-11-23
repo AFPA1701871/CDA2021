@@ -7,6 +7,8 @@ namespace DemoEF.Data.Dtos
 {
     public class PersonnesDTO
     {
+
+        public int IdPersonne { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
     }
