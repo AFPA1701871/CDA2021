@@ -18,5 +18,20 @@ namespace TablesLiees.Data
         {
 
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Entite2>(e2 =>
+            {
+                e2.ToTable("Entite2");
+                e2.Property(e => e.IdEntite2).HasColumnName("IdEntite2");
+            });
+            modelBuilder.Entity<Entite1>(e1 =>
+            {
+                e1.ToTable("Entite1");
+                e1.Property(e => e.IdEntite2).HasColumnName("IdEntite2");
+                e1.HasOne(e => e.Ent2).WithOne().HasForeignKey<Entite2>(e => e.IdEntite2);
+            });
+        }
     }
 }

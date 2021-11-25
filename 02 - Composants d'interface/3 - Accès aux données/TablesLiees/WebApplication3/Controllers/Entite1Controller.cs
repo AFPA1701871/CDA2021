@@ -47,5 +47,40 @@ namespace TablesLiees.Controllers
             IEnumerable<Entite1> listeEntite1 = _service.GetAllEntite1();
             return Ok(_mapper.Map<IEnumerable<Entite1DTO>>(listeEntite1));
         }
+
+        //GET api/Entite1/id
+        [HttpGet("{id}", Name = "GetEntite1ById")]
+        public ActionResult<Entite1DTO> GetEntite1ById(int id)
+        {
+            Entite1 ent = _service.GetEntite1ById(id);
+            return Ok(_mapper.Map<Entite1DTO>(ent));
+        }
+
+        //POST api/Entite1
+        [HttpPost]
+        public ActionResult CreateEntite1(Entite1DTOIn ent)
+        {
+            //on ajoute l’objet à la base de données
+            _service.AddEntite1(ent);
+            //on retourne le chemin de findById avec l'objet créé
+            return NoContent();
+
+        }
+
+        //PUT api/entite1/{id}
+        [HttpPut("{id}")]
+        public ActionResult UpdateEntite1(int id, Entite1DTO entite1)
+        {
+            var entite1FromRepo = _service.GetEntite1ById(id);
+            if (entite1FromRepo == null)
+            {
+                return NotFound();
+            }
+            _mapper.Map(entite1, entite1FromRepo);
+            // inutile puisque la fonction ne fait rien, mais garde la cohérence
+            _service.UpdateEntite1(entite1FromRepo);
+
+            return NoContent();
+        }
     }
 }

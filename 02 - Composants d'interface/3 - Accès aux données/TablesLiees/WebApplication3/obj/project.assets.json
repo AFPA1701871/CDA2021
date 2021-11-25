@@ -7644,11 +7644,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesLiees\\WebApplication3\\TablesLiees.csproj",
+      "projectUniqueName": "C:\\Users\\1701871\\Desktop\\TablesLiees\\WebApplication3\\TablesLiees.csproj",
       "projectName": "TablesLiees",
-      "projectPath": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesLiees\\WebApplication3\\TablesLiees.csproj",
+      "projectPath": "C:\\Users\\1701871\\Desktop\\TablesLiees\\WebApplication3\\TablesLiees.csproj",
       "packagesPath": "C:\\Users\\1701871\\.nuget\\packages\\",
-      "outputPath": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesLiees\\WebApplication3\\obj\\",
+      "outputPath": "C:\\Users\\1701871\\Desktop\\TablesLiees\\WebApplication3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
