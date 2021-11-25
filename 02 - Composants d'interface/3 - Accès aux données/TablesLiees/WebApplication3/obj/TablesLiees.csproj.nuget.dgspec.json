@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1701871\\Desktop\\WebApplication3\\WebApplication3\\TablesLiees.csproj": {}
+    "U:\\GRP-07\\Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesLiees\\WebApplication3\\TablesLiees.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1701871\\Desktop\\WebApplication3\\WebApplication3\\TablesLiees.csproj": {
+    "U:\\GRP-07\\Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesLiees\\WebApplication3\\TablesLiees.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1701871\\Desktop\\WebApplication3\\WebApplication3\\TablesLiees.csproj",
+        "projectUniqueName": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesLiees\\WebApplication3\\TablesLiees.csproj",
         "projectName": "TablesLiees",
-        "projectPath": "C:\\Users\\1701871\\Desktop\\WebApplication3\\WebApplication3\\TablesLiees.csproj",
+        "projectPath": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesLiees\\WebApplication3\\TablesLiees.csproj",
         "packagesPath": "C:\\Users\\1701871\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1701871\\Desktop\\WebApplication3\\WebApplication3\\obj\\",
+        "outputPath": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesLiees\\WebApplication3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

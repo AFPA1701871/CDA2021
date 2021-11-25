@@ -17,28 +17,28 @@ namespace TablesLiees.Data.Services
         }
 
         // L'entité1 est indépendante
-        public IEnumerable<Entite1> GetAllEntite1()
-        {
-            return _context.Entite1.ToList();
-        }
+        //public IEnumerable<Entite1> GetAllEntite1()
+        //{
+        //    return _context.Entite1.ToList();
+        //}
 
 
         // L'entité 1 contient une Entite2
         // On crée une jointure pour récupérer les données
 
-        //public IEnumerable<Entite1> GetAllEntite1()
-        //{
-        //    var liste = (from e1 in _context.Entite1
-        //                 join e2 in _context.Entite2
-        //                 on new { e1.IdEntite2 } equals new { e2.IdEntite2 }
-        //                 select new Entite1
-        //                 {
-        //                     IdEntite1 = e1.IdEntite1,
-        //                     NomEntite1 = e1.NomEntite1,
-        //                     IdEntite2 = e2.IdEntite2,
-        //                     Ent2 = e2
-        //                 }).ToList();
-        //    return liste;
-        //}
+        public IEnumerable<Entite1> GetAllEntite1()
+        {
+            var liste = (from e1 in _context.Entite1
+                         join e2 in _context.Entite2
+                         on new {  e1.IdEntite2  } equals new { e2.IdEntite2 }
+                         select new Entite1
+                         {
+                             IdEntite1 = e1.IdEntite1,
+                             NomEntite1 = e1.NomEntite1,
+                             IdEntite2 = e2.IdEntite2,
+                             Ent2 = e2
+                         }).ToList();
+            return liste;
+        }
     }
 }

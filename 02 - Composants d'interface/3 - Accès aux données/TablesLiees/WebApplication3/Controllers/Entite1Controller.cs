@@ -29,23 +29,23 @@ namespace TablesLiees.Controllers
         //Pas d'utilisation de DTO
         // Toutes les informations sont affichées
         //GET api/Entite1
-        [HttpGet]
-        public ActionResult<IEnumerable<Entite1>> GetAllEntite1()
-        {
-            IEnumerable<Entite1> listeEntite1 = _service.GetAllEntite1();
-            return Ok(listeEntite1);
-        }
+        //[HttpGet]
+        //public ActionResult<IEnumerable<Entite1>> GetAllEntite1()
+        //{
+        //    IEnumerable<Entite1> listeEntite1 = _service.GetAllEntite1();
+        //    return Ok(listeEntite1);
+        //}
 
 
         //Utilisation d'un DTO
         // Les Id sont masqués dans Entite1 et dans Entite2
 
         //GET api/Entite1
-        //[HttpGet]
-        //public ActionResult<IEnumerable<Entite1DTO>> GetAllEntite1()
-        //{
-        //    IEnumerable<Entite1> listeEntite1 = _service.GetAllEntite1();
-        //    return Ok(_mapper.Map<IEnumerable<Entite1DTO>>(listeEntite1));
-        //}
+        [HttpGet]
+        public ActionResult<IEnumerable<Entite1DTO>> GetAllEntite1()
+        {
+            IEnumerable<Entite1> listeEntite1 = _service.GetAllEntite1();
+            return Ok(_mapper.Map<IEnumerable<Entite1DTO>>(listeEntite1));
+        }
     }
 }
