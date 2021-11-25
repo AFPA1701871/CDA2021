@@ -30,7 +30,7 @@ namespace TablesLiees.Data.Services
         {
             var liste = (from e1 in _context.Entite1
                          join e2 in _context.Entite2
-                         on new {  e1.IdEntite2  } equals new { e2.IdEntite2 }
+                         on   e1.IdEntite2 equals e2.IdEntite2 
                          select new Entite1
                          {
                              IdEntite1 = e1.IdEntite1,
