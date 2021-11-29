@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesLiees\\WebApplication3\\TablesLiees.csproj": {}
+    "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesRelations\\TablesRelations\\TablesRelations.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesLiees\\WebApplication3\\TablesLiees.csproj": {
+    "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesRelations\\TablesRelations\\TablesRelations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesLiees\\WebApplication3\\TablesLiees.csproj",
-        "projectName": "TablesLiees",
-        "projectPath": "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesLiees\\WebApplication3\\TablesLiees.csproj",
+        "projectUniqueName": "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesRelations\\TablesRelations\\TablesRelations.csproj",
+        "projectName": "TablesRelations",
+        "projectPath": "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesRelations\\TablesRelations\\TablesRelations.csproj",
         "packagesPath": "C:\\Users\\1701871\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesLiees\\WebApplication3\\obj\\",
+        "outputPath": "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\TablesRelations\\TablesRelations\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -51,19 +51,11 @@
               "target": "Package",
               "version": "[5.0.12, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.12, )"
-            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.12, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[5.0.2, )"
             },
             "MySql.EntityFrameworkCore": {
               "target": "Package",
