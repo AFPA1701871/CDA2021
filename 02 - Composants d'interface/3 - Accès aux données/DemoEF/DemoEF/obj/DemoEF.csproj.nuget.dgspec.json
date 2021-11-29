@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "U:\\GRP-07\\Reference\\02 - Composants d'interface\\3 - Accès aux données\\DemoEF\\DemoEF\\DemoEF.csproj": {}
+    "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\DemoEF\\DemoEF\\DemoEF.csproj": {}
   },
   "projects": {
-    "U:\\GRP-07\\Reference\\02 - Composants d'interface\\3 - Accès aux données\\DemoEF\\DemoEF\\DemoEF.csproj": {
+    "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\DemoEF\\DemoEF\\DemoEF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\3 - Accès aux données\\DemoEF\\DemoEF\\DemoEF.csproj",
+        "projectUniqueName": "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\DemoEF\\DemoEF\\DemoEF.csproj",
         "projectName": "DemoEF",
-        "projectPath": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\3 - Accès aux données\\DemoEF\\DemoEF\\DemoEF.csproj",
+        "projectPath": "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\DemoEF\\DemoEF\\DemoEF.csproj",
         "packagesPath": "C:\\Users\\1701871\\.nuget\\packages\\",
-        "outputPath": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\3 - Accès aux données\\DemoEF\\DemoEF\\obj\\",
+        "outputPath": "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\DemoEF\\DemoEF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\1701871\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
