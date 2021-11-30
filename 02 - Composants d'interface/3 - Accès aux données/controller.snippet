@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Title>Controller</Title>
+    <Description>Crée les fonctions CRUD du controller, son constructeur et ses propriétés</Description>
+    <HelpUrl>
+    </HelpUrl>
+    <Shortcut>CRUDController</Shortcut>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal Editable="true">
+        <ID>TagName</ID>
+        <ToolTip>Nom du controller (1ère lettre en majuscule et se termine par un s))</ToolTip>
+        <Default>NomController</Default>
+      </Literal>
+	  <Literal Editable="true">
+        <ID>className</ID>
+        <ToolTip>Nom du model (1ère lettre en majuscule et sans s)</ToolTip>
+        <Default>NomModel</Default>
+      </Literal>
+    </Declarations>
+
+    <Code Language="CSharp">
+      <![CDATA[
+        private readonly $TagName$Services _service;
+        private readonly IMapper _mapper;
+
+        public $TagName$Controler($TagName$Services service, IMapper mapper)
+        {
+            _service = service;
+            _mapper = mapper;
+        }
+
+        //GET api/$TagName$
+        [HttpGet]
+        public ActionResult<IEnumerable<$TagName$DTO>> GetAll$TagName$()
+        {
+            IEnumerable<$className$> liste$TagName$ = _service.GetAll$TagName$();
+            return Ok(_mapper.Map<IEnumerable<$TagName$DTO>>(liste$TagName$));
+        }
+
+        //GET api/$TagName$/{i}
+        [HttpGet("{id}", Name = "Get$className$ById")]
+        public ActionResult<$TagName$DTO> Get$className$ById(int id)
+        {
+            $className$ commandItem = _service.Get$className$ById(id);
+            if (commandItem != null)
+            {
+                return Ok(_mapper.Map<$TagName$DTO>(commandItem));
+            }
+            return NotFound();
+        }
+
+        //POST api/$TagName$
+        [HttpPost]
+        public ActionResult<$TagName$DTO> Create$className$($className$ obj)
+        {
+            _service.Add$className$(obj);
+            return CreatedAtRoute(nameof(Get$className$ById), new { Id = obj.Id }, obj);
+        }
+
+        //POST api/$TagName$/{id}
+        [HttpPut("{id}")]
+        public ActionResult Update$className$(int id, $TagName$DTO obj)
+        {
+            $className$ objFromRepo = _service.Get$className$ById(id);
+            if (objFromRepo==null)
+            {
+                return NotFound();
+            }
+            _mapper.Map(obj,objFromRepo);
+            _service.Update$className$(objFromRepo);
+            return NoContent();
+        }
+
+        // Exemple d'appel
+        // [{
+        // "op":"replace",
+        // "path":"",
+        // "value":""
+        // }]
+        //PATCH api/$TagName$/{id}
+        [HttpPatch("{id}")]
+        public ActionResult Partial$className$Update(int id, JsonPatchDocument<$className$> patchDoc)
+        {
+            $className$ objFromRepo = _service.Get$className$ById(id);
+            if (objFromRepo == null)
+            {
+                return NotFound();
+            }
+            $className$ objToPatch = _mapper.Map<$className$>(objFromRepo);
+            patchDoc.ApplyTo(objToPatch,ModelState);
+            if (!TryValidateModel(objToPatch))
+            {
+                return ValidationProblem(ModelState);
+            }
+            _mapper.Map(objToPatch,objFromRepo);
+            _service.Update$className$(objFromRepo);
+            return NoContent();
+        }
+
+        //DELETE api/$TagName$/{id}
+        [HttpDelete("{id}")]
+        public ActionResult Delete$className$(int id)
+        {
+            $className$ obj = _service.Get$className$ById(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            _service.Delete$className$(obj);
+            return NoContent();
+        }
+
+      $selected$$end$]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

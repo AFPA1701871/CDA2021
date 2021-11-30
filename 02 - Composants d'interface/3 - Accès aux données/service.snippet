@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Title>Service</Title>
+    <Description>Crée les fonctions CRUD du controller, son constructeur et ses propriétés</Description>
+    <HelpUrl>
+    </HelpUrl>
+    <Shortcut>CRUDService</Shortcut>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal Editable="true">
+        <ID>TagName</ID>
+        <ToolTip>Nom du service (1ère lettre en majuscule et se termine par un s))</ToolTip>
+        <Default>NomService</Default>
+      </Literal>
+	  <Literal Editable="true">
+        <ID>className</ID>
+        <ToolTip>Nom du model (1ère lettre en majuscule et sans s)</ToolTip>
+        <Default>nomModel</Default>
+      </Literal>
+    </Declarations>
+
+    <Code Language="CSharp">
+      <![CDATA[
+        private readonly MyDbContext _context;
+
+        public $TagName$Services(MyDbContext context)
+        {
+            _context = context;
+        }
+
+        public void Add$className$($className$ obj)
+        {
+            if (obj == null)
+            {
+                throw new ArgumentNullException(nameof(obj));
+            }
+            _context.$TagName$.Add(obj);
+            _context.SaveChanges();
+        }
+
+        public void Delete$className$($className$ obj)
+        {
+            if (obj == null)
+            {
+                throw new ArgumentNullException(nameof(obj));
+            }
+            _context.$TagName$.Remove(obj);
+            _context.SaveChanges();
+        }
+
+        public IEnumerable<$className$> GetAll$TagName$()
+        {
+            return _context.$TagName$.ToList();
+        }
+
+        public $className$ Get$className$ById(int id)
+        {
+            return _context.$TagName$.FirstOrDefault(obj=>obj.Id==id);
+        }
+
+        public void Update$className$($className$ obj)
+        {
+            _context.SaveChanges();
+        }
+
+      $selected$$end$]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>
