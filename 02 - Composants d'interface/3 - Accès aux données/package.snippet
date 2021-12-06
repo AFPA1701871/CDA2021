@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Title>Package</Title>
+    <Description>Crée l'ItemGroup des package pour EntityFramework (a copier dans le .csproj)</Description>
+    <HelpUrl>
+    </HelpUrl>
+    <Shortcut>PackageEntityFramework</Shortcut>
+  </Header>
+  <Snippet>
+
+    <Code Language="CSharp">
+      <![CDATA[
+        <ItemGroup>
+            <PackageReference Include="AutoMapper" Version="10.1.1" />
+            <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+            <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="6.0.0" />
+            <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.12" />
+            <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
+            <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12">
+              <PrivateAssets>all</PrivateAssets>
+              <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            </PackageReference>
+            <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.8" />
+            <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+        </ItemGroup>
+
+      $selected$$end$]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

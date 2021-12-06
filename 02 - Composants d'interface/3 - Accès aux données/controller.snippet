@@ -29,7 +29,11 @@
         private readonly $TagName$Services _service;
         private readonly IMapper _mapper;
 
+<<<<<<< HEAD
+        public $TagName$Controller($TagName$Services service, IMapper mapper)
+=======
         public $TagName$Controler($TagName$Services service, IMapper mapper)
+>>>>>>> ef6f73d5361be19f43c4ab013c17825100b5eea1
         {
             _service = service;
             _mapper = mapper;
@@ -57,15 +61,27 @@
 
         //POST api/$TagName$
         [HttpPost]
+<<<<<<< HEAD
+        public ActionResult<$TagName$DTO> Create$className$($TagName$DTOIn objIn)
+        {
+            $className$ obj = _mapper.Map<$className$>(objIn);
+            _service.Add$className$(obj);
+            return CreatedAtRoute(nameof(Get$className$ById), new { Id = obj.Id$className$ }, obj);
+=======
         public ActionResult<$TagName$DTO> Create$className$($className$ obj)
         {
             _service.Add$className$(obj);
             return CreatedAtRoute(nameof(Get$className$ById), new { Id = obj.Id }, obj);
+>>>>>>> ef6f73d5361be19f43c4ab013c17825100b5eea1
         }
 
         //POST api/$TagName$/{id}
         [HttpPut("{id}")]
+<<<<<<< HEAD
+        public ActionResult Update$className$(int id, $TagName$DTOIn obj)
+=======
         public ActionResult Update$className$(int id, $TagName$DTO obj)
+>>>>>>> ef6f73d5361be19f43c4ab013c17825100b5eea1
         {
             $className$ objFromRepo = _service.Get$className$ById(id);
             if (objFromRepo==null)
