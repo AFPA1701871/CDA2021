@@ -15,10 +15,10 @@ namespace Schools.Controllers
     [ApiController]
     public class GradesController : ControllerBase
     {
-        private readonly GradesServices _service;
+        private readonly GradesService _service;
         private readonly IMapper _mapper;
 
-        public GradesController(GradesServices service, IMapper mapper)
+        public GradesController(GradesService service, IMapper mapper)
         {
             _service = service;
             _mapper = mapper;
@@ -48,8 +48,9 @@ namespace Schools.Controllers
         [HttpPost]
         public ActionResult<Grade> CreateGrade(GradeDTOIn obj)
         {
-            _service.AddGrade(_mapper.Map<Grade>( obj));
-            return CreatedAtRoute(nameof(GetGradeById), new { Id = obj.GradeId }, obj);
+            Grade newGrade = _mapper.Map<Grade>(obj);
+            _service.AddGrade(newGrade);
+            return CreatedAtRoute(nameof(GetGradeById), new { Id = newGrade.GradeId }, newGrade);
         }
 
         //POST api/Grades/{id}

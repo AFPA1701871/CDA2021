@@ -9,13 +9,13 @@ namespace Schools.Data.Models
     {
         public Course()
         {
-            Studentscourses = new HashSet<Studentscourse>();
+            StudentsCourses = new HashSet<StudentsCourse>();
         }
 
         public int CourseId { get; set; }
         public string CourseName { get; set; }
         public string Description { get; set; }
 
-        public virtual ICollection<Studentscourse> Studentscourses { get; set; }
+        public virtual ICollection<StudentsCourse> StudentsCourses { get; set; }
     }
 }

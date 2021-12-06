@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Schools.Data.Models
 {
-    public partial class Studentscourse
+    public partial class StudentsCourse
     {
         public int StudentCourseId { get; set; }
         public int? StudentId { get; set; }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Schools.Data.Dtos;
 using Schools.Data.Models;
 using Schools.Data.Services;
 using System;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Schools.Controllers
 {
-    [Route("api/Courses")]
+    [Route("api/[controller]")]
     [ApiController]
     public class CoursesController : ControllerBase
     {
@@ -26,35 +27,36 @@ namespace Schools.Controllers
 
         //GET api/Courses
         [HttpGet]
-        public ActionResult<IEnumerable<Course>> GetAllCourses()
+        public ActionResult<IEnumerable<CourseDTOAvecStudentCourse>> GetAllCourses()
         {
             IEnumerable<Course> listeCourses = _service.GetAllCourses();
-            return Ok(_mapper.Map<IEnumerable<Course>>(listeCourses));
+            return Ok(_mapper.Map<IEnumerable<CourseDTOAvecStudentCourse>>(listeCourses));
         }
 
         //GET api/Courses/{i}
         [HttpGet("{id}", Name = "GetCourseById")]
-        public ActionResult<Course> GetCourseById(int id)
+        public ActionResult<CourseDTOAvecStudentCourse> GetCourseById(int id)
         {
             Course commandItem = _service.GetCourseById(id);
             if (commandItem != null)
             {
-                return Ok(_mapper.Map<Course>(commandItem));
+                return Ok(_mapper.Map<CourseDTOAvecStudentCourse>(commandItem));
             }
             return NotFound();
         }
 
         //POST api/Courses
         [HttpPost]
-        public ActionResult<Course> CreateCourse(Course obj)
+        public ActionResult<CourseDTOOut> CreateCourse(CourseDTOIn obj)
         {
-            _service.AddCourse(obj);
-            return CreatedAtRoute(nameof(GetCourseById), new { Id = obj.CourseId }, obj);
+            Course newCourse = _mapper.Map<Course>(obj);
+            _service.AddCourse(newCourse);
+            return CreatedAtRoute(nameof(GetCourseById), new { Id = newCourse.CourseId }, newCourse);
         }
 
         //POST api/Courses/{id}
         [HttpPut("{id}")]
-        public ActionResult UpdateCourse(int id, Course obj)
+        public ActionResult UpdateCourse(int id, CourseDTOIn obj)
         {
             Course objFromRepo = _service.GetCourseById(id);
             if (objFromRepo == null)
@@ -104,6 +106,8 @@ namespace Schools.Controllers
             _service.DeleteCourse(obj);
             return NoContent();
         }
+
+
 
 
     }

@@ -9,7 +9,7 @@ namespace Schools.Data.Models
     {
         public Student()
         {
-            Studentscourses = new HashSet<Studentscourse>();
+            StudentsCourses = new HashSet<StudentsCourse>();
         }
 
         public int StudentId { get; set; }
@@ -17,6 +17,6 @@ namespace Schools.Data.Models
         public int GradeId { get; set; }
 
         public virtual Grade Grade { get; set; }
-        public virtual ICollection<Studentscourse> Studentscourses { get; set; }
+        public virtual ICollection<StudentsCourse> StudentsCourses { get; set; }
     }
 }

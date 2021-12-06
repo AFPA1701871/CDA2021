@@ -39,12 +39,12 @@ namespace Schools.Data.Services
         public IEnumerable<Student> GetAllStudents()
         {
 
-            return _context.Students.Include("Grade").ToList();
+            return _context.Students.Include("Grade").Include("StudentsCourses.Course").ToList();
         }
 
         public Student GetStudentsById(int id)
       {
-            return _context.Students.Include("Grade").FirstOrDefault(obj => obj.StudentId == id);
+            return _context.Students.Include("Grade").Include("StudentsCourses.Course").FirstOrDefault(obj => obj.StudentId == id);
         }
 
         public void UpdateStudents(Student obj)

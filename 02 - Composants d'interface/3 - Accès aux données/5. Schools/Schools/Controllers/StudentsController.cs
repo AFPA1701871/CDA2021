@@ -26,20 +26,20 @@ namespace Schools.Controllers
 
         //GET api/Students
         [HttpGet]
-        public ActionResult<IEnumerable<StudentDTOAvecGrade>> GetAllStudents()
+        public ActionResult<IEnumerable<StudentDTOAvecGradeEtCourses>> GetAllStudents()
         {
             IEnumerable<Student> listeStudents = _service.GetAllStudents();
-            return Ok(_mapper.Map<IEnumerable<StudentDTOAvecGrade>>(listeStudents));
+            return Ok(_mapper.Map<IEnumerable<StudentDTOAvecGradeEtCourses>>(listeStudents));
         }
 
         //GET api/Students/{i}
         [HttpGet("{id}", Name = "GetStudentById")]
-        public ActionResult<StudentDTOAvecGrade> GetStudentById(int id)
+        public ActionResult<StudentDTOAvecGradeEtCourses> GetStudentById(int id)
         {
             Student commandItem = _service.GetStudentsById(id);
             if (commandItem != null)
             {
-                return Ok(_mapper.Map<StudentDTOAvecGrade>(commandItem));
+                return Ok(_mapper.Map<StudentDTOAvecGradeEtCourses>(commandItem));
             }
             return NotFound();
         }
@@ -48,13 +48,20 @@ namespace Schools.Controllers
         [HttpPost]
         public ActionResult<Student> CreateStudent(StudentDTOIn obj)
         {
-            _service.AddStudents(_mapper.Map<Student>(obj));
-            return CreatedAtRoute(nameof(GetStudentById), new { Id = obj.StudentId }, obj);
+            // avec l'ID dans le DTO In
+            //_service.AddStudents( _mapper.Map<Student>(obj));
+            //return CreatedAtRoute(nameof(GetStudentById), new { Id = obj.StudentId }, obj);
+
+
+            // sans l'id dans le DTOIn
+            Student newStudent = _mapper.Map<Student>(obj);
+            _service.AddStudents(newStudent);
+            return CreatedAtRoute(nameof(GetStudentById), new { Id = newStudent.StudentId }, newStudent);
         }
 
         //POST api/Students/{id}
         [HttpPut("{id}")]
-        public ActionResult UpdateStudent(int id, Student obj)
+        public ActionResult UpdateStudent(int id, StudentDTOIn obj)
         {
             Student objFromRepo = _service.GetStudentsById(id);
             if (objFromRepo == null)

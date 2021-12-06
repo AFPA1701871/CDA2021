@@ -20,7 +20,7 @@ namespace Schools.Data.Models
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Grade> Grades { get; set; }
         public virtual DbSet<Student> Students { get; set; }
-        public virtual DbSet<Studentscourse> Studentscourses { get; set; }
+        public virtual DbSet<StudentsCourse> StudentsCourses { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -75,7 +75,7 @@ namespace Schools.Data.Models
                     .HasConstraintName("student_ibfk_1");
             });
 
-            modelBuilder.Entity<Studentscourse>(entity =>
+            modelBuilder.Entity<StudentsCourse>(entity =>
             {
                 entity.HasKey(e => e.StudentCourseId)
                     .HasName("PRIMARY");
@@ -93,12 +93,12 @@ namespace Schools.Data.Models
                 entity.Property(e => e.StudentId).HasColumnType("int(11)");
 
                 entity.HasOne(d => d.Course)
-                    .WithMany(p => p.Studentscourses)
+                    .WithMany(p => p.StudentsCourses)
                     .HasForeignKey(d => d.CourseId)
                     .HasConstraintName("studentscourses_ibfk_2");
 
                 entity.HasOne(d => d.Student)
-                    .WithMany(p => p.Studentscourses)
+                    .WithMany(p => p.StudentsCourses)
                     .HasForeignKey(d => d.StudentId)
                     .HasConstraintName("studentscourses_ibfk_1");
             });

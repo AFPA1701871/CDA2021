@@ -17,8 +17,13 @@ namespace Schools.Data.Profiles
             CreateMap<StudentDTOIn, Student>();
             CreateMap<Student, StudentDTOAvecGrade>();
             CreateMap<StudentDTOAvecGrade, Student>();
+
             CreateMap<Student, StudentDTOOut>();
             CreateMap<StudentDTOOut, Student>();
+
+            CreateMap<Student, StudentDTOAvecGradeEtCourses>();
+            CreateMap<StudentDTOAvecGradeEtCourses, Student>();
+
         }
     }
 }

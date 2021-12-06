@@ -31,7 +31,9 @@ namespace Schools
         {
             services.AddDbContext<schoolsContext>(options=>options.UseMySQL(Configuration.GetConnectionString("maConnection")));
             services.AddTransient<StudentsServices>();
-            services.AddTransient<GradesServices>();
+            services.AddTransient<GradesService>();
+            services.AddTransient<CoursesService>();
+            services.AddTransient<StudentsCoursesService>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
             services.AddSwaggerGen(c =>
