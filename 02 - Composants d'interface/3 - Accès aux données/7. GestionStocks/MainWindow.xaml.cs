@@ -41,7 +41,7 @@ namespace GestionStocks
         }
 
         /// <summary>
-        /// Méthode qui capte le click sur l'un des boutons d'actions
+        /// Méthode qui capte le click sur l'un des boutons d'actions et ouvre le formulaire dans le mode correspondant
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -58,8 +58,8 @@ namespace GestionStocks
             else
             {
                 // On ouvre la fenêtre de détail
-                // Elle prend les arguments suivants : le bouton cliqué, la fenêtre mère, l'article selectionné, le context
-                FormulaireArticle actions = new FormulaireArticle(sender, this, article,_context);
+                // Elle prend les arguments suivants : l'action cliqué, la fenêtre mère, l'article selectionné, le context
+                FormulaireArticle actions = new FormulaireArticle(nom, this, article,_context);
                 this.Opacity = 0.7;
                 actions.ShowDialog();
                 this.Opacity = 1;

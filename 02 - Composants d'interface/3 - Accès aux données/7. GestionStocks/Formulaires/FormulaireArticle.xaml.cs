@@ -26,14 +26,14 @@ namespace GestionStocks
     public partial class FormulaireArticle : Window
     {
         // Attributs
-        MainWindow Window;
+        MainWindow Window; // fenêtre d'appel
         ArticlesDTOAvecLibelleCategorie Article;
         CategoriesController CategorieController;
         string Action;
         int Id;
 
         // Constructeurs
-        public FormulaireArticle(object sender, MainWindow window, ArticlesDTOAvecLibelleCategorie article, MyDbContext _context)
+        public FormulaireArticle(string action, MainWindow window, ArticlesDTOAvecLibelleCategorie article, MyDbContext _context)
         {
             InitializeComponent();
             this.Article = article;
@@ -41,11 +41,11 @@ namespace GestionStocks
             // on récupère l'id de l'article, null si pas d'article
             this.Id = (article == null) ? 0 : article.IdArticle;
             // On récupère le type d'action Ajouter, Modifier, Supprimer à partir de l'information du bouton cliqué
-            this.Action = (string)((Button)sender).Content;
+            this.Action = action;
 
             CategorieController = new CategoriesController(_context);
 
-            InitPage(sender);
+            InitPage();
         }
 
         //Autres méthodes
@@ -53,8 +53,7 @@ namespace GestionStocks
         /// <summary>
         /// Méthode qui permet de remplir le formulaire à partir des données de la classe
         /// </summary>
-        /// <param name="sender"></param>
-        private void InitPage(object sender)
+        private void InitPage()
         {
 
             //on met à jour le titre de la fenetre
@@ -65,7 +64,8 @@ namespace GestionStocks
             cbCategorie.DisplayMemberPath = "LibelleCategorie"; //Valeur a afficher dans la combobox
             cbCategorie.SelectedValuePath = "IdCategorie"; // Valeur de la combobox
             //Button valider
-            btn_Valider.Click += (s, e) => ActionArticle();
+            btn_Valider.Click += (s, e) => ActionArticle(); // On affecte la fonction au bouton
+            btn_Valider.Content = this.Action;
 
 
             switch (this.Action)
