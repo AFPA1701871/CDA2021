@@ -1,0 +1,24 @@
+﻿<Application x:Class="GestionCantine.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GestionCantine"
+             StartupUri="MainWindow.xaml"
+    xmlns:System="clr-namespace:System;assembly=System.Runtime">
+    <Application.Resources>
+
+        <System:Double x:Key="Font">20</System:Double>
+        <SolidColorBrush x:Key="BorderBoutton" Color="#FFEE6C4D"/>
+        <SolidColorBrush x:Key="FondBoutton" Color="#FF98C1D9"/>
+         <SolidColorBrush x:Key="TextLabel" Color="#FF98C1D9"/>
+        <SolidColorBrush x:Key="BackgroundWindow" Color="#FF293241"/>
+        <Style x:Key="SelectedBackground" TargetType="DataGridCell">
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource BackgroundWindow}" />
+                    <Setter Property="Foreground" Value="{DynamicResource TextLabel}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Application.Resources>
+</Application>

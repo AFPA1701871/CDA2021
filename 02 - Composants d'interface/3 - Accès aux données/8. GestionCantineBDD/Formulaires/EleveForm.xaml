@@ -1,0 +1,43 @@
+﻿<Window x:Class="GestionCantine.Formulaires.EleveForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionCantine.Formulaires"
+        mc:Ignorable="d"
+        Title="EleveForm" Height="450" Width="800">
+    <Grid Background="{DynamicResource BackgroundWindow}">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="1*"/>
+        <RowDefinition Height="0.75*"/>
+        <RowDefinition Height="0.5*"/>
+        <RowDefinition Height="0.5*"/>
+        <RowDefinition Height="1*"/>
+        <RowDefinition Height="0.2*"/>
+        <RowDefinition Height="1*"/>
+        <RowDefinition Height="0.2*"/>
+        <RowDefinition Height="1*"/>
+        <RowDefinition Height="0.5*"/>
+        <RowDefinition Height="1*"/>
+        <RowDefinition Height="1*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="20*"/>
+        <ColumnDefinition Width="20*"/>
+        <ColumnDefinition Width="1*"/>
+        <ColumnDefinition Width="18*"/>
+        <ColumnDefinition Width="2*"/>
+        <ColumnDefinition Width="18*"/>
+        <ColumnDefinition Width="2*"/>
+    </Grid.ColumnDefinitions>
+    <Label Content="Eleve" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="45" Foreground="{DynamicResource TextLabel}" Grid.RowSpan="2"/>
+    <Label Content="Nom" Grid.Column="1" Grid.Row="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Foreground="{DynamicResource TextLabel}" HorizontalAlignment="Right" />
+    <Label Content="Prenom" Grid.Column="1" Grid.Row="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Foreground="{DynamicResource TextLabel}" HorizontalAlignment="Right" />
+    <Label Content="Date de naissance" Grid.Column="1" Grid.Row="8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="{DynamicResource TextLabel}" HorizontalAlignment="Right" />
+    <TextBox x:Name="Nom" Grid.Column="3" Grid.Row="4" Text="" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20"/>
+        <TextBox x:Name="Prenom" Grid.Column="3" Grid.Row="6" Text="" VerticalContentAlignment="Center" FontSize="20"/>
+        <DatePicker x:Name="DateDeNaissance" Grid.Row="8" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Content="Valider" Grid.Column="1" Grid.Row="10" Background="{DynamicResource FondBoutton}" BorderBrush="{DynamicResource BorderBoutton}" FontSize="20" Click="Go"/>
+        <Button Content="Retour" Grid.Column="3" Grid.Row="10" Background="{DynamicResource FondBoutton}" BorderBrush="{DynamicResource BorderBoutton}" Grid.ColumnSpan="2" FontSize="20" Click="Back"/>
+    </Grid>
+</Window>

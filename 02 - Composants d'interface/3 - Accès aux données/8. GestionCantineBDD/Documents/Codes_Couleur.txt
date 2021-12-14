@@ -1,0 +1,4 @@
+TextLabel : Couleur du text des labels
+FondBoutton : Couleur de fond des bouttons
+BorderBoutton : Couleur de la bordure des bouttons
+BackgroundWindow : Couleur de fond des pages

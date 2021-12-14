@@ -1,0 +1,43 @@
+﻿<Window x:Class="GestionCantine.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionCantine"
+        mc:Ignorable="d"
+        Title="Gestion Cantine" Height="450" MaxHeight="450" Width="800" MaxWidth="800">
+   
+    <Grid Background="{DynamicResource BackgroundWindow}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Gestion Cantine" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="45" Foreground="{DynamicResource TextLabel}"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.32*"/>
+                <ColumnDefinition Width="0.16*"/>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.16*"/>
+                <ColumnDefinition Width="0.32*"/>
+                <ColumnDefinition Width="0.2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="BtnReservations" Content="Reservations" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource FondBoutton}" FontSize="{DynamicResource Font}" BorderBrush="{DynamicResource BorderBoutton}" Click="OpenWindow"/>
+            <Button x:Name="BtnMenus"  Content="Menus" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Background="{DynamicResource FondBoutton}" FontSize="20" BorderBrush="{DynamicResource BorderBoutton}" Click="OpenWindow"/>
+            <Button x:Name="BtnEleves" Content="Eleves" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Background="{DynamicResource FondBoutton}" FontSize="20" BorderBrush="{DynamicResource BorderBoutton}" Click="OpenWindow"/>
+            <Button x:Name="BtnPaiements" Content="Paiements" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2" Background="{DynamicResource FondBoutton}" FontSize="20" BorderBrush="{DynamicResource BorderBoutton}" Click="OpenWindow"/>
+            <Button x:Name="BtnModePaiements" Content="Modes de paiements" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Background="{DynamicResource FondBoutton}" FontSize="20" BorderBrush="{DynamicResource BorderBoutton}" Click="OpenWindow"/>
+        </Grid>
+    </Grid>
+</Window>

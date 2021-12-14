@@ -1,0 +1,175 @@
+﻿<Window x:Class="GestionCantine.Formulaires.ReservationsForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionCantine.Formulaires"
+        mc:Ignorable="d"
+        Title="ReservationsForm" Height="450" Width="800">
+    <Grid Background="{DynamicResource BackgroundWindow}">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.1*"/>
+            </Grid.RowDefinitions>
+            <!--Row 0-->
+            <Label x:Name="titreForm" Grid.Row="0" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="45" Foreground="{DynamicResource TextLabel}"/>
+
+            <!--Row 1-->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="7.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="0.5*"/>
+                </Grid.RowDefinitions>
+
+
+                <Grid Grid.Column="1">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="0.01*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label VerticalAlignment="Center" HorizontalAlignment="Center" Content="Liste des élèves" Foreground="{DynamicResource TextLabel}" FontSize="15" FontWeight="Bold" />
+                    <Label Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Liste des Menus" Foreground="{DynamicResource TextLabel}" FontSize="15" FontWeight="Bold" />
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="2">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="0.01*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <DataGrid x:Name="dgEleve" Grid.Row="2" CanUserAddRows="False" AutoGenerateColumns="False" CellStyle="{DynamicResource SelectedBackground}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Nom de l'élève" Binding="{Binding NomEleve}" Width="1*"/>
+                            <DataGridTextColumn Header="Prenom de l'élève" Binding="{Binding PrenomEleve}" Width="1*"/>
+                            <DataGridTextColumn Header="Date de naissance" Binding="{Binding DDNEleve}" Width="1*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <DataGrid x:Name="dgMenu" Grid.Column="3"  Grid.Row="2" CanUserAddRows="False" AutoGenerateColumns="False" CellStyle="{DynamicResource SelectedBackground}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Date du menu" Binding="{Binding DateMenu}" Width="1*"/>
+                            <DataGridTextColumn Header="Menu" Binding="{Binding LibelleMenu}" Width="1*"/>
+                            <DataGridTextColumn Header="Prix" Binding="{Binding PrixMenu}" Width="1*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="4">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="0.01*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Content="Date de la réservation :" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="15" Foreground="{DynamicResource TextLabel}" />
+                        <DatePicker x:Name="dateReservationPicker" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    </Grid>
+
+                </Grid>
+
+
+
+                <!--<DataGrid Grid.Column="1" CanUserAddRows="False" AutoGenerateColumns="False"></DataGrid>-->
+
+            </Grid>
+
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="6.1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="0.2*"/>
+                    </Grid.RowDefinitions>
+
+                    <!--<Button Grid.Row="1" Content="Retour" BorderBrush="{DynamicResource BorderBoutton}" Background="{DynamicResource FondBoutton}" FontSize="15" Click="Back"/>-->
+
+                </Grid>
+
+            </Grid>
+
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="7.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="0.02*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.2*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="0.2*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <Button x:Name="action" Grid.Row="1" Content="" Background="{DynamicResource FondBoutton}" BorderBrush="{DynamicResource BorderBoutton}" Click="btnActionClick"/>
+                    </Grid>
+
+                    <Grid Grid.Column="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.2*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="0.2*"/>
+                        </Grid.RowDefinitions>
+
+                        <Button Grid.Row="1" Content="Retour" Background="{DynamicResource FondBoutton}" BorderBrush="{DynamicResource BorderBoutton}" Click="Back"/>
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+
+
+
+        </Grid>
+
+    </Grid>
+</Window>

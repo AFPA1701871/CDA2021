@@ -1,0 +1,30 @@
+﻿<Window x:Class="GestionCantine.Formulaires.Suppression"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionCantine.Formulaires"
+        mc:Ignorable="d"
+        Title="Attention !" Height="210" Width="297">
+    <Grid Background="{DynamicResource BackgroundWindow}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" FontWeight="Bold" Text="Les données que vous vous appretez à supprimer vont être définitivement perdues." TextWrapping="Wrap" Foreground="{DynamicResource TextLabel}" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+        <Button x:Name="BtnAnnuler" Content="Annuler" Grid.Row="3" Grid.Column="1" Background="{DynamicResource FondBoutton}" BorderBrush="{DynamicResource BorderBoutton}" Click="Annuler"/>
+        <Button x:Name="BtnContinuer" Content="Continuer" Grid.Row="3" Grid.Column="3" Background="{DynamicResource FondBoutton}" BorderBrush="{DynamicResource BorderBoutton}" Click="Continuer"/>
+    </Grid>
+
+</Window>
+
