@@ -1,0 +1,152 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title></title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/css/highlight/sunburst.css"><link rel="stylesheet" href="/css/highlight/line-number.css"><link rel="stylesheet" href="/css/markdown.css"><link rel="stylesheet" href="/css/markdown_foad.css"><link rel="stylesheet" href="/css/menu-markdown.css"><script src="/js/highlight.js"></script><script src="/js/highlightjs-line-numbers.min.js"></script><script src="/js/jquery.js"></script></head><body class="markdown-body"><div class="markdown-body"><h1 id="css-phase-7-le-web-responsive">CSS Phase 7 : Le web responsive</h1>
+<h2 id="objectifs">Objectifs</h2>
+<ul>
+<li>Connaître les contraintes du web responsive</li>
+<li>Maîtriser les media queries CSS  </li>
+<li>Adapter une page HTML pour le responsive </li>
+</ul>
+<h2 id="cheminement">Cheminement</h2>
+<p>Assistez à la présentation sur <a target="_blank" href="ressources/01 - Présentation Responsive.pptx" title="web responsive">le web responsive</a> par votre formateur.</p>
+<h2 id="pensez-_responsive_">Pensez <em>responsive</em></h2>
+<p>Tous les éléments composant une page web doivent être redimensionnés automatiquement. Il ne faut donc pas oublier :</p>
+<ul>
+<li>Les polices de caractères</li>
+<li>Les images </li>
+<li>Les autres médias : vidéos, animations (canvas, Flash...)</li>
+<li>Les tableaux HTML</li>
+</ul>
+<h2 id="le-viewport">Le viewport</h2>
+<p>Pour pouvoir rendre une page responsive, il faut au préalable ajouter une balise HTML meta (donc dans la partie <code>&lt;head&gt;</code>) nommée <strong>viewport</strong>.</p>
+<p>Le code de celle-ci est en général le suivant :</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+</code></pre><p>Expliquons les valeurs de l&#39;attribut <code>content</code> : </p>
+<ul>
+<li><code>width=device-width</code> : fixe la largeur de la fenêtre = celle de l&#39;appareil</li>
+<li><code>initial-scale=1.0</code> : niveau de zoom initial (ici échelle = 1, soit 100%)</li>
+<li><code>shrink-to-fit=no</code> : règle un bug spécifique du navigateur Apple Safari mobile sous le système d&#39;exploitation iOS 9 (iPhone/iPad).</li>
+</ul>
+<blockquote>
+<p>La notion de viewport est un peu plus complexe techniquement, lire (facultatif) <a href="https://www.alsacreations.com/article/lire/1490-comprendre-le-viewport-dans-le-web-mobile.html">cette page</a> qui explique de façon détaillée son fonctionnement.</p>
+</blockquote>
+<h2 id="media-queries">Media queries</h2>
+<p>Les media queries permettent d&#39;appliquer des règles CSS différentes selon le dispositif et d&#39;autres critères  (appelés fonctionnalités).</p>
+<p>Listes des dispositifs : </p>
+<ul>
+<li><code>screen</code> : écrans</li>
+<li><code>handheld</code> : périphériques mobiles ou de petite taille</li>
+<li><code>print</code> : impression</li>
+<li><code>aural</code> (CSS 2.0) / <code>speech</code> (CSS 2.1) : synthèses vocales</li>
+<li><code>braille</code> : plages braille</li>
+<li><code>embossed</code> : imprimantes braille</li>
+<li><code>projection</code> : projecteurs (ou présentations avec slides)</li>
+<li><code>tty</code> : terminal/police à pas fixe</li>
+<li><code>tv</code> : téléviseur</li>
+<li><code>all</code> : tous les précédents</li>
+</ul>
+<p>Liste des fonctionnalités :</p>
+<ul>
+<li><code>color</code> : support de la couleur (bits/pixel)</li>
+<li><code>color-index</code> : périphérique utilisant une table de couleurs indexées</li>
+<li><code>device-aspect-ratio</code> : ratio du périphérique de sortie (par exemple 16/9)</li>
+<li><code>aspect-ratio</code> : ratio de la zone d&#39;affichage</li>
+<li><code>device-height</code> : dimension en hauteur du périphérique</li>
+<li><code>device-width</code> : dimension en largeur du périphérique</li>
+<li><code>grid</code> : périphérique bitmap ou grille (ex : lcd)</li>
+<li><code>height</code> : dimension en hauteur de la zone d&#39;affichage</li>
+<li><code>monochrome</code> : périphérique monochrome ou niveaux de gris (bits/pixel)</li>
+<li><code>orientation</code> : orientation du périphérique (portait ou landscape)</li>
+<li><code>resolution</code> : résolution du périphérique (en dpi, dppx, ou dpcm)</li>
+<li><code>scan</code> : type de balayage des téléviseurs (progressive ou interlace)</li>
+<li><code>width</code> : dimension en largeur de la zone d&#39;affichage</li>
+</ul>
+<p>Les fonctionnalités peuvent être préfixées par <code>min-</code> ou <code>max-</code>.</p>
+<p>Ces critères peuvent être combinés via les opérateurs suivants : </p>
+<ul>
+<li><code>and</code> : et</li>
+<li><code>only</code> : uniquement</li>
+<li><code>not</code> : non</li>
+</ul>
+<blockquote>
+<p>Pour le web, nous serons surtout concernés par les dispositifs de type écrans et les largeurs minimum et maximum.  </p>
+</blockquote>
+<p>Exemples :</p>
+<pre><code>@media screen and (max-width: 576px) 
+{ 
+    h1 
+    { 
+        font-size : 20px; 
+    } 
+} 
+
+@media screen and (max-width: 768px) 
+{ 
+    h1 
+    { 
+        font-size : 40px; 
+    } 
+}     
+</code></pre><p>Ce code CSS affichera le texte des balises <code>h1</code> sur 20 pixels pour les écrans inférieurs à 576 pixels puis sur 40 pixels pour les écrans de 577 à 768 pixels. Au-delà les <code>h1</code> auront une taille normale.  </p>
+<blockquote>
+<p>Attention au sens de lecture des préfixes <code>min-</code> (s&#39;appliquera à ce qui est au-dessus de la valeur indiquée) et <code>max-</code> (s&#39;appliquera à ce qui est en dessous de la valeur indiquée).   </p>
+</blockquote>
+<h2 id="int-gration-des-media-queries">Intégration des media queries</h2>
+<p>L&#39;appel de media queries dans votre page peut se faire de 2 manières : </p>
+<ul>
+<li>Un seul fichier CSS externe global contenant toutes les media queries.    </li>
+<li><p>Plusieurs fichiers CSS externes, un par media querie/dispositif/point d&#39;arrêt, ciblé par l&#39;attribut <code>media</code> de la balise <code>&lt;link&gt;</code> :</p>
+<pre><code>  &lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (max-width: 575px)&quot; href=&quot;mobile.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (min-width: 576px)&quot; href=&quot;tablette.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (min-width: 992px)&quot; href=&quot;desktop.css&quot;&gt; 
+</code></pre></li>
+</ul>
+<h2 id="taille-des-polices-de-caract-res">Taille des polices de caractères</h2>
+<p>La gestion de la taille des polices de caractères en responsive peut s&#39;avérer complexe (elle l&#39;est d&#39;ailleurs aussi en &quot;non responsive&quot;). La problématique est cependant commune avec les autres éléments : il s&#39;agit de rendre flexible (élastique) pour le redimensionnement, c&#39;est-à-dire utiliser des unités de mesure relatives et non absolues (pt, cm etc.).  </p>
+<h3 id="le-cas-particulier-des-pixels">Le cas particulier des pixels</h3>
+<p>Traditionnellement, l’unité de taille de police la plus utilisée sur le web est le pixel. Celle-ci est bien une unité dite « relative » c’est-à-dire redimensionnable; mais elle dépend en effet de la résolution et de la taille de l&#39;écran. </p>
+<h3 id="les-autres-unit-s-relatives-em-et-rem-">Les autres unités relatives : <code>%</code>, <code>em</code> et <code>rem</code></h3>
+<p>Le problème des unités relatives <code>%</code> (pourcentage) et <code>em</code> (cadratin) est qu&#39;elles sont proportionnelles à leurs parent. Cela se rèvèle ingérable en responsive, où le principe est de tout redimensionner. Les résultats obtenuis ne sont pas focèment ceux attendus par le concepteur d&#39;une page web.</p>
+<p>Pour y remédier, l&#39;unité <code>rem</code> se base sur la taille de l&#39;élément racine (&quot;root em&quot;) de la page, c&#39;est-à-dire la balise <code>&lt;html&gt;</code>. Tous les calculs de taille pour les autres éléments HTML sont donc effectués ensuite sur cette base. </p>
+<h3 id="nouvelles-unit-s-vw-et-vh-">Nouvelles unités <code>vw</code> et <code>vh</code></h3>
+<p>Le CSS 3 a introduit de nouvelles unités spécialement dédiée au responsive : <code>vw</code>, <code>vh</code>, <code>vmin</code>et <code>vmax</code> basées sur la notion de viewport. La solution la plus simple pour des polices responsive est donc d&#39;utiliser ces dernières unités. Revoir le <a href="04 - Polices_Couleurs.pdf">cours CSS Polices et Couleurs</a> pour plus de détails.  </p>
+<h3 id="quelle-unit-choisir-pour-le-responsive-">Quelle unité choisir pour le responsive ?</h3>
+<p>Les unités basées sur le viewport sont un bon choix puisque spécialement dédié au responsive. La seule limite est leur <a href="https://caniuse.com/#feat=viewport-units">prise en charge</a> sous d&#39;anciennes versions de navigateurs. Autre point, le redimensionnement peut s&#39;avérer trop petit sur mobile, il faut donc veiller à laisser des tailles lisibles.   </p>
+<p>Beaucoup préconisent l&#39;utilisation de l&#39;unité <code>rem</code> en fixant à 100% la racine <code>&lt;html&gt;</code> :</p>
+<pre><code>html {
+     font-size: 100%;
+}
+</code></pre><p>Puis pour les autres éléments, on utilisera l&#39;unité <code>rem</code>, par exemple :</p>
+<pre><code>h1 {
+   font-size: 2rem;
+}      
+</code></pre><p>Il convient toutefois là aussi de s&#39;assurer de la <a href="https://caniuse.com/#feat=rem">compatibilité navigateur</a>. </p>
+<h3 id="conversion">Conversion</h3>
+<p>Il existe des outils de conversion d&#39;une unité de taille à une autre, <a href="https://www.jarrige.fr/pixelrem">par exemple</a> (pixels vers rem).</p>
+<h4 id="sources">Sources</h4>
+<ul>
+<li><a href="https://blog.lesieur.name/pourquoi-j-utilise-l-unite-rem-et-non-l-unite-pixel/">https://blog.lesieur.name/pourquoi-j-utilise-l-unite-rem-et-non-l-unite-pixel</a></li>
+<li><a href="http://wdfriday.com/wdfriday.com/blog/2012/02/font-size-responsive-accessibilite/index.html">http://wdfriday.com/wdfriday.com/blog/2012/02/font-size-responsive-accessibilite/index.html</a></li>
+</ul>
+<h2 id="images">Images</h2>
+<p>On rend une image responsive en appliquant les instructions CSS suivantes. Au préalable, il est nécessaire de supprimer les attributs de dimensions <code>width</code> et <code>height</code> :    </p>
+<pre><code>img 
+{
+     max-width: 100%;
+     height: auto;
+}
+</code></pre><ul>
+<li><code>max-width: 100%</code> : cette propriété est utilisée pour définir la largeur maximale d&#39;un élément donné. Elle empêche la valeur de la propriété <code>width</code> de devenir supérieure à la valeur spécifiée par <code>max-width</code> (autrement dit, <code>max-width</code> est une borne supérieur pour <code>width</code>). Ainsi, l&#39;image s&#39;adaptera à la largeur de son conteneur sans jamais la dépasser même si la largeur de l&#39;image en pixels est supérieure à la largeur de la balise qui contient l&#39;image.</li>
+<li><code>height: auto</code> :  calcule automatiquement la hauteur; en responsive, permet d&#39;ajuster la hauteur en rapport à la largeur de l&#39;image, sinon l&#39;image présenterait une distorsion.</li>
+</ul>
+<blockquote>
+<p>Ceci est la solution standard mais basique. Il existe <a href="https://www.alsacreations.com/article/lire/1621-responsive-images-srcset.html">des alternatives</a> plus poussées. </p>
+</blockquote>
+<h2 id="exercice">Exercice</h2>
+<p>Reprenez la maquette du site <em>Tartempion</em> pour la rendre responsive en intégrant les contraintes suivantes :</p>
+<ul>
+<li>Un seul breakpoint : 768 pixels.</li>
+<li>La colonne de droite sera masquée sur les dispositifs mobiles.</li>
+<li>Sur mobile, les menus doivent s&#39;afficher verticalement. </li>
+<li>Les polices doivent être redimensionnées</li>
+</ul>
+<p><strong>Une fois l&#39;exercice terminé, demandez au formateur de vérifier votre travail</strong>.</p>
+</div><div class="menu-markdown"><img src="/images/menu.png"></div></body></html><script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script><script src="/js/menu-markdown.js"></script>

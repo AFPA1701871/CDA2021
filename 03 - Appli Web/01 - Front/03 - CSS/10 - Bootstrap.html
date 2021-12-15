@@ -1,0 +1,330 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title></title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/css/highlight/sunburst.css"><link rel="stylesheet" href="/css/highlight/line-number.css"><link rel="stylesheet" href="/css/markdown.css"><link rel="stylesheet" href="/css/markdown_foad.css"><link rel="stylesheet" href="/css/menu-markdown.css"><script src="/js/highlight.js"></script><script src="/js/highlightjs-line-numbers.min.js"></script><script src="/js/jquery.js"></script></head><body class="markdown-body"><div class="markdown-body"><h1 id="css-8-utiliser-un-framework-css-bootstrap">CSS 8 : Utiliser un framework CSS : Bootstrap</h1>
+<h2 id="objectifs">Objectifs</h2>
+<ul>
+<li>Maîtriser un framework CSS implémentant les contraintes du web responsive</li>
+<li>Utiliser un système de grille</li>
+</ul>
+<h2 id="cheminement">Cheminement</h2>
+<p>Le framework CSS <a href="https://getbootstrap.com" title="Bootstrap">Bootstrap</a> vous permet de mettre en oeuvre facilement des sites dits &quot;responsive&quot;, c&#39;est-à-dire avec une mise en page qui s&#39;adapte automatiquement en fonction des écrans (PC, smartphones, tablettes).</p>
+<h2 id="qu-est-ce-que-bootstrap-">Qu&#39;est-ce que Bootstrap ?</h2>
+<p>Ce document a été rédigé pour la version 4.1 de Bootstrap (mai 2018). En fonction de l&#39;évolution des versions des points peuvent avoir changé. </p>
+<p>Afin d&#39;aider les « front designers » (appelés il y a peu encore des intégrateurs) dans la conception « front-end » (le web design), des frameworks (« librairies ») CSS ont été créés, le plus populaire en termes d&#39;utilisation étant Bootstrap.</p>
+<p>Bootstrap a été développé en 2010 par deux ingénieurs de Twitter qui souhaitaient répondre à la problématique d&#39;une librairie servant de base commune à tous les projets de leur société. Bootstrap est actuellement (fin 2018) disponible dans sa version 4.1  </p>
+<p>Bootstrap permet principalement de structurer une page HTML en la rendant adaptable aux différentes tailles d&#39;écran (<em>web responsive</em>) grâce à un découpage en grille, le <em>grid system</em>. </p>
+<p>Outre le web responsive, Bootstrap embarque une multitude d&#39;aides pour la conception front-end entre autres : </p>
+<ul>
+<li>menus (accordéons etc.) </li>
+<li>gestion des polices, couleurs etc.</li>
+<li>messages (alertes, infobulles)</li>
+<li>gestion des marges et paddings </li>
+<li>habillage des formulaires </li>
+<li>habillage des tableaux </li>
+<li>gestion des images </li>
+<li>placements de contenus (medias, cards) </li>
+<li>popup/fenêtres modales (iframes) </li>
+<li>carrousels (diaporamas) etc.</li>
+</ul>
+<h2 id="int-grer-bootstrap-dans-une-page-web">Intégrer Bootstrap dans une page web</h2>
+<h3 id="dans-la-partie-head-de-la-page-html-">Dans la partie <code>&lt;head&gt;</code> de la page HTML :</h3>
+<ol>
+<li><p>Ajouter la balise meta <em>viewport</em> : </p>
+<pre><code> &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;   
+</code></pre></li>
+<li><p>Puis le code pour intégrer la feuille de style CSS de Bootstrap, toujours dans <code>&lt;head&gt;</code> : </p>
+<pre><code> &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css&quot; integrity=&quot;sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO&quot; crossorigin=&quot;anonymous&quot;&gt;
+</code></pre></li>
+</ol>
+<blockquote>
+<p>Ici, on importe Bootstrap via une URL pointant sur un CDN (un serveur externe hébergeant des fichiers) mais rien n&#39;empêche de télécharger Bootstrap directement dans l&#39;arborescence de votre site.</p>
+</blockquote>
+<p>Vous pourrez ensuite ajouter vos propres fichiers CSS qui devront être chargés <strong>APRES</strong> celui de Bootstrap.</p>
+<h3 id="a-la-fin-de-la-page">A la fin de la page</h3>
+<ol>
+<li><p>Enfin, intégrez les fichiers Javascript nécessaires à Bootstrap; placez ce code <strong>avant</strong> la fermeture de la balise body (<code>&lt;/body&gt;</code>), l&#39;ordre des fichiers est à respecter (Jquery, Popper puis Bootstrap) : </p>
+<pre><code> &lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot; integrity=&quot;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+ &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js&quot; integrity=&quot;sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+ &lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js&quot; integrity=&quot;sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+</code></pre></li>
+</ol>
+<blockquote>
+<p><a href="https://getbootstrap.com/docs/4.1/getting-started/introduction">Retrouvez ici</a> les extraits de code mis à jour pour la dernière version de Bootstrap. </p>
+<p><a href="https://popper.js.org">Popper</a> est optionnel.  </p>
+</blockquote>
+<p>Vous pourrez ensuite ajouter vos propres fichiers JS qui devront être chargés <strong>APRES</strong> ceux de Bootstrap.</p>
+<ol>
+<li>Barre de navigation (il s&#39;agit d&#39;un exemple), à placer dans <code>&lt;body&gt;</code> :</li>
+</ol>
+<pre><code>&lt;nav id=&quot;navbar&quot; class=&quot;navbar navbar-expand-sm bg-dark navbar-dark&quot;&gt;
+    &lt;!-- Toggler/collapsibe Button --&gt;
+    &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#collapsibleNavbar&quot;&gt;
+    &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;collapsibleNavbar&quot;&gt;
+        &lt;ul class=&quot;navbar-nav&quot;&gt;
+            &lt;li class=&quot;nav-item&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;index.php&quot;&gt;Accueil&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;nav-item&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;tableau.php&quot;&gt;Tableau&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;nav-item&quot;&gt;
+                &lt;a class=&quot;nav-link&quot; href=&quot;formulaire.php&quot;&gt;Formulaire wazaa&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt; 
+&lt;/nav&gt;
+</code></pre><p>Fonctionnement des <em>navbar</em> : </p>
+<ul>
+<li>ligne 1 : on ouvre la balise <code>&lt;nav&gt;</code> qui contient plusieurs classes obligatoires (mais variables), notamment  <code>navbar-expand-sm</code> qui indique à partir de quelle dimension (ici <code>sm</code>, donc à plus de 576px) la barre de navigation sera visible entièrement au lieu d&#39;afficher le bouton <em>hamburger</em>. </li>
+<li>ligne 3-5 : on trouve ici une balise bouton : il s&#39;agit du code du bouton <em>hamburger</em>. L&#39;attribut <code>data-target</code> est obligatoire; sa valeur doit être la même que celle de l&#39;attribut <code>id</code> du <code>&lt;div&gt;</code> suivant (ici <code>collapsibleNavbar</code>) mais préfixé du signe <code>#</code>.    </li>
+<li>ligne 7-19 : un <code>div</code> qui contient une liste de liens classiques, c&#39;est bien notre menu tel que visible sur des écrans larges. </li>
+</ul>
+<p>Les barres de navigation peuvent supporter des :</p>
+<ul>
+<li>un nom de site/marque, éventuellement une image (logo) : <code>brand</code></li>
+<li>un formulaire (zone de saisie pour un champ de recherche) </li>
+<li>des sous-menus, appelés <code>dropdowns</code></li>
+</ul>
+<p><a href="https://getbootstrap.com/docs/4.1/components/navbar">Barre de navigation</a></p>
+<h2 id="le-syst-me-de-grille">Le système de grille</h2>
+<p>Avec Bootstrap, il n&#39;est plus nécessaire d&#39;écrire des requêtes CSS media queries : Bootstrap l&#39;a déjà fait pour vous ! Il ne &quot;suffit plus&quot; qu&#39;à utiliser des classes CSS correspondant aux points de rupture selon le tableau suivant : </p>
+<p><img src="ressources/breakpoints_tableau.png" alt="classes Bootstrap"></p>
+<blockquote>
+<p>Ce tableau est valable uniquement pour Bootstrap 4 qui a modifié les breakpoints et les classes par rapport à Bootstrap 3.</p>
+</blockquote>
+<p>Le principe de grille consiste à découper votre page en cellules, comme dans un tableau, donc à créer des lignes et des colonnes. </p>
+<p>Bootstrap découpe la largeur d&#39;écran en <strong>12 blocs de largeurs égales</strong> (égales mais variables selon la largeur du dispositif sur lequel on affiche). Les classes <code>col-</code> vont spécifier combien de blocs on veut utiliser. </p>
+<p>Par exemple, pour faire 2 colonnes, la première avec une largeur de 8 blocs et la seconde avec une largeur de 4 blocs, on écrira : </p>
+<pre><code>&lt;div class=&quot;container&quot;&gt; 
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-8&quot;&gt;Colonne avec une largeur de 8 blocs&lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;Colonne avec une largeur de 4 blocs&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h3 id="conteneurs">Conteneurs</h3>
+<p>Pour créer une grille, il faut d&#39;abord l&#39;ouvrir avec une balise <code>&lt;div&gt;</code> avec la classe CSS <code>container</code>, laquelle a une largeur par défaut de 980px sur PC (donc sur un écran plus grand que 980px on obtient un effet de centrage).</p>
+<pre><code>&lt;div class=&quot;container&quot;&gt; 
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-8&quot;&gt;Colonne avec une largeur de 8 blocs&lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;Colonne avec une largeur de 4 blocs&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><blockquote>
+<p>Il existe une seconde classe de conteneur, <code>container-fluid</code>, permettant d&#39;utiliser toute la largeur de l&#39;écran (100%).</p>
+</blockquote>
+<p>Dans une page HTML, il faut au moins un conteneur (dans ce cas il sera placé immédiatement sous <code>&lt;body&gt;</code> et se terminera à la fin de la page, avant la fermeture de <code>&lt;/body&gt;</code>. </p>
+<blockquote>
+<p>Il est possible d&#39;utiliser plusieurs conteneurs dans une page, y compris mixer les classes <code>container</code> et <code>container-fluid</code>. </p>
+</blockquote>
+<p>Dans le conteneur, on placera tout le reste de la grille : lignes (rangées) et colonnes.</p>
+<h3 id="les-lignes-rang-es-">Les lignes (= rangées)</h3>
+<p>On crée ensuite une rangée (ligne) en appliquant la classe <code>.row</code> (= rangée) à une seconde balise <code>&lt;div&gt;</code> :</p>
+<pre><code>&lt;div class=&quot;container&quot;&gt; 
+    &lt;div class=&quot;row&quot;&gt;
+        [ ... ]
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h3 id="les-colonnes">Les colonnes</h3>
+<p>On découpe ensuite une ligne en colonnes en appliquant la classe <code>col</code> à une ou plusieurs balises <code>&lt;div&gt;</code> : </p>
+<pre><code>&lt;div class=&quot;container&quot;&gt; 
+    &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;col-12&quot;&gt;Une (seule) colonne oocupant toute la largeur&lt;/div&gt; 
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p><strong>Une ligne est découpée en 12 blocs de largeur égale</strong>, on va préciser combien de ces blocs une colonne utilise, en ajoutant ce nombre après le mot <code>col</code> (plus un tiret), par exemple : </p>
+<pre><code>&lt;div class=&quot;container&quot;&gt; 
+    &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;col-8&quot;&gt;Une première colonne qui utilise 8 blocs&lt;/div&gt; 
+       &lt;div class=&quot;col-4&quot;&gt;Une seconde colonne qui utilise les 4 blocs restants&lt;/div&gt; 
+    &lt;/div&gt;
+&lt;/div&gt; 
+</code></pre><p>Dans cet exemple, il n&#39;y a que 2 colonnes, une de 8 blocs et une de 4 blocs, le total étant bien de 12.</p>
+<p><strong>Testez l&#39;exemple.</strong></p>
+<p>Il existe de nombreuses possibilités de découpe, le total de blocs utilisés devant toujours être égal à 12, par exemple : </p>
+<ul>
+<li>3 colonnes de 4 blocs</li>
+<li>6 colonnes de 2 blocs</li>
+<li>2 colonnes de 6 blocs (largeur égale/divison de la zone en 2)</li>
+<li>1 colone de 7 blocs et une seconde de 5 blocs
+etc.</li>
+</ul>
+<p>A noter : </p>
+<ul>
+<li>Chaque colonne peut être redécoupée en créant une ligne elle-même redécoupée en colonnes</li>
+<li>Les colonnes peuvent dimensionnées automatiquement, en indiquant uniquement <a href="https://getbootstrap.com/docs/4.0/layout/grid/#auto-layout-columns"><code>col</code></a> comme classe ou en ajoutant le suffixe <a href="https://getbootstrap.com/docs/4.0/layout/grid/#variable-width-content"><code>auto</code></a> (dans ce cas la colonne est ajustée à la largeur de son contenu)  </li>
+<li>Les colonnes peuvent être &quot;sautées&quot; via la classe <a href="https://getbootstrap.com/docs/4.0/layout/grid/#offsetting-columns"><code>offset</code></a> </li>
+</ul>
+<p>Ces 2 points permettent d&#39;effectuer des mises en page assez complexes. </p>
+<p><a href="https://getbootstrap.com/docs/4.0/layout/grid">documentation sur la grille</a></p>
+<h2 id="affichage-responsive">Affichage responsive</h2>
+<p>Toute la &quot;magie&quot; de Bootstrap est ici ! Nous allons mettre en oeuvre les points de rupture (breakpoints). </p>
+<p>Reprenons l&#39;exemple précédent (colonnes) :</p>
+<pre><code>&lt;div class=&quot;container&quot;&gt; 
+    &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;col-8&quot;&gt;Une première colonne qui utilise 8 blocs&lt;/div&gt; 
+       &lt;div class=&quot;col-4&quot;&gt;Une seconde colonne qui utilise les 4 blocs restants&lt;/div&gt; 
+    &lt;/div&gt;
+&lt;/div&gt;  
+</code></pre><p><strong>Testez l&#39;exemple.</strong></p>
+<p>Ce code s&#39;affiche de la même façon sur tout les dispositifs. Mais on pourrait souhaiter obtenir un affichage différent selon la largeur d&#39;écran.</p>
+<p>Par exemple : </p>
+<ul>
+<li><em>Règle 1</em> : Une page présentant deux colonnes : une partie centrale d&#39;une largeur de 9 blocs et une seconde colonne de largeur 4 sur les plus grands écrans. </li>
+<li><em>Règle 2</em> : pour les écrans supérieurs à 992px, la colonne de droite doit être un peu plus large; on a donc une largeur de 8 pour la partie centrale et une largeur de 4 pour l&#39;autre colonne.  </li>
+<li><em>Règle 3</em> : sur tablettes en mode portrait, la colonne principale aura une largeur de 7 blocs et la seconde en occupera les 5 restant. </li>
+<li><em>Règle 4</em> : nos 2 colonnes auront une largeur égale pour les dispositifs à partir de 576px.</li>
+<li><em>Règle 5</em> : sur les mobiles, l&#39;affichage se fait sur une seule colonne.</li>
+</ul>
+<p>Pour cela, on va ajouter un préfixe de point de rupture entre <code>col</code> et le nombre de blocs, par exemple <code>col-md-7</code> va indiquer que pour la dimension <code>md</code>, c&#39;est-à-dire de 768 à 991 pixels, la colonne occupera 7 blocs.       </p>
+<p>On va répéter ce principe pour tout les points de rupture : </p>
+<pre><code>&lt;div class=&quot;container&quot;&gt; 
+    &lt;div class=&quot;row&quot;&gt;
+           &lt;div class=&quot;col-12 col-sm-6 col-md-7 col-lg-8 col-xl-9&quot;&gt;Colonne 1&lt;/div&gt; 
+        &lt;div class=&quot;col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3&quot;&gt;Colonne 2&lt;/div&gt; 
+    &lt;/div&gt;
+&lt;/div&gt;  
+</code></pre><p><strong>Testez l&#39;exemple.</strong></p>
+<blockquote>
+<p>Rappel : Bootstrap 4 étant <em>Mobile first</em>, on part d&#39;abord de la dimension la plus petite, celle pour mobile (576px), pour aller vers la plus grande.</p>
+</blockquote>
+<p>Ici on a toujours 2 colonnes, sauf sur mobile puisqu&#39;on a indiqué que les colonnes y occupaient les 12 blocs disponibles; la seconde colonne se placera alors sous la 1<sup>ère</sup>.  </p>
+<p>Dernier point, on a indiqué ici des souhaits pour tous les points de rupture, mais ce n&#39;est pas obligatoire  </p>
+<h2 id="masquer-une-zone">Masquer une zone</h2>
+<p>Sur mobile, il peut être utile de ne pas afficher une zone, pour améliorer le temps de chargement ou parce que le contenu n&#39;est pas pertinent sur mobile (publicité par exemple). </p>
+<p>Bootstrap propose un ensemble de classes régissant <a href="https://getbootstrap.com/docs/4.1/utilities/display/#hiding-elements">l&#39;affichage</a> : </p>
+<pre><code>&lt;div class=&quot;d-xs-none&quot;&gt;Ce bloc sera masqué sur les écrans plus large que XS, c&#39;est-à-dire plus grands que 576 pixels&lt;/div&gt;
+&lt;div class=&quot;d-none d-xs-block&quot;&gt;Ce bloc sera masqué sur les écrans plus petit que XS, c&#39;est-à-dire plus grands que 576 pixels (dispositifs mobiles)&lt;/div&gt;
+</code></pre><p><strong>Testez l&#39;exemple.</strong></p>
+<h2 id="marges-spacing-">Marges (spacing)</h2>
+<p>Bootstrap 4 a introduit un système de gestion des espacements : marges externes (<code>margin)</code> et internes (<code>paddings</code>) : </p>
+<p>+++ TODO [19/11/2018] +++ </p>
+<h2 id="tableaux">Tableaux</h2>
+<p>Bootstrap fournit un ensemble de classes pour habiller les tableaux HTML. </p>
+<p>Pour commencer, il convient d&#39;ajouter la classe <code>table</code> à la balise HTML <code>&lt;table&gt;</code> :</p>
+<pre><code>&lt;table class=&quot;table&quot;&gt;
+    [ ... ]
+&lt;/table&gt;
+</code></pre><p>Différentes classes peuvent ensuite y être ajoutées :  </p>
+<ul>
+<li><code>.table-bordered</code> : affiche les bordures</li>
+<li><code>.table-striped</code> : ajoute un fond de couleur à une ligne sur deux pour faciliter la lisibilité  </li>
+<li><code>.table-hover</code> : surligne la ligne en cours de survol de la souris.</li>
+</ul>
+<p>Les tableaux HTML doivent eux aussi être responsive : pour cela il est nécessaire d&#39;englober tout le tableau dans un <code>&lt;div&gt;</code> supplémentaire avec en attribut classe <code>table-responsive</code>. </p>
+<p>Bootstrap propose bien d&#39;autres options pour les tableaux : <a href="https://getbootstrap.com/docs/4.1/content/tables">documentation</a>.</p>
+<p>Exemple : </p>
+<pre><code>&lt;div class=&quot;table-responsive&quot;&gt;
+    &lt;table class=&quot;table table-striped table-hover table-bordered&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nom&lt;/th&gt;
+        &lt;th&gt;Prénom&lt;/th&gt;
+        &lt;th&gt;Adresse&lt;/th&gt;
+    &lt;/tr&gt;    
+    &lt;/thead&gt;
+    &lt;tbody&gt;            
+    &lt;tr&gt;
+        &lt;td&gt;LOPER&lt;/td&gt;
+        &lt;td&gt;Dave&lt;/td&gt;
+        &lt;td&gt;30 rue de Poulainville 80000 Amiens&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;CHARPENTIER&lt;/td&gt;
+        &lt;td&gt;Joseph&lt;/td&gt;
+        &lt;td&gt;12 place de la grotte 99000 Bethléem&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;        
+    &lt;/table&gt;
+&lt;/div&gt;
+</code></pre><p><strong>Testez l&#39;exemple.</strong></p>
+<h2 id="formulaires">Formulaires</h2>
+<p>Un champ de formulaire standard (<code>input type=&quot;text&quot;</code>) est défini par le code suivant dans Bootstrap :  </p>
+<pre><code>&lt;form&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;courriel&quot;&gt;Adresse email&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;form-control&quot; name=&quot;courriel&quot; id=&quot;courriel&quot; placeholder=&quot;Saisir votre adresse mail&quot;&gt;        
+  &lt;/div&gt;
+</code></pre><p><strong>Testez l&#39;exemple.</strong></p>
+<ul>
+<li>Les champs <code>input</code> et le <code>label</code> associé sont groupés dans un <code>&lt;div&gt;</code> qui prend en attribut la classe <code>form-group</code></li>
+<li>Les champs <code>input</code> prennent une classe <code>form-control</code>.</li>
+</ul>
+<p>Ensuite, il existe différentes variantes, dont des classes : <a href="https://getbootstrap.com/docs/4.1/components/forms">Documentation</a> </p>
+<h2 id="messages-alertes-">Messages (alertes)</h2>
+<p>Bootstrap propose un système de <a href="https://getbootstrap.com/docs/4.1/components/alerts">messages</a> (boîtes d&#39;alerte) pour communiquer avec l&#39;utilisateur.</p>
+<h2 id="boutons">Boutons</h2>
+<p>Bootstrap permet d&#39;habiller des boutons avec des classes de couleurs et de taille. </p>
+<p>Exemple 1 : un bouton avec fond bleu et texte blanc :</p>
+<pre><code>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt; 
+</code></pre><p>Exemple 2 : ajout de la classe <code>btn-lg</code> pour obtenir le même bouton qu&#39;à l&#39;exemple 1 mais en plus grand : </p>
+<pre><code>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Primary&lt;/button&gt; 
+</code></pre><p><strong>Ces classes de boutons peuvent être utilisées sur les liens (balises <code>&lt;a&gt;</code>).</strong> </p>
+<p><a href="https://getbootstrap.com/docs/4.1/components/buttons">Documentation</a></p>
+<h2 id="cards">Cards</h2>
+<p>Bootstrap 4 apporte un nouveau composant, les <a href="https://getbootstrap.com/docs/4.0/components/card">cards</a>, qui permettent l&#39;habillage de blocs de contenus, <a href="https://bootsnipp.com/tags/card">exemples</a>.   </p>
+<p>Une alternative au <em>cards</em> : <a href="https://getbootstrap.com/docs/4.1/layout/media-object">les médias</a>.  </p>
+<h2 id="images">Images</h2>
+<p>Bootstrap fournit des classes pour placer, habiller (bordures, arrondis) ou redimensionner <a href="https://getbootstrap.com/docs/4.1/content/images">les images</a>.   </p>
+<p>Pour afin de les rendre responsive, il suffit d&#39;appliquer la classe <code>img-fluid</code> sur la balise <code>&lt;img&gt;</code> tout en veillant à ne pas spécifier de dimensions fixes : suppression des attributs <code>width`` et</code>height`), ce qui donne :</p>
+<pre><code>&lt;img src=&quot;image.jpg&quot; class=&quot;img-fluid&quot; alt=&quot;Image responsive&quot; title=&quot;Image responsive&quot;&gt;
+</code></pre><p>La classe <code>img-fluid</code> applique les règles CSS suivantes aux balises <code>&lt;img&gt;</code> :</p>
+<ul>
+<li><code>max-width: 100%;</code> : fixe la largeur de l&#39;image à celle de son parent (pour résumer).</li>
+<li><code>height: auto;</code> : adapte la hauteur de l&#39;image en fonction de sa largeur, afin de ne pas obtenir de distorsion de l&#39;image.</li>
+</ul>
+<p>En dehors de cette classe et de Bootstrap, <a href="https://developer.mozilla.org/fr/Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_%C3%A0_une_page_web">d&#39;autres solutions</a> existent pour gérer la problématique
+responsive des images : plusieurs dimensions d’une même image (attributs <a href="https://www.alsacreations.com/article/lire/1621-responsive-images-srcset.html"><code>srcset</code> et <code>sizes</code></a>, balise
+<code>&lt;picture&gt;</code>), propriétés css (<a href="https://www.alsacreations.com/tuto/lire/1390-arriere-plans-css3-background.html"><code>cover</code></a> etc.).</p>
+<p>Enfin, Bootstrap fournit d’autres classes applicables aux images pour gérer les miniatures, les arrondis
+et leur placement.</p>
+<p>En ce qui concerne les vidéos, voir cette page. </p>
+<h2 id="typographie">Typographie</h2>
+<p>Bootstrap fournit des classes pour gérer la typographie : polices, taille, alignement, gras, italique, titres (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>...), mise en exergue, habillage des listes (<code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>) etc.  </p>
+<h3 id="polices">Polices</h3>
+<p>La police de caractère affichée par défaut varie en fonction du <a href="https://getbootstrap.com/docs/4.1/content/reboot/#native-font-stack">système d&#39;exploitation</a>, par exemple : </p>
+<ul>
+<li><em>Sego UI</em> sous Windows</li>
+<li><em>Roboto</em> sous Androïd </li>
+</ul>
+<p>La police par défaut peut bien entendu être changée, via une feuille de style CSS.</p>
+<h3 id="taille">Taille</h3>
+<p>Bootstrap définit par défaut la taille de police à <strong>16 pixels</strong>, donc une unité de taille fixe. En effet, Bootstrap ne gère pas le redimensionnement des textes pour qu&#39;ils deviennent « responsive » : il faudra ajouter des media queries spécifiques, nous y reviendrons plus tard.  </p>
+<h3 id="alignement">Alignement</h3>
+<p>Il existe des classes pour l&#39;alignement du texte, équivalents de <code>text-align</code> en CSS :</p>
+<ul>
+<li><code>text-left</code> : aligne le texte à gauche de son conteneur (par défaut)</li>
+<li><code>text-right</code> : aligne le texte à droite de son conteneur</li>
+<li><code>text-center</code>    : centre le texte dans son conteneur</li>
+<li><code>text-justify</code> : justifie le texte</li>
+</ul>
+<p>Exemple : </p>
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-12&quot;&gt;
+       &lt;p class=&quot;text-left&quot;&gt;Texte aligné à gauche (normal)&lt;/p&gt;
+       &lt;p class=&quot;text-right&quot;&gt;Texte aligné à droite&lt;/p&gt;           
+       &lt;p class=&quot;text-center&quot;&gt;Texte centré&lt;/p&gt;           
+       &lt;p class=&quot;text-justify&quot;&gt;Texte justifié. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget mi lobortis, bibendum nibh eu, semper quam. In eget felis urna. Maecenas luctus lacus quis semper semper. Donec pellentesque ligula tortor, ut pulvinar massa consequat ac.&lt;/p&gt;           
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><blockquote>
+<p>Ces classes peuvent être spécifiées pour un dispositif en particulier grâce aux préfixes de breakpoints : par exemple <code>text-sm-center</code> centrera le texte uniquement à la dimension correspondant à <code>sm</code>, c&#39;est-à-dire à partir de 576 pixels.     </p>
+</blockquote>
+<ul>
+<li><a href="https://getbootstrap.com/docs/4.1/content/typography">Documentation</a></li>
+</ul>
+<h2 id="mise-en-pratique">Mise en pratique</h2>
+<p>Reprenez la maquette <em>Jarditou</em> et utilisez le framework Bootstrap : </p>
+<p>Votre page HTML devra respecter les consignes suivantes :</p>
+<ul>
+<li>Etre responsive bien sûr, pour tout les éléments : menu, images, tableaux, formulaires (mais pas les polices).</li>
+<li>N&#39;utiliser qu&#39;un seul conteneur. </li>
+<li>La partie centrale aura une largeur de 8 et la colonne de droite une largeur de 4 sur les écrans supérieurs à 992px. En dessous, les colonnes auront une largeur égale.</li>
+</ul>
+<h2 id="ressources">Ressources</h2>
+<ul>
+<li><a href="https://getbootstrap.com" title="Bootstrap">Bootstrap</a></li>
+<li><a href="https://www.w3schools.com/bootstrap4" title="w3schools">w3schools</a></li>
+<li><strong>Hackerthemes</strong> : <a href="https://hackerthemes.com/bootstrap-cheatsheet" title="Bootstrap4 Cheat Sheet">Bootstrap4 Cheat Sheet</a> et <a href="https://hackerthemes.com/bootstrap-buffet/#alerts" title="Bootstrap 4 Buffet">Bootstrap 4 Buffet</a>, permet de sélectionner des éléments Bootstrap plus facilement.</li>
+</ul>
+<!-- MAJ : 21/11/2018 --></div><div class="menu-markdown"><img src="/images/menu.png"></div></body></html><script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script><script src="/js/menu-markdown.js"></script>
