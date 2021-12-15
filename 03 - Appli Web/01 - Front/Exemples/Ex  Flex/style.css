@@ -1,0 +1,46 @@
+/****  GENERAL ****/
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+div, a, header, footer, nav, article, section, body, html,main {
+    display: flex;
+    flex: 1;
+}
+
+img, video {
+    width: 100%;
+}
+
+.colonne {
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+.borderBlack{
+    border: 3px solid black;
+    padding: 1em;
+}
+#borderMauve{
+    background-color: #ca4e4e;
+    
+    border: 5px solid #3e2083;
+}
+.mini{
+    flex : 0.2;
+}
+.double{
+    flex:2;
+}
+.demi{
+    flex:0.5;
+}
+.espaceH{
+    flex: none;
+    height: 5vh;
+}
