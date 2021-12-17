@@ -1,0 +1,149 @@
+
+/************************ GLOBAL ***************************/
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../../image/fond.jpg);
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    display: flex;
+    flex: 1;
+}
+img{
+    width: 100%;
+}
+video{
+    width: 100%;
+}
+.espace{
+    flex: 0.2;
+}
+.espaceHor {
+    height: 5vh;
+}
+/************************* HEADER **************************/
+header {
+    background-image: url(../../image/header.jpg);
+    display: flex;
+}
+
+
+/************************** FOOTER *************************/
+footer{
+    display: flex;
+    background-image: url(../../image/fond1.png);
+    background-position: top;
+}
+
+/************************** PAGE ***************************/
+.page {
+    width: 80vw;
+    flex-direction: column;
+    flex: none;
+    display: block;
+}
+.titrePage, .piedPage {
+    flex: 9;
+    justify-content: center;
+}
+.titrePage {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 4em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: white 0.1em 0.1em 0.2em;
+    
+}
+/************************** MENU ***************************/
+nav{
+    display: flex;
+    justify-content: center;
+    background-image: url(../../image/fond1.png);
+    background-position: left;
+    padding: 0.2vw 0;
+}
+
+.menu{
+    flex: none; /*chaque bouton prend sa taille */
+    background: linear-gradient(to bottom, #08598c, #3e99d1);
+    border: solid #326280 3px;
+    border-radius: 5px;
+    font-size: 2em;
+    color: white;
+    padding: 0 0.5vw;
+    position: relative;
+}
+.sousMenu{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 1.5em;
+    margin-left: -0.5vw;
+    background: linear-gradient(to bottom, #08598c, #3e99d1);
+    border: solid #326280 3px;
+    border-radius: 5px;
+    color: white;
+    padding: 0 0.5vw;
+    font-size: 0.8em;
+    white-space: nowrap;    /*evite le retour à la ligne du sous menu*/
+}
+.menu:hover .sousMenu{
+    display: flex;
+}
+.sousItem:hover{
+    color: #ccc;
+    border: 1px solid #ccc;
+}
+/************************** CONTENU ************************/
+.contenu{
+    flex-direction: column;
+    display: block;
+}
+/*****                      Partie1                    *****/
+.titreSemaine{
+    justify-content: center;
+    background: linear-gradient(rgb(30, 87, 153) 0%, rgb(41, 137, 216) 50%, rgb(32, 124, 202) 51%, rgb(125, 185, 232) 100%)
+}
+.cookieSemaine
+{
+    flex: 3;
+    flex-direction: column;
+    height: 35vh;
+    overflow-y: scroll; 
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(229, 229, 229, 1) 100%);
+    
+}
+.ingredients, .recette{
+    flex-direction: column;
+}
+
+
+/*****                      Partie2                    *****/
+.partie2{
+    flex-direction: column;
+}
+.titreArticle{
+    justify-content: center;
+}
+.texteArticle{
+    flex: 9; 
+    text-align: justify;
+    padding: 0 1em;
+}
+aside{
+    display: flex;
+    flex: 1;
+    border: blue 1px solid;
+    border-radius: 6px;
+    padding: 0 0.5em;
+    align-items: center;
+}
+

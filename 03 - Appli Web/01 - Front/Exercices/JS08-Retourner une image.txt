@@ -1,0 +1,5 @@
+On utilise 2 images, 1 representant le recto et l'autre le verso
+Ecrire une page HTML affichant le verso
+1. Ecrire le javascript permettant d'afficher le recto lorsque l'on clique sur l'image
+2. Modifier le script pour que l'image se retourne une nouvelle fois, lorsque l'on reclique
+3. Modifier le script pour que l'image se retourne au bout de 3 secondes

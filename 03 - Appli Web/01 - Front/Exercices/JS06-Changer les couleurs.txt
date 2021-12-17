@@ -1,0 +1,3 @@
+Ecrire une page HTML avec plusieurs paragraphes, des titres en h1,H2 et H3
+1. Ecrire le javascript permettant de changer la couleur d'un paragraphe en cliquant dessus (2 couleurs)
+2. Ecrire le javascript permettant de changer la couleur de tous les titres du même type en cliquant sur l'un des titres  (rotation sur 3 couleurs)

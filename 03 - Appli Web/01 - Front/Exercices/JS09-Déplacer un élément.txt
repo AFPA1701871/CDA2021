@@ -1,0 +1,9 @@
+Ecrire une page HTML affichant un carré
+Ecrire le javascript qui permet de déplacer le carré à l'aide de 
+1. des boutons sur la page HTML
+2. les touches du clavier
+3. la souris
+4. ajouter un obstacle
+5. ajouter des obstacles
+6. faire un labyrinthe
+

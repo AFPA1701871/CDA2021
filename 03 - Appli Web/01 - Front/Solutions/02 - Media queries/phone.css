@@ -1,0 +1,34 @@
+
+@media screen and (max-width:900px)
+{
+    .page{
+        width: 90vw;
+    }
+    .texteArticle{
+        word-spacing: 0.8em;
+        color:green;
+    }
+    .DeleteSmall
+    {display:none;
+    }
+}
+
+
+@media screen and (max-width:800px)
+{
+    .page{
+        width: 98vw;
+    }
+    .descriptionSemaine{
+        flex-direction: column;
+    }
+    .photoSemaine{
+        width: 50%;
+        align-self: center;
+    }
+    .texteArticle{
+        word-spacing: 0.8em;
+        color:blue;
+    }
+   
+}

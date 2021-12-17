@@ -1,0 +1,4 @@
+Ecrire une page HTML avec une liste à puce contenant des desserts
+Ajouter un bouton "Ajout d'un dessert"
+1. Ecrire le javascript permettant d'ajouter un dessert à la liste (l'utilisateur saisi le dessert)
+2. Supprimer un dessert lorsque l'on clique dessus

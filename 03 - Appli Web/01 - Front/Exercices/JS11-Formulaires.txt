@@ -1,0 +1,5 @@
+1. Créer un formulaire HTML contenant un nom, un numero de telephone, un code postal,une adresse mail, un mot de passe
+2. Mettre un peu de CSS pour avoir envie de travailler avec
+3. Controller en JS les saisies pour empecher les erreurs de format 
+4. Ajouter des regex HTML pour obliger le respect des formats de données
+5. Modifier le JS pour se servir des Regex HTML

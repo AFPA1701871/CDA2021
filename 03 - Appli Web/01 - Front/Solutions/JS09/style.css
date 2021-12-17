@@ -1,0 +1,16 @@
+#carre{
+    background-color: green;
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+div{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+button{
+    font-size: 2em;
+}

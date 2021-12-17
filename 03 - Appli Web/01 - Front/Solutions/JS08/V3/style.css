@@ -1,0 +1,7 @@
+img{
+    transform: rotateY(180deg)
+    }
+    .card{  
+        transition: all 1s;
+    transform-style: preserve-3d;
+    }
