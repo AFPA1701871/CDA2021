@@ -1,0 +1,46 @@
+div{
+    display: flex;
+    flex:1;
+}
+
+.colonne{
+    flex-direction: column;
+}
+
+.bleu{
+    border: 4px blue solid;
+    height: 800px;
+    padding : 15px
+}
+
+.rouge{
+    border: 4px red solid;
+}
+
+.centre{
+    margin-top: 10px;
+}
+
+.gauche{
+    flex:1;
+}
+
+.gris{
+    border: 4px grey solid;
+    margin-top: 5px;
+}
+
+.droite{
+    margin-left: 20px;
+    flex:3;
+}
+
+.jaune{
+    border: 4px yellow solid;
+    margin-top: 5px;
+}
+
+.vert{
+    border: 4px green solid;
+    margin-top: 15px;
+}

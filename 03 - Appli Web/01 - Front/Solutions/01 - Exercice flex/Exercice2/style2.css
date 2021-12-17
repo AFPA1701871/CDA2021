@@ -1,0 +1,54 @@
+div{
+    display: flex;
+    flex:1;
+}
+
+.colonne{
+    flex-direction:column; 
+}
+
+.bleu{
+    background-color: blue;
+    height: 700px;
+}
+
+.rouge{
+    background-color: red;
+    margin: 5px;
+}
+
+.centre{
+    flex-direction: row;
+    margin: 5px;
+}
+
+.gris{
+    background-color: grey;
+    flex: 1;
+    
+}
+
+.liste{
+    flex: 3;
+    margin-left:5px;
+}
+
+.jaune{
+    background-color: yellow;
+    margin-top: 10px;
+}
+
+.bleufonce{
+    background-color: royalblue;
+    margin-top: 10px;
+}
+
+.vertclair{
+    background-color: greenyellow;
+    margin-top: 10px;
+}
+
+.vert{
+    background-color: green;
+}
+

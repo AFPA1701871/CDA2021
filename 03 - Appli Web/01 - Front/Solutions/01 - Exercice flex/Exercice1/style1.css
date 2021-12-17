@@ -1,0 +1,43 @@
+div{
+    display: flex;
+    flex: 1;
+}
+.colonne{
+    flex-direction: column;
+}
+
+.bleu{
+    background-color: blue;
+    height: 700px;
+}
+
+
+
+.rouge{
+    background-color: red;
+    height: 200px;
+    margin: 10px
+}
+
+.grisjaune{
+    margin: 10px;
+}
+
+.gris{
+    background-color: grey;
+    height: 200px;
+    margin: 10px;
+    flex:1;
+}
+
+.jaune{
+    background-color: yellow;
+    height: 200px;
+    margin: 10px;
+    flex:3
+}
+
+.vert{
+    background-color: green;
+    margin: 10px;
+}
