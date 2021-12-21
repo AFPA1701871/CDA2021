@@ -1,0 +1,26 @@
+﻿<Window x:Class="ECF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ECF"
+        mc:Ignorable="d"
+        Title="Gestion des articles" Height="450" Width="800" Background="#FF92D0EE">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnMusicien" Content="Gestion des Musiciens" Grid.Column="1"  Grid.Row="1" Style="{DynamicResource RoundCorner}" Click="btnMusicien_Click" FontSize="{DynamicResource FontSize}" />
+        <Button x:Name="btnGroupe" Content="Gestion des Groupes" Grid.Column="1"  Grid.Row="3" Style="{DynamicResource RoundCorner}"  Click="btnGroupe_Click"  />
+
+    </Grid>
+</Window>
