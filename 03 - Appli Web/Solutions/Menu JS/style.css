@@ -37,9 +37,13 @@ main{
     background-color: var(--bgc1);
     padding: .8em;
 }
+.titreNav{
+    display: none;
+}
 .sousMenu{
     display: none;
     background-color: var(--bgc2);
+    margin-left: 5vw;
 }
 .sousMenuItem{
     font-size: 1.5em;
