@@ -1,0 +1,48 @@
+:root{
+    --bgc1 : #f5deb3;
+    --bgc2 : tan;
+    --font : #074e4e;
+}
+
+/****  GENERAL ****/
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+div, a, header, footer, nav, article, section {
+    display: flex;
+    flex: 1;
+}
+
+img, video {
+    width: 100%;
+}
+
+.colonne {
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+main{
+    flex: 4;
+}
+.titreNav,.menuItem{
+    font-size: 2em;
+    color:var(--font);
+    background-color: var(--bgc1);
+    padding: .8em;
+}
+.sousMenu{
+    display: none;
+    background-color: var(--bgc2);
+}
+.sousMenuItem{
+    font-size: 1.5em;
+    color:var(--font);
+    padding: .8em;
+}
