@@ -40,6 +40,10 @@ video {
 main {
     flex: 4;
 }
+.menu{
+    
+    height: min-content;
+}
 
 .titreNav,
 .menuItem {
@@ -57,6 +61,9 @@ main {
     display: none;
     background-color: var(--bgc2);
     transition: 1s;
+    /* pour éviter que le site descend */
+    position: absolute;
+    top:5.5em;
 }
 
 .sousMenuItem {
@@ -76,6 +83,6 @@ main {
     border: 2px solid var(--font);
 }
 .decalage{
-    flex: 0.2;
+    flex: 0;
     background-color: #fff;
 }
