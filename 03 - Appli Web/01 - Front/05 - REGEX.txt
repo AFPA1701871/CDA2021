@@ -1,0 +1,21 @@
+UCFIRST: 
+[A-Z][a-z]+
+
+Date sous forme jj/mm/aaaa ou jj-mm-aaaa : 
+[0-3]?[0-9](\/|-)(0|1)?[0-9](\/|-)[0-9]{4}
+ou ^([0-2]?[0-9]|3[0-1])(\/|-)(0?[1-9]|1[0-2])(\/|-)[1-2][0-9]{3}$
+
+Pseudo avec des lettres majuscules ou minuscules, chiffres, tiret,underscore, minimum 3 caratères : 
+[\w-]{3,}
+
+adresse mail : 
+[[:alpha:]]([\.\-_]?[[:alnum:]])+@[[:alpha:]]([\.\-_]?[[:alnum:]])+\.[[:alpha:]]{2,4}
+
+au moins un numerique : 
+^(?=.*\d)[\w]+$
+
+au moins une lettre minuscule et un chiffre : 
+^(?=.*\d)(?=.*[a-z])[\w]+$
+
+Mot de passe au moins une minuscule, une majuscule, un chiffre, un caractère spécial et 8 caractères minimum : 
+^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}$
