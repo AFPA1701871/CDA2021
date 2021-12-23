@@ -50,7 +50,7 @@ function check(event) {
         input.classList.add("rouge");
         valide[input.name] = false;
     }
-console.log(valide);
+    console.log(valide);
     checkForm();
 }
 
