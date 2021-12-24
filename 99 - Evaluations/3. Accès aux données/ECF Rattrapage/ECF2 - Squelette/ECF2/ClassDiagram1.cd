@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="DTOs">
+    <Position X="0.51" Y="3.458" Height="0.375" Width="1.231" />
+  </Comment>
+  <Comment CommentText="Models">
+    <Position X="3.302" Y="0.5" Height="0.385" Width="0.888" />
+  </Comment>
+  <Comment CommentText="Profiles">
+    <Position X="9.583" Y="0.677" Height="0.333" Width="0.888" />
+  </Comment>
+  <Comment CommentText="Services">
+    <Position X="9.562" Y="2.25" Height="0.333" Width="0.888" />
+  </Comment>
+  <Comment CommentText="Controllers">
+    <Position X="9.5" Y="5.083" Height="0.333" Width="0.888" />
+  </Comment>
+  <Class Name="ECF2.Data.Ecf2Context">
+    <Position X="0.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAQAQAAAAAAAAAAAAEAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Data\Ecf2Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ECF2.Data.Models.Hotel">
+    <Position X="3.25" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAgAAAAAIAAAAAABAAAAAAAAIAAAAIAA=</HashCode>
+      <FileName>Data\Models\Hotel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ECF2.Data.Models.Chambre">
+    <Position X="6.25" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAABQAAAEAAAAAAAAAAAEAAEAAAAAA=</HashCode>
+      <FileName>Data\Models\Chambre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ECF2.Data.Dtos.HotelsDTOIn">
+    <Position X="0.5" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAIAAAAAAAAAAAAAAAIAAAAIAA=</HashCode>
+      <FileName>Data\Dtos\HotelsDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ECF2.Data.Dtos.HotelsDTOOut">
+    <Position X="3.5" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAgAAAAAIAAAAAAAAAAAAAAAIAAAAIAA=</HashCode>
+      <FileName>Data\Dtos\HotelsDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ECF2.Data.Dtos.ChambresDTOIn">
+    <Position X="0.5" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAABQAAAEAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Data\Dtos\ChambresDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ECF2.Data.Dtos.ChambresDTOOut">
+    <Position X="3.5" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABQAAAEAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Data\Dtos\ChambresDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ECF2.Data.Dtos.ChambresDTOOutAvecHotel">
+    <Position X="6.5" Y="6.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAABQAIAEAAAAAAAAAAAEAIAAAAAAA=</HashCode>
+      <FileName>Data\Dtos\ChambresDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ECF2.Data.Profiles.HotelsProfiles">
+    <Position X="11" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Profiles\HotelsProfiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ECF2.Data.Profiles.ChambresProfiles">
+    <Position X="14.25" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Profiles\ChambresProfiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ECF2.Data.Services.HotelsServices">
+    <Position X="11" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAACAMABAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Data\Services\HotelsServices.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ECF2.Data.Services.ChambresServices">
+    <Position X="14.25" Y="2.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAwhAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Data\Services\ChambresServices.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ECF.Controllers.HotelsController">
+    <Position X="11" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAQAMAAAAQAAABAAAAAAIAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Controllers\HotelsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ECF.Controllers.ChambresController">
+    <Position X="14.25" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAwgAAQAEABAAAAAAIAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Controllers\ChambresController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

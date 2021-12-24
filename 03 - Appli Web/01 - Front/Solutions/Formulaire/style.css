@@ -1,0 +1,85 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+div, a, header, footer, nav, article, section, body, aside{
+    display: flex;
+    flex: 1;
+}
+
+img, video {
+    width: 100%;
+}
+
+.colonne {
+    flex-direction: column;
+}
+
+.red{
+    color:red;
+}
+
+.green{
+    color:green;
+}
+
+.cacher{
+    visibility: hidden;
+}
+
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.1fr 0.1fr;
+    grid-gap: 0.5em;
+    grid-auto-rows: minmax(1em, auto);
+}
+
+.info{
+    position: absolute;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    padding: 0.2em;
+    margin-left: 1.5em;
+}
+
+.multicolor{
+    background: -webkit-linear-gradient(rgb(255, 238, 2),rgb(137, 255, 2), rgb(22, 140, 161),red,rgb(2, 27, 255),rgb(255, 2, 158));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#mdp{
+    width: 100%;
+}
+
+#eye{
+    position: absolute;
+    margin-left:12em;
+    margin-top:0.2em;
+}
+
+#infoMDP{
+    position: absolute;
+    background-color: whitesmoke;
+    margin-left: 12em;
+    margin-top:5em;
+} 
+
+#up{
+    position: fixed;
+    bottom: 0;
+    left:70vw;
+}
+
+main{
+    height: 120vh;
+}
