@@ -20,7 +20,10 @@ img {
 .demi{
 	flex:0.5;
 }
-
+.texteColore{
+	
+	color: coral;
+}
 .titre {
 	flex: 5;
 	color: coral;

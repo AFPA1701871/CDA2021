@@ -76,7 +76,8 @@ class UtilisateursManager
             else
             {
                 return false;
-            }}
+            }
+        }
         else
         {
             return false;

@@ -11,7 +11,7 @@ switch ($mode) {
         $disabled = " disabled ";
         break;
 }
-echo '  <h5>'.$mode.' une nouvelle catégorie</h5></div>
+echo '  <h5>'.$mode.' une catégorie</h5></div>
         <form id="formulaire" method="post" action="index.php?page=actionCategorie&mode='.$mode.'">';
 
 if (isset($_GET['id'])) {

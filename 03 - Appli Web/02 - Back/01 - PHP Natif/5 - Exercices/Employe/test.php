@@ -18,9 +18,9 @@ function afficheTableau($tab)
     }
     echo "\n";
 }
-$a1 = new agence(["Nom" => "tutu", "adresse" => "12 rue toto","restauration" => "restaurant d'entreprise" ,"codePostal" => "59520" , "ville" => "Lille"]);
-$a2 = new agence(["Nom" => "toto", "adresse" => "154 rue tata","restauration" =>"ticket restaurant" ,"codePostal" => "62102", "ville" => "Lens"]);
-$a3 = new agence(["Nom" => "tata", "adresse" => "132 rue tutu","restauration" =>"restaurant d'entreprise" ,"codePostal" => "52013", "ville" => "Marseille"]);
+$a1 = new Agence(["Nom" => "tutu", "adresse" => "12 rue toto","restauration" => "restaurant d'entreprise" ,"codePostal" => "59520" , "ville" => "Lille"]);
+$a2 = new Agence(["Nom" => "toto", "adresse" => "154 rue tata","restauration" =>"ticket restaurant" ,"codePostal" => "62102", "ville" => "Lens"]);
+$a3 = new Agence(["Nom" => "tata", "adresse" => "132 rue tutu","restauration" =>"restaurant d'entreprise" ,"codePostal" => "52013", "ville" => "Marseille"]);
 $enfant[] = new Enfant(["Nom" => "Premier", "Prenom" => "Alcibiade", "Age" => 12]);
 $enfant[] = new Enfant(["Nom" => "Deuxième", "Prenom" => "Walbert", "Age" => 8]);
 $enfant[] = new Enfant(["Nom" => "Troisième", "Prenom" => "Maxanne", "Age" => 6]);

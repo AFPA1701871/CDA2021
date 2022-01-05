@@ -6,22 +6,24 @@ class CategoriesManager
 	{
  		$db=DbConnect::getDb();
 		$q=$db->prepare("INSERT INTO Categories (LibelleCategorie) VALUES (:LibelleCategorie)");
-		$q->bindValue(":LibelleCategorie", $obj->getLibelleCategorie());
+		// vérifier qu'il ne contient pas de ;
+		$q->bindValue(":LibelleCategorie", $obj->getLibelleCategorie(), PDO::PARAM_STR);
 		$q->execute();
 	}
 
 	public static function update(Categories $obj)
 	{
  		$db=DbConnect::getDb();
-		$q=$db->prepare("UPDATE Categories SET idCategorie=:idCategorie,LibelleCategorie=:LibelleCategorie WHERE idCategorie=:idCategorie");
-		$q->bindValue(":idCategorie", $obj->getIdCategorie());
-		$q->bindValue(":LibelleCategorie", $obj->getLibelleCategorie());
+		$q=$db->prepare("UPDATE Categories SET LibelleCategorie=:LibelleCategorie WHERE idCategorie=:idCategorie");
+		$q->bindValue(":idCategorie", $obj->getIdCategorie(), PDO::PARAM_INT);
+		$q->bindValue(":LibelleCategorie", $obj->getLibelleCategorie(),PDO::PARAM_STR);
 		$q->execute();
 	}
 	public static function delete(Categories $obj)
 	{
  		$db=DbConnect::getDb();
-		$db->exec("DELETE FROM Categories WHERE idCategorie=" .$obj->getIdCategorie());
+		$id = (int) $obj->getIdCategorie(); // permet de bloquer les injections SQL
+		$db->exec("DELETE FROM Categories WHERE idCategorie=" .$id);
 	}
 	public static function findById($id)
 	{

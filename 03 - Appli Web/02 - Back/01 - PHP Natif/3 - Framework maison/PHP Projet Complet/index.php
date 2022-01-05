@@ -12,6 +12,7 @@ session_start(); // initialise la variable de Session
 /***************************GESTION DES LANGUES ******************/
 // on recupere la langue de l'URL
 if (isset($_GET['lang'])) {
+    // tester si la langue est gérée
     $_SESSION['lang'] = $_GET['lang'];
 }
 

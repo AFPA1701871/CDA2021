@@ -7,7 +7,7 @@
             <?php
 
             if (isset($_SESSION['utilisateur'])) {
-                echo '<div>Bonjour ' . $_SESSION['utilisateur']->getNom() . '</div>';
+                echo '<div class="texteColore">Bonjour ' . $_SESSION['utilisateur']->getNom() . '</div>';
                 echo '<div><a href="index.php?page=deconnection">Déconnecter</a></div>';
             } else {
                 echo '<a href="index.php?page=connection">Connecter</a>';
