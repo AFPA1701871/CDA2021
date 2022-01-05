@@ -9,7 +9,6 @@ class Employes
     private $_fonction;
     private $_salaireAnnuel;
     private $_service;
-    private $_agence;
 
     /*****************Accesseurs***************** */
 
@@ -72,15 +71,7 @@ class Employes
     {
         $this->_service = $service;
     }
-    public function getAgence()
-    {
-        return $this->_agence;
-    }
 
-    public function setAgence(Agences $agence)
-    {
-        $this->_agence = $agence;
-    }
     /*****************Constructeur***************** */
 
     public function __construct(array $options = [])
@@ -106,7 +97,6 @@ class Employes
     {
         $aff = "\n\n*** SALARIE ***\n";
         $aff .= "Nom :" . $this->getNom() . "\nPrenom :" . $this->getPrenom() . "\nDateEmbauche :" . $this->getDateEmbauche()->format('Y-m-d') . "\nPosteEntreprise :" . $this->getFonction() . "\nSalaire annuel :" . $this->getSalaireAnnuel() . "K€\nService :" . $this->getService() . "\n";
-        $aff .= "** Agence **".$this->getAgence()->toString()."  ";
         return $aff;
     }
     /**
@@ -185,6 +175,4 @@ class Employes
     {
         return $this->getSalaireAnnuel()+$this->primeAnnuelle();
     }
-
-    
 }
