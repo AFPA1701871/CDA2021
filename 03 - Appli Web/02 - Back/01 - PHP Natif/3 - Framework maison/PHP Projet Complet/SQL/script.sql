@@ -69,7 +69,7 @@ INSERT INTO `texte`(`codeTexte`, `FR`, `EN`) VALUES
 ("Connexion","Connecter","Connect"),
 ("MotDePasse","Mot de Passe","Password"),
 ("Envoyer","Envoyer","Send"),
-("Inscription","S'incrire","Register"),
+("Inscription","S'inscrire","Register"),
 ("Nom","Nom","Name"),
 ("Prenom","Prenom","Surname"),
 ("ConfirmationMotDePasse","Confirmation du mot de passe","Confirm password"),
@@ -93,4 +93,13 @@ INSERT INTO `texte`(`codeTexte`, `FR`, `EN`) VALUES
 ("ListeProduits", "Liste de produits", "List product"),
 ("GestionProduit", "Gestion des produits", "Product management"),
 ("ListeCategories", "Liste des Catégories", "List Category"),
-("GestionCategories", "Gestion des catégories", "Category management");
+("GestionCategories", "Gestion des catégories", "Category management"),
+('Inconnue', '418: je suis une théière !','418 I\'m a teapot'),
+('erreurAjouter','Add failed', 'L\'ajout a échoué'),
+('erreurModifier', 'La modification a échoué','Update failed'),
+('erreurSupprimer', 'La suppression a échoué','Delete failed'),
+('Confirm', 'La confirmation ne correspond pas au mot de passe','Confirmation not match'),
+('DoublePsedo', 'Le pseudo existe deja','Nickname already exists '),
+('MdpIncorrect', 'Le mot de passe est incorrect','incorrect password'),
+('PseudoUnkn', 'Le pseudo n\'existe pas','nickname unknown'),
+('titreErreur', 'Une erreur est survenue','An error occurred');

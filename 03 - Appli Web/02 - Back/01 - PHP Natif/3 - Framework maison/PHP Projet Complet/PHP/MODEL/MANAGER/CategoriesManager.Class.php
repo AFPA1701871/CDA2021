@@ -8,7 +8,7 @@ class CategoriesManager
 		$q=$db->prepare("INSERT INTO Categories (LibelleCategorie) VALUES (:LibelleCategorie)");
 		// vérifier qu'il ne contient pas de ;
 		$q->bindValue(":LibelleCategorie", $obj->getLibelleCategorie(), PDO::PARAM_STR);
-		$q->execute();
+		return $q->execute();
 	}
 
 	public static function update(Categories $obj)
@@ -17,13 +17,13 @@ class CategoriesManager
 		$q=$db->prepare("UPDATE Categories SET LibelleCategorie=:LibelleCategorie WHERE idCategorie=:idCategorie");
 		$q->bindValue(":idCategorie", $obj->getIdCategorie(), PDO::PARAM_INT);
 		$q->bindValue(":LibelleCategorie", $obj->getLibelleCategorie(),PDO::PARAM_STR);
-		$q->execute();
+		return $q->execute();
 	}
 	public static function delete(Categories $obj)
 	{
  		$db=DbConnect::getDb();
 		$id = (int) $obj->getIdCategorie(); // permet de bloquer les injections SQL
-		$db->exec("DELETE FROM Categories WHERE idCategorie=" .$id);
+		return $db->exec("DELETE FROM Categories WHERE idCategorie=" .$id);
 	}
 	public static function findById($id)
 	{

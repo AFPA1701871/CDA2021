@@ -41,7 +41,9 @@ $routes = [
 
     "listeCategorie" => ["PHP/VIEW/LISTE/", "ListeCategorie", "ListeCategories", 2, false],
     "formCategorie" => ["PHP/VIEW/FORM/", "FormCategorie", "GestionCategories", 2, false],
-    "actionCategorie" => ["PHP/CONTROLLER/ACTION/", "ActionCategorie", "Mise à jour du produit", 2, false]
+    "actionCategorie" => ["PHP/CONTROLLER/ACTION/", "ActionCategorie", "Mise à jour du produit", 2, false],
+    
+    "erreur" => ["PHP/VIEW/GENERAL/", "Erreur", "titreErreur", 0, false]
 ];
 
 if (isset($_GET["page"])) {

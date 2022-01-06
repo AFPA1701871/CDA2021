@@ -1,15 +1,15 @@
 <?php
-$erreur = false;
+$pasDErreur = true;
  //var_dump($_POST);
 $p = new Categories($_POST);
  // var_dump($p);
 switch ($_GET['mode']) {
     case "Ajouter": {
-            CategoriesManager::add($p);
+            $pasDErreur = CategoriesManager::add($p);
             break;
         }
     case "Modifier": {
-            CategoriesManager::update($p);
+            $pasDErreur = CategoriesManager::update($p);
             break;
         }
     case "Supprimer": {
@@ -18,7 +18,7 @@ switch ($_GET['mode']) {
             //    if (count($listeProduit)>0)
             //    {
             //        echo 'Il reste des produits';
-            //        $erreur=true;
+            //        $pasDErreur=false;
 
             //    }
             //    else{
@@ -29,13 +29,13 @@ switch ($_GET['mode']) {
             foreach ($listeProduit as $unProduit) {
                 ProduitsManager::delete($unProduit);
             }
-            CategoriesManager::delete($p);
+            $pasDErreur = CategoriesManager::delete($p);
             break;
         }
 }
 
-if (!$erreur) {  // si pas d'erreur
+if ($pasDErreur) {  // si pas d'erreur
     header("location:index.php?page=listeCategorie");   //redirection directe
 } else {
-    header("refresh:3;url=index.php?page=listeCategorie");    // on attend 3 secondes avant la redirection
+    header("location:index.php?page=erreur&source=listeCategorie&codeErreur=erreur".$_GET['mode']);    // on redirigege vers la page d'erreur
 }

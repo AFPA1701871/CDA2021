@@ -7,10 +7,8 @@ if ($uti != false) {
         $_SESSION['utilisateur'] = $uti;
         header("location:index.php?page=accueil");
     } else {
-        echo '<div class="erreur">le mot de passe est incorrect</div>';
-        header("refresh:3;url=index.php?page=connection");
+        header("location:index.php?page=erreur&source=connection&codeErreur=MdpIncorrect");
     }
 } else {
-    echo '<div class="erreur">le pseudo n\'existe pas</div>';
-    header("refresh:3;url=index.php?page=connection");
+    header("location:index.php?page=erreur&source=connection&codeErreur=PseudoUnkn");
 }

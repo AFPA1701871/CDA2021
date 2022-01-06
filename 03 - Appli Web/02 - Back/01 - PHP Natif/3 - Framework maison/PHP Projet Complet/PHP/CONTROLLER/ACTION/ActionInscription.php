@@ -11,10 +11,8 @@ if ($_POST['motDePasse'] == $_POST['confirmation']) {
         UtilisateursManager::add($u);
         header("location:index.php?page=connection");
     } else {
-        echo '<div class="erreur">le pseudo existe deja</div>';
+        header("location:index.php?page=erreur&source=inscription&codeErreur=DoublePsedo");
     }
 } else {
-
-    echo '<div class="erreur">la confirmation ne correspond pas au mot de passe</div>';
+    header("location:index.php?page=erreur&source=inscription&codeErreur=Confirm");
 }
-header("refresh:3;url=index.php?page=inscription");

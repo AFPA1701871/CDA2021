@@ -9,7 +9,7 @@ class ProduitsManager
         $q->bindValue(":prix", $obj->getPrix());
         $q->bindValue(":dateDePeremption", $obj->getDateDePeremption());
         $q->bindValue(":idCategorie", $obj->getIdCategorie());
-        $q->execute();
+        return $q->execute();
     }
 
     public static function update(Produits $obj)
@@ -21,13 +21,13 @@ class ProduitsManager
         $q->bindValue(":dateDePeremption", $obj->getDateDePeremption());
         $q->bindValue(":idCategorie", $obj->getIdCategorie());
         $q->bindValue(":idProduit", $obj->getIdProduit());
-        $q->execute();
+        return $q->execute();
     }
 
     public static function delete(Produits $obj)
     {
         $db = DbConnect::getDb();
-        $db->exec("DELETE FROM Produits WHERE idProduit=" . $obj->getIdProduit());
+        return $db->exec("DELETE FROM Produits WHERE idProduit=" . $obj->getIdProduit());
     }
 
     public static function findById($id)

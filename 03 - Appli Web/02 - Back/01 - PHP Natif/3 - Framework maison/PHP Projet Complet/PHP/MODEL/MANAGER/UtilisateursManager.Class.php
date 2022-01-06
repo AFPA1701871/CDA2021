@@ -12,7 +12,7 @@ class UtilisateursManager
         $q->bindValue(":adresseMail", $obj->getAdresseMail());
         $q->bindValue(":role", $obj->getRole());
         $q->bindValue(":pseudo", $obj->getPseudo());
-        $q->execute();
+        return $q->execute();
     }
 
     public static function update(Utilisateurs $obj)
@@ -26,12 +26,12 @@ class UtilisateursManager
         $q->bindValue(":adresseMail", $obj->getAdresseMail());
         $q->bindValue(":role", $obj->getRole());
         $q->bindValue(":pseudo", $obj->getPseudo());
-        $q->execute();
+        return $q->execute();
     }
     public static function delete(Utilisateurs $obj)
     {
         $db = DbConnect::getDb();
-        $db->exec("DELETE FROM Utilisateurs WHERE idUtilisateur=" . $obj->getIdUtilisateur());
+        return $db->exec("DELETE FROM Utilisateurs WHERE idUtilisateur=" . $obj->getIdUtilisateur());
     }
     public static function findById($id)
     {
