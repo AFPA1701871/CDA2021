@@ -11,14 +11,17 @@ session_start(); // initialise la variable de Session
 
 /***************************GESTION DES LANGUES ******************/
 // on recupere la langue de l'URL
-if (isset($_GET['lang'])) {
+if (isset($_GET['lang']) && TexteManager::checkIfLangExist($_GET['lang'])) {
     // tester si la langue est gérée
     $_SESSION['lang'] = $_GET['lang'];
+}else if (isset($_COOKIE['lang'])) {
+    $_SESSION['lang'] = $_COOKIE['lang'];
+}else{
+    $_SESSION['lang'] = 'FR';
 }
 
-//on prend la langue de la session sinon FR par défaut
-$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'FR';
-
+//Crée un cookie lang sur la machine de l'utilisateur d'une durée de 10h.
+setcookie("lang", $_SESSION['lang'], time()+36000, '/');
 
 /* création d'un tableau de redirection, en fonction du page, on choisit la page à afficher */
 // Dossier / Nom du fichier / Titre de la page / Autorisation requise / Api ou pas 
@@ -32,12 +35,12 @@ $routes = [
     "accueil" => ["PHP/VIEW/GENERAL/", "Accueil", "Accueil", 0, false],
     "deconnection" => ["PHP/CONTROLLER/ACTION/", "Actiondeconnection", "Erreur", 0, false],
 
-    "listeProduit" => ["PHP/VIEW/LISTE/", "ListeProduit", "Liste de produits", 1, false],
-    "formProduit" => ["PHP/VIEW/FORM/", "FormProduit", "Détail du produit", 1, false],
+    "listeProduit" => ["PHP/VIEW/LISTE/", "ListeProduit", "ListeProduits", 1, false],
+    "formProduit" => ["PHP/VIEW/FORM/", "FormProduit", "GestionProduit", 1, false],
     "actionProduit" => ["PHP/CONTROLLER/ACTION/", "ActionProduit", "Mise à jour du produit", 1, false],
 
-    "listeCategorie" => ["PHP/VIEW/LISTE/", "ListeCategorie", "Liste des Catégories", 2, false],
-    "formCategorie" => ["PHP/VIEW/FORM/", "FormCategorie", "Gestion des catégories", 2, false],
+    "listeCategorie" => ["PHP/VIEW/LISTE/", "ListeCategorie", "ListeCategories", 2, false],
+    "formCategorie" => ["PHP/VIEW/FORM/", "FormCategorie", "GestionCategories", 2, false],
     "actionCategorie" => ["PHP/CONTROLLER/ACTION/", "ActionCategorie", "Mise à jour du produit", 2, false]
 ];
 

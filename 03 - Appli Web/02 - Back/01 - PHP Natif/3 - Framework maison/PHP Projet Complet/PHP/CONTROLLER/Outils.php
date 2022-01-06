@@ -23,7 +23,7 @@ function AfficherPage($page)
 {
     $chemin = $page[0];
     $nom = $page[1];
-    $titre = $page[2];
+    $titre = texte($page[2]);
     $roleRequis = $page[3];
     $api = $page[4];
     $roleConnecte = isset($_SESSION["utilisateur"])?$_SESSION["utilisateur"]->getRole():0;
@@ -47,8 +47,7 @@ function AfficherPage($page)
  */
 function texte($codetexte)
 {
-    global $lang; //on appel la variable globale
-    return TexteManager::findByCodes($lang, $codetexte);
+    return TexteManager::findByCodes($_SESSION['lang'], $codetexte);
 }
 
 function crypte($mot) //fonction qui crypte le mot de passe
