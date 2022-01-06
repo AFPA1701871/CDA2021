@@ -5,8 +5,8 @@ class Categories
 
 	/*****************Attributs***************** */
 
-	private $_idCategorie;
-	private $_LibelleCategorie;
+	private  $_idCategorie;
+	private  $_LibelleCategorie;
 
 	/***************** Accesseurs ***************** */
 
