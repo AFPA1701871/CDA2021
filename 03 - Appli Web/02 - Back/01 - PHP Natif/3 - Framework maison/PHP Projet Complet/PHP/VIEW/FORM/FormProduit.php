@@ -13,7 +13,7 @@ switch ($defaultMode) {
 }
 
 echo '<h5>' . $modeTraduit . texte('titreCrud') .'</h5></div>
-<form id="formulaire" method="post" action="index.php?page=actionProduit&mode=' . $modeTraduit . '">';
+<form id="formulaire" method="post" action="index.php?page=actionProduit&mode=' . $defaultMode . '">';
 if (isset($_GET['id'])) {
     $prod = ProduitsManager::findById($_GET['id']);
     $idCateg = $prod->getIdCategorie();

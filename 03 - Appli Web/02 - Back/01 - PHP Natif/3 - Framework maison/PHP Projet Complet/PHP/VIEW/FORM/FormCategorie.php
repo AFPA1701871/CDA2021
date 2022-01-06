@@ -13,7 +13,7 @@ switch ($defaultMode) {
         break;
 }
 echo '  <h5>'.$modeTraduit . texte('titreCrud') .'</h5></div>
-        <form id="formulaire" method="post" action="index.php?page=actionCategorie&mode='.$modeTraduit.'">';
+        <form id="formulaire" method="post" action="index.php?page=actionCategorie&mode='.$defaultMode.'">';
 
 if (isset($_GET['id'])) {
     $categ = CategoriesManager::findById($_GET['id']);

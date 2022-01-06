@@ -24,6 +24,9 @@ img {
 	
 	color: coral;
 }
+.centrer{
+	align-items: center;
+}
 .titre {
 	flex: 5;
 	color: coral;
@@ -113,6 +116,12 @@ form{
 #crudTableau{
 	display: grid;
     grid-template-columns: 3fr 0.5fr 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+    grid-auto-rows: minmax(1.5em, auto);
+}
+#crudTableau2Col{
+	display: grid;
+    grid-template-columns: 3fr 1fr 0.5fr 1fr 1fr 1fr;
     grid-gap: 0.5em;
     grid-auto-rows: minmax(1.5em, auto);
 }
