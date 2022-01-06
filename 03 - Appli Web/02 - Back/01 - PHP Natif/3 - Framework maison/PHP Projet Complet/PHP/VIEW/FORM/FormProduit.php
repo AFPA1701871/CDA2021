@@ -12,7 +12,7 @@ switch ($defaultMode) {
         break;
 }
 
-echo '<h5>' . $modeTraduit . texte('titreCrud') .'</h5></div>
+echo '<h5>' . $modeTraduit . texte('CrudProduit') . '</h5></div>
 <form id="formulaire" method="post" action="index.php?page=actionProduit&mode=' . $defaultMode . '">';
 if (isset($_GET['id'])) {
     $prod = ProduitsManager::findById($_GET['id']);
@@ -28,14 +28,14 @@ $listeCateg = CategoriesManager::getList();
 // il faut que les name des input correspondent aux attributs de la class
 // si on a les informations (cas Editer, Modifier, supp) on les mets à jour
 echo '  <input type="hidden" name="idProduit" value="' . $prod->getIdProduit() . '">';
-echo '  <label>'. texte('Libelle').' :</label>
+echo '  <label>' . texte('Libelle') . ' :</label>
         <input type="text" name="libelleProduit" value="' . $prod->getLibelleProduit() . '"' . $disabled . '>';
-echo '  <label>'. texte('Prix').' :</label>
+echo '  <label>' . texte('Prix') . ' :</label>
         <input type="number" name="prix" value="' . $prod->getPrix() . '"' . $disabled . '>';
-echo '  <label>'. texte('DatePeremption').' :</label>
+echo '  <label>' . texte('DatePeremption') . ' :</label>
         <input type="date" name="dateDePeremption" value="' . $prod->getDateDePeremption() . '"' . $disabled . '>';
-echo '  <label>'. texte('Categories').' :</label>
-        <select name="idCategorie" '.$disabled.'>';
+echo '  <label>' . texte('Categories') . ' :</label>
+        <select name="idCategorie" ' . $disabled . '>';
 foreach ($listeCateg as $uneCategorie) {
     $sel = "";
     if ($uneCategorie->getIdCategorie() == $idCateg) {
@@ -45,13 +45,12 @@ foreach ($listeCateg as $uneCategorie) {
     echo '<option value="' . $uneCategorie->getIdCategorie() . '" ' . $sel . ' >' . $uneCategorie->getLibelleCategorie() . '</option>';
 }
 
-echo '
-    </select>
-    </div>';
+echo '</select>';
 
-echo '<div class="ligneDetail"><input type="submit" value="' . $modeTraduit . '" class=" crudBtn crudBtn' . $defaultMode . '"/>';
+if ($defaultMode != 'Editer')
+    echo '<input type="submit" value="' . $modeTraduit . '" class=" crudBtn crudBtn' . $defaultMode . '"/>';
+else echo '<div></div>';
 echo '
-<a href="index.php?page=listeProduit" class=" crudBtn crudBtnRetour">'. texte('Annuler') .'</a>
-</div>
+<a href="index.php?page=listeProduit" class=" crudBtn crudBtnRetour">' . texte('Annuler') . '</a>
 </div>
 </form>';
