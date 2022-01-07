@@ -1,8 +1,8 @@
 <?php
 $pasDErreur = true;
- //var_dump($_POST);
+//var_dump($_POST);
 $p = new Categories($_POST);
- // var_dump($p);
+// var_dump($p);
 switch ($_GET['mode']) {
     case "Ajouter": {
             $pasDErreur = CategoriesManager::add($p);
@@ -37,5 +37,5 @@ switch ($_GET['mode']) {
 if ($pasDErreur) {  // si pas d'erreur
     header("location:index.php?page=listeCategorie");   //redirection directe
 } else {
-    header("location:index.php?page=erreur&source=listeCategorie&codeErreur=erreur".$_GET['mode']);    // on redirigege vers la page d'erreur
+    header("location:index.php?page=erreur&cible=listeCategorie&codeErreur=erreur" . $_GET['mode']);    // on redirigege vers la page d'erreur
 }

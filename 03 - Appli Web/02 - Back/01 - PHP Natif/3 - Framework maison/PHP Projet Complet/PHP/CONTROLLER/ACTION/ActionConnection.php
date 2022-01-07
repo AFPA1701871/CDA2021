@@ -7,8 +7,8 @@ if ($uti != false) {
         $_SESSION['utilisateur'] = $uti;
         header("location:index.php?page=accueil");
     } else {
-        header("location:index.php?page=erreur&source=connection&codeErreur=MdpIncorrect");
+        header("location:index.php?page=erreur&cible=connection&codeErreur=MdpIncorrect");
     }
 } else {
-    header("location:index.php?page=erreur&source=connection&codeErreur=PseudoUnkn");
+    header("location:index.php?page=erreur&cible=connection&codeErreur=PseudoUnkn");
 }

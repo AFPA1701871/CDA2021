@@ -11,8 +11,8 @@ if ($_POST['motDePasse'] == $_POST['confirmation']) {
         UtilisateursManager::add($u);
         header("location:index.php?page=connection");
     } else {
-        header("location:index.php?page=erreur&source=inscription&codeErreur=DoublePsedo");
+        header("location:index.php?page=erreur&cible=inscription&codeErreur=DoublePseudo");
     }
 } else {
-    header("location:index.php?page=erreur&source=inscription&codeErreur=Confirm");
+    header("location:index.php?page=erreur&cible=inscription&codeErreur=Confirm");
 }

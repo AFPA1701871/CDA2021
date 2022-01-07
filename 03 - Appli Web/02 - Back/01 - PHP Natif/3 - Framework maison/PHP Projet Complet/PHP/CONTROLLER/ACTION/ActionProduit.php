@@ -5,22 +5,22 @@ $p = new Produits($_POST);
 var_dump($p);
 switch ($_GET['mode']) {
     case "Ajouter": {
-            $pasDErreur =ProduitsManager::add($p);
+            $pasDErreur = ProduitsManager::add($p);
             break;
         }
     case "Modifier": {
 
-            $pasDErreur =ProduitsManager::update($p);
+            $pasDErreur = ProduitsManager::update($p);
             break;
         }
     case "Supprimer": {
 
-            $pasDErreur =ProduitsManager::delete($p);
+            $pasDErreur = ProduitsManager::delete($p);
             break;
         }
 }
-if ($pasDErreur) {// si pas d'erreur
+if ($pasDErreur) { // si pas d'erreur
     header("location:index.php?page=listeProduit");
-}else{
-    header("location:index.php?page=erreur&source=listeProduit&codeErreur=erreur".$_GET['mode']);
+} else {
+    header("location:index.php?page=erreur&cible=listeProduit&codeErreur=erreur" . $_GET['mode']);
 }

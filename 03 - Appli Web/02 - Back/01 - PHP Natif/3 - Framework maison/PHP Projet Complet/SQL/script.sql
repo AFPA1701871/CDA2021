@@ -96,11 +96,11 @@ INSERT INTO `texte`(`codeTexte`, `FR`, `EN`) VALUES
 ("ListeCategories", "Liste des Catégories", "List Category"),
 ("GestionCategories", "Gestion des catégories", "Category management"),
 ('Inconnue', '418: je suis une théière !','418 I\'m a teapot'),
-('erreurAjouter','Add failed', 'L\'ajout a échoué'),
+('erreurAjouter','L\'ajout a échoué', 'Add failed'),
 ('erreurModifier', 'La modification a échoué','Update failed'),
 ('erreurSupprimer', 'La suppression a échoué','Delete failed'),
 ('Confirm', 'La confirmation ne correspond pas au mot de passe','Confirmation not match'),
-('DoublePsedo', 'Le pseudo existe deja','Nickname already exists '),
+('DoublePseudo', 'Le pseudo existe deja','Nickname already exists '),
 ('MdpIncorrect', 'Le mot de passe est incorrect','incorrect password'),
 ('PseudoUnkn', 'Le pseudo n\'existe pas','nickname unknown'),
 ('titreErreur', 'Une erreur est survenue','An error occurred');

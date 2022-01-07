@@ -1,5 +1,5 @@
 <?php
-$defaultMode =  $_GET['mode'];
+$defaultMode =  $_GET['mode']; //mode en fr
 $modeTraduit = texte($defaultMode); // On traduit le mode pour la gestion des affichages
 echo '<div class="demiPage colonne">';
 echo '<div id="DivSousTitre">';

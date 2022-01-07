@@ -24,9 +24,6 @@ class TexteManager
 		$q->bindValue(":codeLangue", $codeLangue, PDO::PARAM_STR);
 		$q->execute();
 		$results = $q->fetch(PDO::FETCH_ASSOC);
-		if ($results != false) {
-			return true;
-		}
-		return $results;
+		return ($results != false); // renvoi vrai si la requete retourne des données, false sinon
 	}
 }
