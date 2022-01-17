@@ -39,7 +39,6 @@ class DAO
 			// on exécute $obj->$methode pour avoir la valeur 
 			$q->bindValue(":" . $colonnes[$i], $obj->$methode());
 		}
-		var_dump($requ);
 		// on exécute la requête
 		return $q->execute();
 	}
@@ -76,7 +75,7 @@ class DAO
 			// on exécute $obj->$methode pour avoir la valeur 
 			$q->bindValue(":" . $colonnes[$i], $obj->$methode());
 		}
-		// onexécute la requête
+		// on exécute la requête
 		return $q->execute();
 	}
 	/**
@@ -118,7 +117,7 @@ class DAO
 	 *  [nomColonne => '%abcd%'] => "WHERE nomColonne like "%abcd%"
 	 *  [nomColonne => '1->5'] => "WHERE nomColonne BETWEEN 1 and 5 "
 	 *  Si il y a plusieurs conditions alors :
-	 *  [nomColonne1 => '1', nomColonne2 => '%abcd%' ] => "WHERE nomColonne1 = 1 AND nomColonne2 LIKE "abcd"
+	 *  [nomColonne1 => '1', nomColonne2 => '%abcd%' ] => "WHERE nomColonne1 = 1 AND nomColonne2 LIKE "%abcd%"
 	 *
 	 * @param string $orderBy => null par défaut, contient un string qui contient les noms de colonnes et le type de tri
 	 * Exemple :"nomColonne1 , nomColonne2 DESC" => "Order By nomColonne1 , nomColonne2 DESC"
@@ -138,8 +137,8 @@ class DAO
 	public static function select(array $nomColonnes, string $table, array $conditions = null, string $orderBy = null, string $limit = null, bool $api = false, bool $debug = false)
 	{
 		$db = DbConnect::getDb();
-		$injection = false;
-		$cpt = 0;
+		$injection = false; // sera égale à vrai si une des composantes contient un  ;
+		$cpt = 0;  // compte les colonnes dans les while
 
 		// on initialise les variables a chaine vide.
 		$condi = "";
@@ -171,6 +170,7 @@ class DAO
 		if ($conditions != null) { // on vérifie s'il y a des conditions sinon on fait rien
 			if (!$injection) { // Si Pas d'injection
 
+				// recherche d'injection dans le tableau des conditions
 				foreach ($conditions as $uneCondition) {
 					if (is_array($uneCondition)) { // Si la variable $uneCondition est un tableau
 						$cpt = 0;
@@ -215,11 +215,11 @@ class DAO
 
 		// On vérifie qu'il n'y a pas d'injection OU que les paramètres donnés sont corrects et on lance la requête.
 		if (!$injection) {
-			$q = $db->query($cols . $t . $condi . $ordrBy . $lim);
+			$q = $db->query($cols . $t . $condi . $ordrBy . $limit);
 
 			if ($debug) // Si le debug est a true on affiche la requete qui est envoyée en base de données
 			{
-				var_dump($cols . $t . $condi . $ordrBy . $lim);
+				var_dump($cols . $t . $condi . $ordrBy . $limit);
 			}
 			while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) { // on récupère les enregistrements de la BDD
 				if ($donnees != false) {
@@ -277,7 +277,7 @@ class DAO
 			// cas du in
 			if (is_array($valeur)) {
 				$req .= $nomColonne . " IN (" . $valeur[0] . "," . $valeur[1] . ") AND ";
-			} else if (strpos($valeur, "%")) { //cas like
+			} else if (!(strpos($valeur, "%")===false)) { //cas like  si le % est en premier alors strpos retourne 0 qui correspond à la valeur de false, donc on fait un test avec le type ===
 				$req .= $nomColonne . ' LIKE "' . $valeur . '" AND ';
 			} else if (strpos($valeur, "->")) { //cas between
 				$tab = explode("->", $valeur);

@@ -66,11 +66,10 @@ function InputsCheckValidity(listInputs, listInputsValidity, submit, formulaire)
  * @param {object} formulaire 
  */
 function verifPassword(listInputsValidity, formulaire) {
-    let password = formulaire.querySelector("input[id=pwd]");
-    let confirm_pwd = formulaire.querySelector("input[id=confirm_pwd]");
+    let listePassword = formulaire.querySelectorAll("input[type=password]");
 
-    if (password != undefined && confirm_pwd != undefined && password.value != confirm_pwd.value) {
-        listInputsValidity[confirm_pwd.name] = false;
+    if (count(listePassword)==2 && listePassword[0].value != listePassword[1].value) {
+        listInputsValidity[listePassword[1].name] = false;
     }
 };
 

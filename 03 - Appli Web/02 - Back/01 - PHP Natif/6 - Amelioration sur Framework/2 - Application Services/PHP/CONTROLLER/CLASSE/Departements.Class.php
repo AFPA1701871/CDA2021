@@ -5,41 +5,52 @@ class Departements
 
 	/*****************Attributs***************** */
 
-	private $_dep_id;
-	private $_dep_nom;
-	private $_dep_reg_id;
-	private static $_attributes=["dep_id","dep_nom","dep_reg_id"];
+	private $_idDepartement;
+	private $_numeroDepartement;
+	private $_libelleDepartement;
+	private $_idRegion;
+	private static $_attributes=["idDepartement","numeroDepartement","libelleDepartement","idRegion"];
 	/***************** Accesseurs ***************** */
 
 
-	public function getDep_id()
+	public function getIdDepartement()
 	{
-		return $this->_dep_id;
+		return $this->_idDepartement;
 	}
 
-	public function setDep_id(string $dep_id)
+	public function setIdDepartement(int $idDepartement)
 	{
-		$this->_dep_id=$dep_id;
+		$this->_idDepartement=$idDepartement;
 	}
 
-	public function getDep_nom()
+	public function getNumeroDepartement()
 	{
-		return $this->_dep_nom;
+		return $this->_numeroDepartement;
 	}
 
-	public function setDep_nom(string $dep_nom)
+	public function setNumeroDepartement(string $numeroDepartement)
 	{
-		$this->_dep_nom=$dep_nom;
+		$this->_numeroDepartement=$numeroDepartement;
 	}
 
-	public function getDep_reg_id()
+	public function getLibelleDepartement()
 	{
-		return $this->_dep_reg_id;
+		return $this->_libelleDepartement;
 	}
 
-	public function setDep_reg_id(int $dep_reg_id)
+	public function setLibelleDepartement(string $libelleDepartement)
 	{
-		$this->_dep_reg_id=$dep_reg_id;
+		$this->_libelleDepartement=$libelleDepartement;
+	}
+
+	public function getIdRegion()
+	{
+		return $this->_idRegion;
+	}
+
+	public function setIdRegion(?int $idRegion)
+	{
+		$this->_idRegion=$idRegion;
 	}
 
 	public static function getAttributes()
@@ -77,35 +88,6 @@ class Departements
 	*/
 	public function toString()
 	{
-		return "Dep_id : ".$this->getDep_id()."Dep_nom : ".$this->getDep_nom()."Dep_reg_id : ".$this->getDep_reg_id()."\n";
-	}
-
-
-	
-	/* Renvoit Vrai si lobjet en paramètre est égal 
-	* à l'objet appelant
-	*
-	* @param [type] $obj
-	* @return bool
-	*/
-	public function equalsTo($obj)
-	{
-		return;
-	}
-
-
-	/**
-	* Compare l'objet à un autre
-	* Renvoi 1 si le 1er est >
-	*        0 si ils sont égaux
-	*      - 1 si le 1er est <
-	*
-	* @param [type] $obj1
-	* @param [type] $obj2
-	* @return Integer
-	*/
-	public function compareTo($obj)
-	{
-		return;
+		return "IdDepartement : ".$this->getIdDepartement()."NumeroDepartement : ".$this->getNumeroDepartement()."LibelleDepartement : ".$this->getLibelleDepartement()."IdRegion : ".$this->getIdRegion()."\n";
 	}
 }

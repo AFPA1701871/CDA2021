@@ -1,15 +1,19 @@
-var childMenuOuvert;  // variable qui stockera le sous menu ouvert
+const RightArrow = "fa-chevron-right";
+const DownArrow = "fa-chevron-down";
+var childMenuOuvert; // variable qui stockera le sous menu ouvert
 var nav = document.querySelector("nav");
-   
+
 var listMenu = document.querySelectorAll(".menu");
 
 listMenu.forEach(element => {
-    element.addEventListener('click', function () { showChildMenu(element, listMenu) });
+    element.addEventListener('click', function () {
+        showChildMenu(element, listMenu)
+    });
 });
 
 /*** Gère l'ouverture du menu. ***/
 document.querySelector(".fa-bars").addEventListener("click", function () {
-     nav.style.display="flex";
+    nav.style.display = "flex";
 });
 
 /*** Gère la fermeture du menu et du sous menu déjà ouvert. ***/
@@ -34,7 +38,7 @@ function showChildMenu(menu) {
         /*** Change la flèches du menu a fermer. ***/
         changeArrowDirection(childMenuOuvert.parentNode);
     }
-    
+
     //s'il y a un sous menu
     if (childMenu != undefined) {
         /*** Gère l'apparition des sous menus. ***/
@@ -66,16 +70,13 @@ function showChildMenu(menu) {
  * @param {*} menu 
  */
 function changeArrowDirection(menu) {
-    const RightArrow = "fa-chevron-right";
-    const DownArrow = "fa-chevron-down";
 
     var baliseArrow = menu.querySelector(".fas");
 
     if (baliseArrow.classList.contains(RightArrow)) {
         baliseArrow.classList.remove(RightArrow);
         baliseArrow.classList.add(DownArrow);
-    }
-    else {
+    } else {
         baliseArrow.classList.remove(DownArrow);
         baliseArrow.classList.add(RightArrow);
     }

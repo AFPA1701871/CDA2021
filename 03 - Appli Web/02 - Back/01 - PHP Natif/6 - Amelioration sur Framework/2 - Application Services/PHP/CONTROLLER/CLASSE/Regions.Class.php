@@ -5,41 +5,52 @@ class Regions
 
 	/*****************Attributs***************** */
 
-	private $_reg_id;
-	private $_reg_v_nom;
-	private $_reg_nb_dep;
-	private static $_attributes=["reg_id","reg_v_nom","reg_nb_dep"];
+	private $_idRegion;
+	private $_libelleRegion;
+	private $_numeroRegion;
+	private $_nombreDepartement;
+	private static $_attributes=["idRegion","libelleRegion","numeroRegion","nombreDepartement"];
 	/***************** Accesseurs ***************** */
 
 
-	public function getReg_id()
+	public function getIdRegion()
 	{
-		return $this->_reg_id;
+		return $this->_idRegion;
 	}
 
-	public function setReg_id(int $reg_id)
+	public function setIdRegion(int $idRegion)
 	{
-		$this->_reg_id=$reg_id;
+		$this->_idRegion=$idRegion;
 	}
 
-	public function getReg_v_nom()
+	public function getLibelleRegion()
 	{
-		return $this->_reg_v_nom;
+		return $this->_libelleRegion;
 	}
 
-	public function setReg_v_nom(string $reg_v_nom)
+	public function setLibelleRegion(string $libelleRegion)
 	{
-		$this->_reg_v_nom=$reg_v_nom;
+		$this->_libelleRegion=$libelleRegion;
 	}
 
-	public function getReg_nb_dep()
+	public function getNumeroRegion()
 	{
-		return $this->_reg_nb_dep;
+		return $this->_numeroRegion;
 	}
 
-	public function setReg_nb_dep(int $reg_nb_dep)
+	public function setNumeroRegion(int $numeroRegion)
 	{
-		$this->_reg_nb_dep=$reg_nb_dep;
+		$this->_numeroRegion=$numeroRegion;
+	}
+
+	public function getNombreDepartement()
+	{
+		return $this->_nombreDepartement;
+	}
+
+	public function setNombreDepartement(int $nombreDepartement)
+	{
+		$this->_nombreDepartement=$nombreDepartement;
 	}
 
 	public static function getAttributes()
@@ -77,35 +88,6 @@ class Regions
 	*/
 	public function toString()
 	{
-		return "Reg_id : ".$this->getReg_id()."Reg_v_nom : ".$this->getReg_v_nom()."Reg_nb_dep : ".$this->getReg_nb_dep()."\n";
-	}
-
-
-	
-	/* Renvoit Vrai si lobjet en paramètre est égal 
-	* à l'objet appelant
-	*
-	* @param [type] $obj
-	* @return bool
-	*/
-	public function equalsTo($obj)
-	{
-		return;
-	}
-
-
-	/**
-	* Compare l'objet à un autre
-	* Renvoi 1 si le 1er est >
-	*        0 si ils sont égaux
-	*      - 1 si le 1er est <
-	*
-	* @param [type] $obj1
-	* @param [type] $obj2
-	* @return Integer
-	*/
-	public function compareTo($obj)
-	{
-		return;
+		return "IdRegion : ".$this->getIdRegion()."LibelleRegion : ".$this->getLibelleRegion()."NumeroRegion : ".$this->getNumeroRegion()."NombreDepartement : ".$this->getNombreDepartement()."\n";
 	}
 }
