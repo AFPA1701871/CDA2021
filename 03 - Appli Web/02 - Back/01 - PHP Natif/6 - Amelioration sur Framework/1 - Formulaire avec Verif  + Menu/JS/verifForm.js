@@ -11,7 +11,7 @@ listForms.forEach(formulaire => {
     let listInputs = formulaire.querySelectorAll("input:not([type='submit']):not([type='reset']:not([type='button']),select,textarea");
     let submit = formulaire.querySelector("input[type='submit'], button[type='submit']");
     let reset = formulaire.querySelector("input[type='reset']");
-    let listInputsValidity = {};
+    let listInputsValidity = {}; // tableau qui contient pour chaque input : vrai si l'input est valide, faux sinon
 
     // on lance la vérification sur tous les champs du formulaire
     InputsCheckValidity(listInputs, listInputsValidity, submit, formulaire);
