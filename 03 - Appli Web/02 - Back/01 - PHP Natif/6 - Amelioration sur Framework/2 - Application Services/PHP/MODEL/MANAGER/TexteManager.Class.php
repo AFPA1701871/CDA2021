@@ -1,0 +1,20 @@
+<?php
+
+class TexteManager
+{
+
+	public static function findByCodes($codeLangue, $codeTexte)
+	{
+		return DAO::select([$codeLangue], "texte", ["codeTexte" => $codeTexte]);
+	}
+
+	public static function checkIfLangExist($codeLangue)
+	{
+		$db = DbConnect::getDb();
+		$q = $db->prepare("SHOW COLUMNS FROM texte LIKE :codeLangue");
+		$q->bindValue(":codeLangue", $codeLangue, PDO::PARAM_STR);
+		$q->execute();
+		$results = $q->fetch(PDO::FETCH_ASSOC);
+		return ($results != false); // renvoi vrai si la requete retourne des données, false sinon
+	}
+}

@@ -1,0 +1,22 @@
+/*************** Header/Footer ***************/
+
+header, footer {
+    background-color: var(--color);
+}
+
+header {
+    border-bottom: 2px solid black;
+}
+
+footer {
+    border-top: 2px solid black;
+}
+
+
+body {
+    position: relative;
+}
+
+section {
+    background-color: white;
+}

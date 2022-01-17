@@ -1,0 +1,34 @@
+.bgc1{
+    background-color: var(--bgc1);
+    transform: skewX(-18deg);
+    z-index: 10;
+}
+.bgc2{
+    background-color: var(--bgc2);  
+    transform: skewX(-18deg);
+    z-index: 10;
+}
+.hauteur{
+    height:70vh;
+}
+.coinhaut{
+    background-color: var(--bgc1);
+    position:absolute; 
+    width:25vw;
+    left:-4em; 
+    z-index: 8;
+}
+.coinbas{
+    background-color: var(--bgc2);
+    position:absolute; 
+    width:25vw;
+    right:-4em; 
+    z-index: 8;
+}
+form{
+    transform: skewX(18deg);
+}
+.titre{
+    font-size:1.5em;
+    font-weight:600;
+}

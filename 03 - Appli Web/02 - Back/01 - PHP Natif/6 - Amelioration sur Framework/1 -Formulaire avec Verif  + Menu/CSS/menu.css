@@ -1,0 +1,55 @@
+
+/**************** Nav *****************/
+
+.menuHamburger {
+    background-color: var(--color);
+    position: absolute;
+    width: 20vw;
+    z-index: 30;
+    outline: 2px solid black;
+    display: none;
+    padding-bottom: 2vh;
+}
+
+.block {
+    display: block;
+}
+
+.menuItem, .childMenuItem {
+    background-color: var(--color);
+    border: 1px solid black;
+    padding: 0.5em;
+}
+.childMenuItem {
+    background-color: var(--color);
+    margin-left: 0.5vw;
+}
+
+.noDisplay {
+    display: none;
+}
+
+.borderRadiusTop {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.borderRadiusBottom {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+@media screen and (max-width: 800px)
+{
+    .menuHamburger {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+    #fermetureMenuText {
+        display: none;
+    }
+}

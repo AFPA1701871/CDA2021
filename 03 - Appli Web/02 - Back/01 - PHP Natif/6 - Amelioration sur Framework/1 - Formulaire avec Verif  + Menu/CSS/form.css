@@ -1,0 +1,46 @@
+
+.fa-green {
+    color: var(--inputCorrect);
+}
+
+.fa-red {
+    color: var(--inputIncorrect);
+}
+
+.inputCorrect {
+    background-color: var(--inputCorrect);
+    color:wheat;
+}
+
+.inputIncorrect {
+    background-color: var(--inputIncorrect);
+}
+
+.inputVide {
+    background-color: var(--inputVide);
+}
+
+input, select {
+    box-shadow: 2px 2px 3px black;
+    padding: 0.5em;
+}
+
+label {
+    align-self: center;
+}
+
+fieldset {
+    grid-column: 1 / span 2;
+    padding: 0.5em;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-gap: 0.5em;
+    grid-auto-rows: minmax(1em, auto);
+    width: 75%;
+}
+.colSpan2{
+grid-column: 1 / span 2;
+}
