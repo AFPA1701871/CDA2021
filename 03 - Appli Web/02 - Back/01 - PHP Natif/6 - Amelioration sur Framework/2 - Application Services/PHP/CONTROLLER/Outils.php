@@ -1,12 +1,10 @@
 <?php
 function ChargerClasse($classe)
 {
-	if (file_exists("PHP/CONTROLLER/CLASSE/" . $classe . ".Class.php"))
-	{
+	if (file_exists("PHP/CONTROLLER/CLASSE/" . $classe . ".Class.php")) {
 		require "PHP/CONTROLLER/CLASSE/" . $classe . ".Class.php";
 	}
-	if (file_exists("PHP/MODEL/MANAGER/" . $classe . ".Class.php"))
-	{
+	if (file_exists("PHP/MODEL/MANAGER/" . $classe . ".Class.php")) {
 		require "PHP/MODEL/MANAGER/" . $classe . ".Class.php";
 	}
 }
@@ -18,13 +16,10 @@ function uri()
 	if (substr($uri, strlen($uri) - 1) == "/") // se termine par /
 	{
 		$uri .= "index.php?";
-	}
-	else if (in_array("?", str_split($uri))) // si l'uri contient deja un ?
+	} else if (in_array("?", str_split($uri))) // si l'uri contient deja un ?
 	{
 		$uri .= "&";
-	}
-	else
-	{
+	} else {
 		$uri .= "?";
 	}
 	return $uri;
@@ -42,17 +37,16 @@ function texte($codeTexte)
 
 function afficherPage($page)
 {
-	$chemin=$page[0];
-	$nom=$page[1];
-	$titre=$page[2];
+	$chemin = $page[0];
+	$nom = $page[1];
+	$titre = $page[2];
 	$roleRequis = $page[3];;
 	$api = $page[4];
-	$roleConnecte = isset($_SESSION["utilisateur"])?$_SESSION["utilisateur"]->getRole():0;
-	if  ($roleConnecte>= $roleRequis) {
-		if ($api){
-			include $chemin . $nom . '.php'; 
-		}
-		else{
+	$roleConnecte = isset($_SESSION["utilisateur"]) ? $_SESSION["utilisateur"]->getRole() : 0;
+	if ($roleConnecte >= $roleRequis) {
+		if ($api) {
+			include $chemin . $nom . '.php';
+		} else {
 			include 'PHP/VIEW/GENERAL/Head.php';
 			include 'PHP/VIEW/GENERAL/Header.php';
 			include 'PHP/VIEW/GENERAL/Nav.php';
@@ -75,13 +69,15 @@ function decode($texte)
 }
 
 /* tableau qui stocke les regex les + communes*/
-$regex=[
-	"alpha"=>"[[:alpha:]]",
-	"alphaNum"=>"[[:alnum:]]",
-	"alphaMaj"=>"[A-Z]",
-	"alphaMin"=>"[a-z]",
-	"ucFirst"=>"[A-Z][a-z]+",
-	"email"=>"[[:alpha:]]([\.\-_]?[[:alnum:]])+@[[:alpha:]]([\.\-_]?[[:alnum:]])+\.[[:alpha:]]{2,4}",
-	"date"=>"[0-3]?[0-9](\/|-)(0|1)?[0-9](\/|-)[0-9]{4}",
-	"pwd"=>"(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}"
+$regex = [
+	"alpha" => "[[:alpha:]]",
+	"alphaNum" => "[[:alnum:]]",
+	"alphaMaj" => "[A-Z]",
+	"alphaMin" => "[a-z]",
+	"ucFirst" => "[A-Z][a-z]+",
+	"email" => "[[:alpha:]]([\.\-_]?[[:alnum:]])+@[[:alpha:]]([\.\-_]?[[:alnum:]])+\.[[:alpha:]]{2,4}",
+	"date" => "[0-3]?[0-9](\/|-)(0|1)?[0-9](\/|-)[0-9]{4}",
+	"pwd" => "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}",
+	"tel" => "0[0-9]([-/. ][0-9]{2}){4}",
+	"postal" => "[0-9]{5}"
 ];
