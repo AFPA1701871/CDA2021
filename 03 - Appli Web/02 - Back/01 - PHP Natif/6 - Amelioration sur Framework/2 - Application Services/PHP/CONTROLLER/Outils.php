@@ -74,6 +74,7 @@ $regex = [
 	"alphaNum" => "[[:alnum:]]",
 	"alphaMaj" => "[A-Z]",
 	"alphaMin" => "[a-z]",
+	"num"=>"[0-9]",
 	"ucFirst" => "[A-Z][a-z]+",
 	"email" => "[[:alpha:]]([\.\-_]?[[:alnum:]])+@[[:alpha:]]([\.\-_]?[[:alnum:]])+\.[[:alpha:]]{2,4}",
 	"date" => "[0-3]?[0-9](\/|-)(0|1)?[0-9](\/|-)[0-9]{4}",
