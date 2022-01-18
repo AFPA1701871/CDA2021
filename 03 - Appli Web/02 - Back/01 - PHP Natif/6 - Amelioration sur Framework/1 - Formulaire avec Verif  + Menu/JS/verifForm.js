@@ -31,6 +31,47 @@ listForms.forEach(formulaire => {
     });
 });
 
+/*****************************Mot de passe *************************************/
+
+//gestion de l'oeil dans le mot de passe
+var listeOeil = document.getElementsByClassName("oeil");
+for (let i = 0; i < listeOeil.length; i++) {
+    // on affiche un petit oeil qui permet de voir de mot de passe 
+    listeOeil[i].addEventListener("mousedown", function () {
+        affichePassWord(listeOeil[i], true);
+    });
+    listeOeil[i].addEventListener("mouseup", function () {
+        affichePassWord(listeOeil[i], false);
+    });
+}
+var listePassword = formulaire.querySelectorAll("input[type=password]");
+listePassword.forEach(pwd => {
+    // on empeche le copier coller sur les mots de passe
+    pwd.addEventListener('contextmenu', annule);
+    pwd.addEventListener("paste", annule);
+});
+// affichage de l'aide à la saisie du mot de passe 
+listePassword[0].addEventListener("input", function (event) {
+        let aideMdp = document.getElementsByClassName("aideMdp")[0];
+        aideMdp.style.display = "flex";
+        let lesImages = aideMdp.getElementsByTagName("i");
+        let lesCheck = ["([a-zA-Z0-9!@#\$%\^&\*+]{8,})", "(?=.*[A-Z])", "(?=.*[a-z])", "(?=.*[0-9])", "(?=.*[!@#\$%\^&\*+])"];
+        for (let i = 0; i < lesCheck.length; i++) {
+            if (RegExp(lesCheck[i]).test(mdp.value)) {
+                //la condition est vérifiée, on met la coche verte correspondente
+                lesImages[i].classList = "far fa-check-circle vert";
+            } else {
+                lesImages[i].classList = "far fa-times-circle rouge";
+            }
+        }
+    });
+
+    //suppression de l'aide mot de passe quand on quitte le champ
+    mdp.addEventListener("blur", function (event) {
+        document.getElementsByClassName("aideMdp")[0].style.display = "none";
+    });
+
+
 /***********************************Function************************************/
 
 /**
@@ -66,9 +107,8 @@ function InputsCheckValidity(listInputs, listInputsValidity, submit, formulaire)
  * @param {object} formulaire 
  */
 function verifPassword(listInputsValidity, formulaire) {
-    let listePassword = formulaire.querySelectorAll("input[type=password]");
 
-    if (count(listePassword)==2 && listePassword[0].value != listePassword[1].value) {
+    if (count(listePassword) == 2 && listePassword[0].value != listePassword[1].value) {
         listInputsValidity[listePassword[1].name] = false;
     }
 };
@@ -121,3 +161,24 @@ function revealSubmitButton(listInputsValidity, submit) {
         submit.disabled = true;
     }
 };
+
+
+/**
+ * Annule l'action associé à la touche ou au clic
+ * @param {*} event 
+ */
+function annule(event) {
+    event.preventDefault();
+}
+
+/**
+ * Change le type de l'input mot de passe
+ * @param {boolean} flag 
+ */
+function affichePassWord(input, flag) {
+    inp = input.parentNode.parentNode.querySelector("input");
+    if (flag) inp.type = "text";
+    else inp.type = "password";
+}
+
+

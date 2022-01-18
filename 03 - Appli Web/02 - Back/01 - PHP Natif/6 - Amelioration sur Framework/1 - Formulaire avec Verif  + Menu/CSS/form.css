@@ -44,3 +44,7 @@ form {
 .colSpan2{
 grid-column: 1 / span 2;
 }
+
+.oeil {
+    justify-content: flex-end;
+}

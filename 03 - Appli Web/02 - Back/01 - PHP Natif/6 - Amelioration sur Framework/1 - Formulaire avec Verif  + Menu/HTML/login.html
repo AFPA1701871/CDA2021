@@ -44,6 +44,37 @@
                 pattern="^[a-zA-Z]([\.\-_]?[a-zA-Z0-9])+@[a-zA-Z]([\.\-_]?[a-zA-Z0-9])+\.[a-zA-Z]{2,4}$" required title="Renseigner une adresse mail valide. Elle sera utilisée pour la connexion">
             <label>Téléphone </label>
             <input type="tel" id="phone" name="phone" pattern="^(0|\+33)[\d]{9}$" required >
+            <label>Mot de passe </label>
+            <input type="password" id="pwd" name="pwd" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$" required >
+            <i class="oeil" class="fas fa-eye"></i>
+            <fieldset id="infoMDP" class="noDisplay">
+                <legend>Caractères du mot de passe</legend>
+                <div class="colonne">
+                    <div>
+                        <i class="fas fa-times-circle red"></i>
+                        <label for="">1 majuscule</label>
+                    </div>
+                    <div>
+                        <i class="fas fa-times-circle red"></i>
+                        <label for="">1 minuscule</label>
+                    </div>
+                    <div>
+                        <i class="fas fa-times-circle red"></i>
+                        <label for="">1 chiffre</label>
+                    </div>
+                    <div>
+                        <i class="fas fa-times-circle red"></i>
+                        <label for="">1 caractère spécial</label>
+                    </div>
+                    <div>
+                        <i class="fas fa-times-circle red"></i>
+                        <label for="">8 caractères</label>
+                    </div>
+                </div>
+            </fieldset><label>Confirmation </label>
+            <input type="password" id="conf" name="conf"  required >
+                    <div class=" colSpan2 "></div>
+       
             <div class=" colSpan2 "></div>
             <input type="reset" value="Reset">
             <input type="submit" value="Ajouter" disabled>
