@@ -176,7 +176,7 @@ function annule(event) {
  * @param {boolean} flag 
  */
 function affichePassWord(input, flag) {
-    inp = input.parentNode.parentNode.querySelector("input");
+    inp = input.previousElementSibling;
     if (flag) inp.type = "text";
     else inp.type = "password";
 }

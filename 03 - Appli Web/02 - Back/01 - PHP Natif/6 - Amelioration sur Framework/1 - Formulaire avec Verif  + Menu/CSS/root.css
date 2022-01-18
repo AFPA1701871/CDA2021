@@ -53,3 +53,17 @@ img, video {
     flex: none;
     height: 0.2vh;
 }
+.noDisplay{
+    display: none;
+}
+
+
+.absolu {
+    position: absolute;
+    top: 5em;
+    left: 5em;
+}
+
+.relatif {
+    position: relative;
+}
