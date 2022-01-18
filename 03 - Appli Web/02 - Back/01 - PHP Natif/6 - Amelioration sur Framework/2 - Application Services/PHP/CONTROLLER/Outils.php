@@ -49,11 +49,16 @@ function afficherPage($page)
 	$api = $page[4];
 	$roleConnecte = isset($_SESSION["utilisateur"])?$_SESSION["utilisateur"]->getRole():0;
 	if  ($roleConnecte>= $roleRequis) {
-		include 'PHP/VIEW/GENERAL/Head.php';
-		include 'PHP/VIEW/GENERAL/Header.php';
-		include 'PHP/VIEW/GENERAL/Nav.php';
-		include $chemin . $nom . '.php'; //Chargement de la page en fonction du chemin et du nom
-		include 'PHP/VIEW/GENERAL/Footer.php';
+		if ($api){
+			include $chemin . $nom . '.php'; 
+		}
+		else{
+			include 'PHP/VIEW/GENERAL/Head.php';
+			include 'PHP/VIEW/GENERAL/Header.php';
+			include 'PHP/VIEW/GENERAL/Nav.php';
+			include $chemin . $nom . '.php'; //Chargement de la page en fonction du chemin et du nom
+			include 'PHP/VIEW/GENERAL/Footer.php';
+		}
 	} else {
 		$titre = "Authorisation insuffisante";
 		include 'PHP/VIEW/GENERAL/Head.php';
@@ -68,3 +73,15 @@ function decode($texte)
 {
 	return $texte;
 }
+
+/* tableau qui stocke les regex les + communes*/
+$regex=[
+	"alpha"=>"[[:alpha:]]",
+	"alphaNum"=>"[[:alnum:]]",
+	"alphaMaj"=>"[A-Z]",
+	"alphaMin"=>"[a-z]",
+	"ucFirst"=>"[A-Z][a-z]+",
+	"email"=>"[[:alpha:]]([\.\-_]?[[:alnum:]])+@[[:alpha:]]([\.\-_]?[[:alnum:]])+\.[[:alpha:]]{2,4}",
+	"date"=>"[0-3]?[0-9](\/|-)(0|1)?[0-9](\/|-)[0-9]{4}",
+	
+];

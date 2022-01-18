@@ -22,8 +22,14 @@ class DAO
 		//	- requ : pour la liste des colonnes
 		//  - values : pour les valeurs à insérer sous forme de variable SQL ex: :nom
 		for ($i = 1; $i < count($colonnes); $i++) {
-			$requ .= $colonnes[$i] . ",";
-			$values .= ":" . $colonnes[$i] . ",";
+			// on construit la méthode pour connaitre la valeur associée
+			$methode = "get" . ucfirst($colonnes[$i]);
+			// si la valeur n'est pas renseignée, on ne met pas la colonne dans l'insert
+            if ($obj->$methode() != null)
+        	{
+				$requ .= $colonnes[$i] . ",";
+				$values .= ":" . $colonnes[$i] . ",";
+			}
 		}
 		// on enlève les , mises à la fin de chaque variable
 		$requ = substr($requ, 0, strlen($requ) - 1);
@@ -36,6 +42,7 @@ class DAO
 		for ($i = 1; $i < count($colonnes); $i++) {
 			// on construit la méthode get qui permet de récupérer la valeur
 			$methode = "get" . ucfirst($colonnes[$i]);
+			if ($obj->$methode() != null) // s'il y a une valeur à binder
 			// on exécute $obj->$methode pour avoir la valeur 
 			$q->bindValue(":" . $colonnes[$i], $obj->$methode());
 		}
@@ -134,106 +141,63 @@ class DAO
 	 *
 	 * @return [array ou object] $liste => résultat de la requête revoie false si la requête s'est mal passé sinon renvoie un tableau.
 	 */
+
 	public static function select(array $nomColonnes, string $table, array $conditions = null, string $orderBy = null, string $limit = null, bool $api = false, bool $debug = false)
-	{
-		$db = DbConnect::getDb();
-		$injection = false; // sera égale à vrai si une des composantes contient un  ;
-		$cpt = 0;  // compte les colonnes dans les while
-
-		// on initialise les variables a chaine vide.
-		$condi = "";
-		$ordrBy = "";
-		$lim = "";
-
-		if (!empty($nomColonnes)) { // On test si le tableau de colonnes est pas vide
-			/* On boucle sur le nom des colonnes de la requête en vérifiant que les valeurs ne contiennent pas de ";" */
-			do {
-				if (strpos($nomColonnes[$cpt], ";")) {
-					$injection = true;
-				}
-				$cpt++;
-			} while (!$injection && $cpt < count($nomColonnes));
-			/*** Fin de la boucle ***/
-
-			if (!$injection) { // Si Pas d'injection on execute la fonction qui récup les colonnes.
-				$cols = self::elementSelect($nomColonnes);
-			}
-		} else { //  Dans ce cas il est vide MAIS POUR AUTANT Ce n'est pas une injection mais on arrête le processus si la requête est incomplète.
-			$injection = true;
-		}
-		if (strpos($table, ";") || $injection) { // on revérifie qu'injection = false && pas de ";" Si c'est le cas on execute le reste du programme.
-			$injection = true;
-		} else {
-			$t = self::tableSelect($table);
-		}
-
-		if ($conditions != null) { // on vérifie s'il y a des conditions sinon on fait rien
-			if (!$injection) { // Si Pas d'injection
-
-				// recherche d'injection dans le tableau des conditions
-				foreach ($conditions as $uneCondition) {
-					if (is_array($uneCondition)) { // Si la variable $uneCondition est un tableau
-						$cpt = 0;
-						/*** On boucle sur le tableau $uneCondition en vérifiant que les valeurs ne contiennent pas de ";" ***/
-						do {
-							if (strpos($uneCondition[$cpt], ";")) {
-								$injection = true;
-							}
-							$cpt++;
-						} while (!$injection && $cpt < count($uneCondition));
-						/*** Fin de la boucle While ***/
-					} else { // si $uneCondition est une chaine
-						if (strpos($uneCondition, ";")) {
-							$injection = true;
-						}
-					}
-				}
-				/*** Fin de boucle foreach ***/
-
-				if (!$injection) // On revérifie s'il n'y a pas eu d'injection entre temps et on execute la fonction qui récupère les conditions.
-				{
-					$condi = self::conditionSelect($conditions);
-				}
-			}
-		}
-
-		if ($orderBy != null) { // On vérifie que le select contient un ORDER BY
-			if (strpos($orderBy, ";") || $injection) { // on revérifie qu'injection = false && pas de ";" Si c'est le cas on execute le reste du programme.
-				$injection = true;
-			} else {
-				$ordrBy = self::orderBySelect($orderBy);
-			}
-		}
-
-		if ($limit != null) { // On vérifie que le select contient un LIMIT
-			if (strpos($limit, ";") || $injection) { // on revérifie qu'injection = false && pasde ";" Si c'est le cas on execute le reste du programme.
-				$injection = true;
-			} else {
-				$limit = self::limitSelect($limit);
-			}
-		}
-
-		// On vérifie qu'il n'y a pas d'injection OU que les paramètres donnés sont corrects et on lance la requête.
-		if (!$injection) {
-			$q = $db->query($cols . $t . $condi . $ordrBy . $limit);
-
-			if ($debug) // Si le debug est a true on affiche la requete qui est envoyée en base de données
-			{
-				var_dump($cols . $t . $condi . $ordrBy . $limit);
-			}
-			while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) { // on récupère les enregistrements de la BDD
-				if ($donnees != false) {
-					if ($api) { // On vérifie si api est a true, on renvoie un string sinon des objets liés a à la table donnée en paramètres.
-						$liste[] = $donnees;
-					} else {
-						$liste[] = new $table($donnees);
-					}
-				}
-			}
-			return $liste;
-		}
-		return false;
-	}
+    {
+        $db = DbConnect::getDb();
+		// On mets à plat tous les paramètres à l'aide de json_encode 
+        $string = json_encode($nomColonnes) . $table . json_encode($conditions) . $orderBy . $limit . $api . $debug;
+        // on cherche si l'un des paramètres contient un ; si c'est le cas, on arrête pour éviter les injections SQL
+		if (strpos($string, ";"))
+        {
+            return false;
+        }
+		// on vérifie qu'il y a le minimum pour faire une requête C'est à dire des colonnes et une table
+        else if (!empty($nomColonnes) && ($table != null && $table != ""))
+        {
+			// on crée le select avec les colonnes
+            $cols = self::elementSelect($nomColonnes);
+			// on crée le from
+            $t = " FROM " . $table;
+			// on génère la partie de la requête qui concerne les conditions
+            if ($conditions != null)
+            {
+                $conditions = self::conditionSelect($conditions);
+            }
+			// on génère la partie de la requête qui concerne les tris
+            if ($orderBy != null)
+            {
+                $orderBy = " ORDER BY " . $orderBy;
+            }
+			// on génère la partie de la requête qui concerne les limites
+            if ($limit != null)
+            {
+                $limit = " LIMIT " . $limit;
+            }
+			// on construit la requete
+            $q = $db->query($cols . $t . $conditions . $orderBy . $limit);
+            if ($debug) // Si le debug est a true on affiche la requete qui est envoyée en base de données
+            {
+                var_dump($cols . $t . $conditions . $orderBy . $limit);
+            }
+            while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+            { // on récupère les enregistrements de la BDD
+                if ($donnees != false)
+            {
+                    if ($api)
+                { // On vérifie si api est a true, on renvoie un string sinon des objets liés a à la table donnée en paramètres.
+                        $liste[] = $donnees;
+                    }
+                else
+                {
+                        $liste[] = new $table($donnees);
+                    }
+                }
+            }
+            return $liste;
+        }
+        return false;
+    }
 
 	/**
 	 * Méthode privée qui sera appelée par la méthode select
@@ -251,18 +215,7 @@ class DAO
 		return substr($temp, 0, strlen($temp) - 2);
 	}
 
-	/**
-	 * Méthode privée qui sera appelée par la méthode select
-	 *
-	 * @param string $nomTable => nom de la table sur laquelle la requête sera effectuée pour plus de détail allez voir la doc sur select..
-	 * @return string => compose la partie FROM de la méthode select
-	 *
-	 */
-	private static function tableSelect($nomTable)
-	{
-		return " FROM " . $nomTable;
-	}
-
+	
 	/**
 	 * Méthode privée qui sera appelée par la méthode select
 	 *
@@ -276,7 +229,7 @@ class DAO
 		foreach ($conditions as $nomColonne => $valeur) {
 			// cas du in
 			if (is_array($valeur)) {
-				$req .= $nomColonne . " IN (" . $valeur[0] . "," . $valeur[1] . ") AND ";
+				$req .= $nomColonne . " IN ("  . implode(",",$valeur)  . ") AND ";
 			} else if (!(strpos($valeur, "%")===false)) { //cas like  si le % est en premier alors strpos retourne 0 qui correspond à la valeur de false, donc on fait un test avec le type ===
 				$req .= $nomColonne . ' LIKE "' . $valeur . '" AND ';
 			} else if (strpos($valeur, "->")) { //cas between
@@ -289,29 +242,5 @@ class DAO
 		//On retire le dernier AND
 		$req = substr($req, 0, strlen($req) - 4);
 		return $req;
-	}
-
-	/**
-	 * Méthode privée qui sera appelée par la méthode select
-	 *
-	 * @param string $ordre => contient les colonnes de tri et l'ordre pour plus de détail allez voir la doc sur select.
-	 * @return string => compose la partie ORDER BY de la méthode select
-	 *
-	 */
-	private static function orderBySelect($ordre)
-	{
-		return " ORDER BY " . $ordre;
-	}
-
-	/**
-	 * Méthode privée qui sera appelée par la méthode select
-	 *
-	 * @param string $limit => contient la délimitation des enregistrements de la BDD pour plus de détail allez voir la doc sur select.
-	 * @return string => compose la partie LIMIT de la méthode select
-	 *
-	 */
-	private static function limitSelect($limit)
-	{
-		return " LIMIT " . $limit;
 	}
 }
