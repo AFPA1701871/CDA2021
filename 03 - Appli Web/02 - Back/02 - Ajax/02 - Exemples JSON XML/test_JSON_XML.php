@@ -1,21 +1,21 @@
 <?php
-echo "*********************************************<br>";
-echo "*****           JSON                *********<br>";
-echo "*********************************************<br>";
+echo "*********************************************\n";
+echo "*****           JSON                *********\n";
+echo "*********************************************\n";
 
 /**** tableau simple */
-echo "<br><br> ***** tableau simple   *****<br>";
+echo "\n\n ***** tableau simple   *****\n";
 $tabSimple = array( 1,  2,  3,  4, 5);
 echo json_encode($tabSimple);
 
 /**** tableau associatif */
-echo "<br><br> ***** tableau associatif   *****<br>";
+echo "\n\n ***** tableau associatif   *****\n";
 $tabAssoc = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
 echo json_encode($tabAssoc);
 
 /**** Objet public */
 
-echo "<br><br> ***** objet public   *****<br>";
+echo "\n\n ***** objet public   *****\n";
 require "Personne.Class.php";
 
 $p1 = new Personne("Dupond","Toto");
@@ -26,7 +26,7 @@ var_dump (json_encode($p1));
 
 /**** Objet privé */
 
-echo "<br><br> ***** objet privé   *****<br>";
+echo "\n\n ***** objet privé   *****\n";
 
 require "Voiture.Class.php";
 
@@ -34,27 +34,27 @@ $v1 = new Voiture(["marque"=>"Audi","modele"=>"A3","immatriculation"=>"12df12f",
 var_dump($v1);
 var_dump (json_encode($v1));
 
-echo "<br><br><br><br>";
-echo "*********************************************<br>";
-echo "*****           XML                 *********<br>";
-echo "*********************************************<br>";
+echo "\n\n\n\n";
+echo "*********************************************\n";
+echo "*****           XML                 *********\n";
+echo "*********************************************\n";
 
 /**** tableau simple */
-echo "<br><br> ***** tableau simple   *****<br>";
+echo "\n\n ***** tableau simple   *****\n";
 echo xmlrpc_encode($tabSimple);
 
 /**** tableau associatif */
-echo "<br><br> ***** tableau associatif   *****<br>";
+echo "\n\n ***** tableau associatif   *****\n";
 echo xmlrpc_encode($tabAssoc);
 
 /**** Objet public */
 
-echo "<br><br> ***** objet public   *****<br>";
+echo "\n\n ***** objet public   *****\n";
 var_dump (xmlrpc_encode($p1));
 
 
 /**** Objet privé */
-echo "<br><br> ***** objet privé   *****<br>";
+echo "\n\n ***** objet privé   *****\n";
 require "Voiture2.Class.php";
 
 $v2 = new Voiture2(["marque"=>"Audi","modele"=>"A3","immatriculation"=>"12df12f","couleur"=>"noire","kilometres"=>20000]);
