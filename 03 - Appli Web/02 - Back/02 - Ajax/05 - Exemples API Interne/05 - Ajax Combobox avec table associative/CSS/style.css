@@ -1,0 +1,70 @@
+/* Polices */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+html{font-family: 'Lato', sans-serif;}
+
+/* Général */
+body, header, footer, div {
+    display: flex;
+    flex: 1;
+    margin: 0;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+img, video {
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Positions */
+.center {text-align: center;justify-content: center;}
+.right {text-align: right;justify-content: flex-end;}
+.left {text-align: left;justify-content: flex-start;}
+.acenter {align-items: center;}
+.end{justify-content: flex-end;}
+
+.flex02{flex:0.2;}
+.flex04{flex:0.4;}
+.flex06{flex:0.6;}
+.flex1{flex:1;}
+.flex2{flex:2;}
+.flex3{flex:3;}
+.flex4{flex:4;}
+.noflex{flex:none;}
+
+.padd02 {padding: 0.2vw;}
+.padd04 {padding: 0.4vw;}
+.padd06 {padding: 0.6vw;}
+.padd1 {padding: 1vw;}
+.padd2 {padding: 2vw;}
+.padd3 {padding: 3vw;}
+.padd4 {padding: 4vw;}
+.padd6 {padding: 6vw;}
+
+.h1vh{height: 1vh;}
+.h2vh{height: 2vh;}
+.h3vh{height: 3vh;}
+.h4vh{height: 4vh;}
+.h5vh{height: 5vh;}
+.h6vh{height: 6vh;}
+
+/* Boutons */
+
+button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}

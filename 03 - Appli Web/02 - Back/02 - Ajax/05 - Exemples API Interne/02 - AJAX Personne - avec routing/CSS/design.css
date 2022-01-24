@@ -1,0 +1,9 @@
+#liste{
+	display: flex;
+}
+.ligne{
+	border: 0.1vw solid black;
+	margin: 1%;
+	padding: 1%;
+	border-radius: 2%;
+}

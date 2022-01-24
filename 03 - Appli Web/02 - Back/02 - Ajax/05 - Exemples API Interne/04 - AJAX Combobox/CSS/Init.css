@@ -1,0 +1,35 @@
+:root{
+	/** utiliser ce genre de syntaxe pour les variables --[nom de la variable]: [propriétées];**/
+}
+
+html{
+	scroll-behavior : smooth;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	text-align: justify;
+}
+
+div, header{
+	display: flex;
+	flex: 1;
+}
+
+img{
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+	padding: 0;
+	margin: 0;
+}
+
+.centrer{
+	justify-content: center;
+}
+
+.colonne{
+	flex-direction: column;
+}

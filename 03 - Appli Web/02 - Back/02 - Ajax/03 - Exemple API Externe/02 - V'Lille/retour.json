@@ -1,0 +1,289 @@
+{
+    "nhits": 252,
+    "parameters": {
+        "dataset": "vlille-realtime",
+        "timezone": "UTC",
+        "rows": 50,
+        "start": 0,
+        "format": "json",
+        "facet": [
+            "libelle",
+            "nom",
+            "commune",
+            "etat",
+            "type",
+            "etatconnexion"
+        ]
+    },
+    "records": [
+        {
+            "datasetid": "vlille-realtime",
+            "recordid": "3f443706e549c832710c84005d00723d5a476544",
+            "fields": {
+                "etat": "EN SERVICE",
+                "etatconnexion": "CONNECTED",
+                "nbvelosdispo": 8,
+                "nbplacesdispo": 16,
+                "commune": "LILLE",
+                "type": "AVEC TPE",
+                "libelle": 43,
+                "datemiseajour": "2021-05-26T07:26:20+00:00",
+                "localisation": [
+                    50.629044,
+                    3.058288
+                ],
+                "nom": "THEATRE SEBASTOPOL",
+                "adresse": "3 PLACE SEBASTOPOL",
+                "geo": [
+                    50.629044,
+                    3.058288
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.058288,
+                    50.629044
+                ]
+            },
+            "record_timestamp": "2021-05-26T09:31:01.492000+00:00"
+        },
+        {
+            "datasetid": "vlille-realtime",
+            "recordid": "301edb33dc7276e7346e6cab110788590396bda1",
+            "fields": {
+                "etat": "EN SERVICE",
+                "etatconnexion": "CONNECTED",
+                "nbvelosdispo": 24,
+                "nbplacesdispo": 1,
+                "commune": "LILLE",
+                "type": "AVEC TPE",
+                "libelle": 12,
+                "datemiseajour": "2021-05-26T07:26:20+00:00",
+                "localisation": [
+                    50.637486,
+                    3.065902
+                ],
+                "nom": "OPERA",
+                "adresse": "FACE AU 8 RUE ANATOLE FRANCE",
+                "geo": [
+                    50.637486,
+                    3.065902
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.065902,
+                    50.637486
+                ]
+            },
+            "record_timestamp": "2021-05-26T09:31:01.492000+00:00"
+        },
+        {
+            "datasetid": "vlille-realtime",
+            "recordid": "6f55bf2493bbf51f0490ee50987490d05135c4e6",
+            "fields": {
+                "etat": "EN SERVICE",
+                "etatconnexion": "CONNECTED",
+                "nbvelosdispo": 6,
+                "nbplacesdispo": 12,
+                "commune": "LILLE",
+                "type": "AVEC TPE",
+                "libelle": 66,
+                "datemiseajour": "2021-05-26T07:26:20+00:00",
+                "localisation": [
+                    50.63237,
+                    3.066273
+                ],
+                "nom": "DELESALLE MEDIATHEQUE",
+                "adresse": "35 RUE EDOUARD DELESALLE",
+                "geo": [
+                    50.63237,
+                    3.066273
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.066273,
+                    50.63237
+                ]
+            },
+            "record_timestamp": "2021-05-26T09:31:01.492000+00:00"
+        },
+        {
+            "datasetid": "vlille-realtime",
+            "recordid": "e5decefb7f404a94fafd43a439835a1c6555f661",
+            "fields": {
+                "etat": "EN SERVICE",
+                "etatconnexion": "CONNECTED",
+                "nbvelosdispo": 0,
+                "nbplacesdispo": 0,
+                "commune": "VILLENEUVE D'ASCQ",
+                "type": "AVEC TPE",
+                "libelle": 129,
+                "datemiseajour": "2019-10-21T07:46:05+00:00",
+                "localisation": [
+                    50.63608,
+                    3.130853
+                ],
+                "nom": "FLERS CHATEAU",
+                "adresse": "RUE DE LA CHEVALERIE",
+                "geo": [
+                    50.63608,
+                    3.130853
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.130853,
+                    50.63608
+                ]
+            },
+            "record_timestamp": "2021-05-26T09:31:01.492000+00:00"
+        },
+        {
+            "datasetid": "vlille-realtime",
+            "recordid": "807e07d3f1e4fce53a1f1d7a458345896dc814ce",
+            "fields": {
+                "etat": "HORS SERVICE",
+                "etatconnexion": "DISCONNECTED",
+                "nbvelosdispo": 0,
+                "nbplacesdispo": 12,
+                "commune": "ROUBAIX",
+                "type": "AVEC TPE",
+                "libelle": 222,
+                "datemiseajour": "2019-07-10T15:47:05+00:00",
+                "localisation": [
+                    50.6941,
+                    3.172165
+                ],
+                "nom": "LES GOBELINS",
+                "adresse": "32, RUE DE LA COMMUNAUT\u00c9 URBAINE",
+                "geo": [
+                    50.6941,
+                    3.172165
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.172165,
+                    50.6941
+                ]
+            },
+            "record_timestamp": "2021-05-26T09:31:01.492000+00:00"
+        },
+        {
+            "datasetid": "vlille-realtime",
+            "recordid": "3a4d235ba0c3d7a46784090519e9a80384cba3ca",
+            "fields": {
+                "etat": "HORS SERVICE",
+                "etatconnexion": "DISCONNECTED",
+                "nbvelosdispo": 0,
+                "nbplacesdispo": 0,
+                "commune": "LILLE HELLEMMES",
+                "type": "AVEC TPE",
+                "libelle": 87,
+                "datemiseajour": "2019-07-10T15:39:06+00:00",
+                "localisation": [
+                    50.632393,
+                    3.110669
+                ],
+                "nom": "JULES GUESDE",
+                "adresse": "RUE ST ELOI",
+                "geo": [
+                    50.632393,
+                    3.110669
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.110669,
+                    50.632393
+                ]
+            },
+            "record_timestamp": "2021-05-26T09:31:01.492000+00:00"
+        },
+        {
+            "datasetid": "vlille-realtime",
+            "recordid": "f4ab70778a3b8241b9a813ee27764ac3c9dbdbec",
+            "fields": {
+                "etat": "HORS SERVICE",
+                "etatconnexion": "DISCONNECTED",
+                "nbvelosdispo": 0,
+                "nbplacesdispo": 0,
+                "commune": "HELLEMMES",
+                "type": "AVEC TPE",
+                "libelle": 112,
+                "datemiseajour": "2019-07-10T15:40:06+00:00",
+                "localisation": [
+                    50.626846,
+                    3.115101
+                ],
+                "nom": "SQUARE CHARLES DE GAULLE",
+                "adresse": "4, RUE FERDINAND BUISSON",
+                "geo": [
+                    50.626846,
+                    3.115101
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.115101,
+                    50.626846
+                ]
+            },
+            "record_timestamp": "2021-05-26T09:31:01.492000+00:00"
+        },
+        {
+            "datasetid": "vlille-realtime",
+            "recordid": "fff3776bbd85032f7c57c71570fdf09e805f7370",
+            "fields": {
+                "etat": "EN SERVICE",
+                "etatconnexion": "CONNECTED",
+                "nbvelosdispo": 5,
+                "nbplacesdispo": 7,
+                "commune": "HELLEMMES",
+                "type": "SANS TPE",
+                "libelle": 111,
+                "datemiseajour": "2021-05-26T07:26:20+00:00",
+                "localisation": [
+                    50.62486,
+                    3.116677
+                ],
+                "nom": "HELLEMMES CIMETIERE",
+                "adresse": "318, RUE ROGER SALENGRO",
+                "geo": [
+                    50.62486,
+                    3.116677
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.116677,
+                    50.62486
+                ]
+            },
+            "record_timestamp": "2021-05-26T09:31:01.492000+00:00"
+        },
+        {
+            "datasetid": "vlille-realtime",
+            "recordid": "d951c5801d573f20889b8b8ebeebb62f68a764be",
+            "fields": {
+                "etat": "EN SERVICE",
+                "etatconnexion": "CONNECTED",
+                "nbvelosdispo": 3,
+                "nbplacesdispo": 15,
+                "commune": "LA MADELEINE",
+                "type": "AVEC TPE",
+                "libelle": 115,
+                "datemiseajour": "2021-05-26T07:26:20+00:00",
+                "localisation": [
+                    50.651497,
+                    3.0
