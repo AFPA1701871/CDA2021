@@ -63,5 +63,3 @@ INNER JOIN Oeuvres
 ON Creations.idOeuvre = Oeuvres.idOeuvre
 INNER JOIN Auteurs
 ON Creations.idAuteur = Auteurs.idAuteur
-
--- Faut-il créer une classe puis une classManager vu que c'est une vues ? Si oui, faut-il lui mettre un ID?
