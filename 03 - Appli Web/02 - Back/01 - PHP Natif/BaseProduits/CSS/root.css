@@ -1,0 +1,75 @@
+/* Appel d'une variable s'effectue en faisant "Var(--ColorTitle)" par exemple. */
+:root {
+    --color: #ecc4ff;
+    --inputCorrect: #04724d;
+    --inputIncorrect: #e94f37;
+    --inputVide: #ffffff4d;
+    --bgc1:#9ee0a9;
+    --bgc2:#9ee0e0;
+    --linkColor : black;
+}
+
+html, main, body, div, a, header, footer, nav, article, section, aside, fieldset, label, input, select {
+    display: flex;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+img, video, button {
+    width: 100%;
+}
+
+.colonne {
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Différent taille de flex. */
+.vMini { flex: 0.05; }
+
+.mini { flex: 0.2; }
+
+.demi { flex: 0.5; }
+
+.double { flex: 2; }
+
+.triple { flex: 3; }
+
+.espace {
+    flex: none;
+    height: 2vh;
+}
+
+.bigEspace {
+    flex: none;
+    height: 5vh;
+}
+
+.miniEspace {
+    flex: none;
+    height: 0.2vh;
+}
+.noDisplay{
+    display: none;
+}
+
+
+.absolu {
+    position: absolute;
+    top: 5em;
+    left: 5em;
+}
+
+.relative {
+    position: relative;
+}
+
+a {
+    text-decoration : none;
+    color : var(--linkColor);
+}
