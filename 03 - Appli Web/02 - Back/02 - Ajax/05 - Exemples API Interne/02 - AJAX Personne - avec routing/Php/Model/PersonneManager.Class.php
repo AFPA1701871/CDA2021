@@ -55,7 +55,7 @@ class PersonneManager
 			$persos[] = new Personne($donnees);
 			$json[]=$donnees;
 		}
-		if (!$api)  return $persos;
+		if (!$api)   		return $persos;
 		return $json;
 	}
 	
