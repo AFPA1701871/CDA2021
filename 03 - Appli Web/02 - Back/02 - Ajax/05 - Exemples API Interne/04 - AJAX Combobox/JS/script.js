@@ -16,7 +16,7 @@ requ.onreadystatechange = function (event) {
             //on enleve les departements deja presents
             listeDep.innerHTML = "";
             for (let i = 0; i < reponse.length; i++) { //on traite les éléments de la liste ....
-                ajoutDepartement(reponse[i].libelleDepartement, reponse[i].idDepartement);
+                ajoutDepartement(reponse[i].LibelleDepartement, reponse[i].idDepartement);
             }
         } else {
             console.log("Status de la réponse: %d (%s)", this.status, this.statusText);

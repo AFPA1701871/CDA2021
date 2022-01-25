@@ -7,7 +7,7 @@ echo json_encode( AuteursOeuvresManager::getListByAuteur($id,true));
 
 // sans vue on aurait du faire
 
-//on recupere la liste des creations 
+// //on recupere la liste des creations 
 // $listeCreations = CreationsManager::getListByAuteur($id, false);
 // //on transforme les objets en une liste d'idOeuvre
 // $listeIdOeuvres = "(";
@@ -20,4 +20,3 @@ echo json_encode( AuteursOeuvresManager::getListByAuteur($id,true));
 // //on recupere les oeuvre pour envoyer à l'API
 // $listeOeuvres = OeuvresManager::getListbyId($listeIdOeuvres,true);
 // echo json_encode($listeOeuvres);
-?>
