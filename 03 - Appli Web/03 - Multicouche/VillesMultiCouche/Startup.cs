@@ -24,6 +24,7 @@ namespace VillesMultiCouche
         {
             Configuration = configuration;
         }
+
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -42,11 +43,11 @@ namespace VillesMultiCouche
 
             services.AddCors(options =>
             {
-                options.AddPolicy(name: "MesOrigines",
-                       builder =>
-                       {
-                           builder.WithOrigins("*");
-                       });
+                options.AddPolicy(name: "toto",
+                                    builder =>
+                                    {
+                                        builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
+                                    });
             });
         }
 
@@ -63,8 +64,8 @@ namespace VillesMultiCouche
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseCors("MesOrgines");
 
+            app.UseCors("toto");
 
             app.UseAuthorization();
 

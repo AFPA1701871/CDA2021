@@ -13,7 +13,7 @@ namespace VillesMultiCouche.Controllers
 {
     [Route("api/[Controller]")]
     [ApiController]
-    public class DepartementsController : ControllerBase
+    public class DepartementsController:ControllerBase
     {
         private readonly DepartementsServices _service;
         private readonly IMapper _mapper;
@@ -25,8 +25,8 @@ namespace VillesMultiCouche.Controllers
         }
 
         //GET api/Departements
+        [EnableCors("toto")]
         [HttpGet]
-        [EnableCors("MesOrigines")]
         public ActionResult<IEnumerable<DepartementDTO>> GetAllDepartements()
         {
             IEnumerable<Departement> listeDepartements = _service.GetAllDepartements();
@@ -34,6 +34,7 @@ namespace VillesMultiCouche.Controllers
         }
 
         //GET api/Departements/{i}
+        [EnableCors("toto")]
         [HttpGet("{id}", Name = "GetDepartementById")]
         public ActionResult<DepartementDTO> GetDepartementById(int id)
         {
@@ -46,14 +47,16 @@ namespace VillesMultiCouche.Controllers
         }
 
         //POST api/Departements
+        [EnableCors("toto")]
         [HttpPost]
         public ActionResult<DepartementDTO> CreateDepartement(DepartementDTO obj)
         {
-            _service.AddDepartement(_mapper.Map < Departement > (obj));
+            _service.AddDepartement(_mapper.Map <Departement>(obj));
             return CreatedAtRoute(nameof(GetDepartementById), new { Id = obj.IdDepartement }, obj);
         }
 
         //POST api/Departements/{id}
+        [EnableCors("toto")]
         [HttpPut("{id}")]
         public ActionResult UpdateDepartement(int id, DepartementDTO obj)
         {
@@ -67,9 +70,10 @@ namespace VillesMultiCouche.Controllers
             return NoContent();
         }
 
-       
+
 
         //DELETE api/Departements/{id}
+        [EnableCors("toto")]
         [HttpDelete("{id}")]
         public ActionResult DeleteDepartement(int id)
         {
