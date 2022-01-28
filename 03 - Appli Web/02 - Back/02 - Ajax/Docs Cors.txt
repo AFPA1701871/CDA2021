@@ -1,0 +1,1 @@
+https://jakeydocs.readthedocs.io/en/latest/security/cors.html
