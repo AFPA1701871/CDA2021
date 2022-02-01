@@ -1,0 +1,42 @@
+﻿<Window x:Class="Interface_Carte_dAquisition_PicoDrDAQ.TemperatureFenetre"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Interface_Carte_dAquisition_PicoDrDAQ"
+        xmlns:lcub="http://schemas.arction.com/bindablecharting/ultimate/"
+        mc:Ignorable="d"
+        Title="Temperature" Height="360" Width="360" MinWidth="360" MaxWidth="360" MinHeight="360" MaxHeight="360" Closed="Window_Closed">
+    <Grid x:Name="GridMain">
+        <Image Margin="1,0,0.2,0" Source="piece2.jpg" Stretch="Fill"/>
+        <TextBlock Margin="0" TextWrapping="Wrap" Text="Température de la pièce." Height="42" VerticalAlignment="Top" TextAlignment="Center" FontSize="24" FontFamily="Nirmala UI" FontWeight="Bold">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="#FF2A81FF" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="tbxTempPiece" Margin="142,117,0.6,101.4" TextWrapping="Wrap" Text="35°C" FontSize="72" FontFamily="Nirmala UI" FontWeight="Bold">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="#FF0051C7" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <Image Margin="8,6,215.6,-16.6" Source="Thermometre.png" Stretch="Fill"/>
+        <ProgressBar x:Name="prgbrTemp" Margin="60,65,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Orientation="Vertical" Maximum="40" Foreground="#FFCA2020" HorizontalAlignment="Left" Width="13" Height="204" VerticalAlignment="Top" Minimum="-25"/>
+        <Rectangle HorizontalAlignment="Left" Height="24" Margin="60,250,0,0" VerticalAlignment="Top" Width="13" Fill="#FFCA2020"/>
+        <Button x:Name="btnEnregistrement_Temp" Content="Enregistrement" Margin="170,261,0,0" FontFamily="Nirmala UI" FontWeight="Bold" Height="19" VerticalAlignment="Top" HorizontalAlignment="Left" Width="125" Click="btnEnregistrement_Temp_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="bouttonRouge_blanc.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnGestion" Content="Gestion des données" Margin="170,282,0,0" FontFamily="Perpetua" FontSize="9" FontWeight="Bold" VerticalContentAlignment="Center" Padding="1,2.5,1,1" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="125" Click="btnGestion_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="bouttonBlancBleu_noir.jpg"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

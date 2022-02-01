@@ -1,0 +1,62 @@
+﻿<Window x:Class="Interface_Carte_dAquisition_PicoDrDAQ.SonFenetre"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Interface_Carte_dAquisition_PicoDrDAQ"
+        xmlns:d3="clr-namespace:InteractiveDataDisplay.WPF;assembly=InteractiveDataDisplay.WPF"
+        mc:Ignorable="d"
+        Title="Son" Height="273.6" Width="739.6" Closed="Window_Closed" Background="#FF454545" Foreground="{x:Null}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="418*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="son.jpg" Stretch="Fill" Margin="0,0,0.2,0" Grid.ColumnSpan="3" Grid.RowSpan="4"/>
+
+        <Grid x:Name="Oscilloscope" Grid.Column="3" Margin="0.8,0,-0.2,0" Grid.RowSpan="4">
+            <d3:Chart x:Name="Oscillo" BottomTitle="Temps" LeftTitle="Function" FontFamily="Showcard Gothic" FontSize="9" FontStyle="Italic" Background="#FF454545" Foreground="#FF508EF6">
+                <d3:LineGraph x:Name="linegraph" Description="Onde sonore" Stroke="SpringGreen" StrokeThickness="2"/>
+            </d3:Chart>
+        </Grid>
+        <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" Height="24" TextAlignment="Center" FontSize="22" FontWeight="Bold" FontFamily="OCR A Extended" Margin="0" Grid.ColumnSpan="3">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF938401" Offset="0"/>
+                    <GradientStop Color="#FF85E806" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground><Run Text="Niveau de bruit "/><Run Text="a"/><Run Text="mbiant"/></TextBlock>
+        <TextBlock x:Name="tbxNvSon" Margin="0" TextWrapping="Wrap" FontFamily="OCR A Extended" FontWeight="Bold" FontSize="72" Grid.ColumnSpan="2" Grid.Row="1">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE2FF03" Offset="0"/>
+                    <GradientStop Color="#FF17A92E" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground><Run Text="7"/><Run Text="0"/><Run Text=",35"/></TextBlock>
+        <TextBlock Margin="0" TextWrapping="Wrap" FontFamily="OCR A Extended" FontWeight="Bold" FontSize="72" TextAlignment="Center" Text="dB" Grid.Column="2" Grid.Row="1">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE2FF03" Offset="0"/>
+                    <GradientStop Color="#FF17A92E" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground></TextBlock>
+        <Button x:Name="btnEnregistrement_Son" Content="Enregistrement" Margin="0" FontFamily="OCR A Extended" FontWeight="Bold" FontSize="10" Grid.Row="3" Click="btnEnregistrement_Son_Click" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" >
+            <Button.Background>
+                <ImageBrush ImageSource="bouttonRouge_blanc.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnGestion" Content="Gestion des données" Margin="0" FontFamily="Perpetua" FontSize="9" FontWeight="Bold" VerticalContentAlignment="Center" Padding="1,2.5,1,1" Grid.Row="3" Grid.Column="2" Click="btnGestion_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="bouttonBlancBleu_noir.jpg"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,9 @@
+﻿<Application x:Class="Interface_Carte_dAquisition_PicoDrDAQ.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Interface_Carte_dAquisition_PicoDrDAQ"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

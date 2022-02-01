@@ -1,0 +1,44 @@
+﻿<Window x:Class="Interface_Carte_dAquisition_PicoDrDAQ.Temperature"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Interface_Carte_dAquisition_PicoDrDAQ"
+        xmlns:lcub="http://schemas.arction.com/bindablecharting/ultimate/"
+        mc:Ignorable="d"
+        Title="Temperature" Height="402" Width="362" Closed="Window_Closed">
+    <Grid x:Name="GridMain">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="74*"/>
+            <ColumnDefinition Width="178*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="113*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="13*"/>
+        </Grid.RowDefinitions>
+        <Image Source="Images/piece2.jpg" Stretch="Fill"  Grid.RowSpan="4" Grid.ColumnSpan="4"  />
+        <TextBlock TextWrapping="Wrap" Text="Température de la pièce."  TextAlignment="Center" FontSize="24" FontFamily="Nirmala UI" FontWeight="Bold" Grid.ColumnSpan="4"  Grid.RowSpan="2">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="#FF2A81FF" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="tbxTempPiece"  TextWrapping="Wrap" Text="35°C" FontSize="72" FontFamily="OCR A Extended" FontWeight="Bold"   Grid.Row="1" Grid.Column="3" VerticalAlignment="Center"   >
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="#FF0051C7" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <Image Source="Images/Thermometre.png" Stretch="Fill" Grid.RowSpan="3" HorizontalAlignment="Center" Width="178"  Grid.ColumnSpan="3" />
+        <ProgressBar x:Name="prgbrTemp"  Background="{x:Null}" BorderBrush="{x:Null}" Orientation="Vertical" Maximum="40" Foreground="#FFCA2020"  Width="12"   Minimum="-25" HorizontalAlignment="Center" Grid.Column="1"  Grid.RowSpan="2"  />
+  
+    </Grid>
+</Window>

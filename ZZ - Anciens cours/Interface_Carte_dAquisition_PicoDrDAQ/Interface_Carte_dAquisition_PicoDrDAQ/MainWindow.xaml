@@ -1,0 +1,76 @@
+﻿<Window x:Name="Menu_Principale" x:Class="Interface_Carte_dAquisition_PicoDrDAQ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Interface_Carte_dAquisition_PicoDrDAQ"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="320" Width="360" MinWidth="360" MinHeight="320" MaxWidth="360" MaxHeight="320">
+    <Window.Resources>
+        <Style x:Key="MainSon" TargetType="{x:Type Image}"/>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="TableauNoir.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="210*"/>
+        </Grid.RowDefinitions>
+        <Image Margin="0" Source="TableauNoir.jpg" Stretch="Fill" Grid.RowSpan="2"/>
+        <Grid Margin="0" Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="60*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnTemp" Margin="0" Grid.Row="2" BorderBrush="{x:Null}" Foreground="#FF006E09" FontSize="24" Click="btnTemp_Click" FontFamily="Segoe Print" Content="Température">
+                <Button.Background>
+                    <ImageBrush ImageSource="Boutton_Thermometre.JPG"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnSon" Margin="0" BorderBrush="{x:Null}" Foreground="#FFFFFDFD" FontSize="48" Click="btnSon_Click" Content="Son" FontWeight="Bold" FontFamily="OCR A Extended">
+                <Button.Background>
+                    <ImageBrush ImageSource="son1.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnLumiere" Margin="0,0,0,0" FontSize="18" Click="btnLumiere_Click" Content="Couleurs&#xD;&#xA;    de la&#xD;&#xA;Lumière" FontFamily="Microsoft Uighur" HorizontalAlignment="Left" Width="176" FontWeight="Bold" FontStyle="Italic" Grid.Row="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="CercleArcEnCiel.png"/>
+                </Button.Background>
+            </Button>
+            <Button Content="Luminosité" Margin="0,0,0,0" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="178" FontSize="48" FontFamily="Microsoft Uighur" FontWeight="Bold" Click="Button_Click" Grid.Row="1">
+                <Button.Foreground>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF94C6FC"/>
+                        <GradientStop Color="#FFFFA843" Offset="0.082"/>
+                        <GradientStop Color="#FF94C6FC" Offset="1"/>
+                        <GradientStop Color="#FF9A5E19" Offset="0.869"/>
+                        <GradientStop Color="#FF562A05" Offset="0.598"/>
+                        <GradientStop Color="#FF595889" Offset="0.01"/>
+                        <GradientStop Color="#FF7D4713" Offset="0.402"/>
+                    </RadialGradientBrush>
+                </Button.Foreground>
+                <Button.Background>
+                    <ImageBrush ImageSource="Luminosite.jpg"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Image Margin="0,0,0,0.2" Source="DrDAQ.png" Stretch="Fill" HorizontalAlignment="Left" Width="58"/>
+        <TextBlock Margin="63,-4,51.6,4.2" TextWrapping="Wrap" Text="Dr DAQ" TextAlignment="Center" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="36">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF85F6F2" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.804"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="tbkAff" Margin="0,15.8,-0.4,0.4" Grid.Row="1" TextWrapping="Wrap" Foreground="White" FontFamily="Kristen ITC" TextAlignment="Center"><Run Text="- - - Choisir la grandeur physique a étudier - - -"/></TextBlock>
+        <Image Source="SextantV3_2.png" Stretch="Fill" Margin="0" HorizontalAlignment="Right" Width="84"/>
+
+    </Grid>
+</Window>
