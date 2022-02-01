@@ -1,0 +1,173 @@
+;---------------------------------------------------------------;
+; PICOCyUSB3.INF
+;	-Installs winusb support for Pico USB devices;
+;
+; Copyright © 1995-2015, Pico Technology Ltd
+;
+;	www.picotech.com	www.drdaq.com
+; 
+;---------------------------------------------------------------;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class = DataAcquisitionDevices
+ClassGuid = {745DD1A8-FCA4-4659-9DF2-954176705158}
+provider=%Pico_Provider%
+CatalogFile=picocyusb3.cat
+DriverVer=01/05/2017,1.3.3.1
+[SourceDisksNames]
+1=%PICO_Install%,,,
+
+[SourceDisksFiles]
+CYUSB3.sys = 1
+
+[DestinationDirs]
+PICO.Files.Ext = 10,System32\Drivers
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[Manufacturer]
+%Pico_Provider%=PicoDevice,NTx86,NTamd64,NTx86.6.2,NTamd64.6.2,NTIA64
+
+;for x86 platforms
+[PicoDevice.NTx86]
+;%VID_XXXX&PID_XXXX.DeviceDesc%=Pico, USB\VID_XXXX&PID_XXXX
+%VID_0CE9&PID_1201.DeviceDesc%=Pico, USB\VID_0CE9&PID_1200
+%VID_0CE9&PID_1201.DeviceDesc%=Pico, USB\VID_0CE9&PID_1201
+%VID_0CE9&PID_1211.DeviceDesc%=Pico, USB\VID_0CE9&PID_1211
+%VID_0CE9&PID_1213.DeviceDesc%=Pico, USB\VID_0CE9&PID_1213
+%VID_0CE9&PID_1202.DeviceDesc%=Pico, USB\VID_0CE9&PID_1202
+%VID_0CE9&PID_1203.DeviceDesc%=Pico, USB\VID_0CE9&PID_1203
+%VID_0CE9&PID_1204.DeviceDesc%=Pico, USB\VID_0CE9&PID_1204
+%VID_0CE9&PID_1212.DeviceDesc%=Pico, USB\VID_0CE9&PID_1212
+%VID_0CE9&PID_1214.DeviceDesc%=Pico, USB\VID_0CE9&PID_1214
+
+;for x64 platforms
+[PicoDevice.NTamd64]
+;%VID_XXXX&PID_XXXX.DeviceDesc%=Pico, USB\VID_XXXX&PID_XXXX
+%VID_0CE9&PID_1201.DeviceDesc%=Pico, USB\VID_0CE9&PID_1200
+%VID_0CE9&PID_1201.DeviceDesc%=Pico, USB\VID_0CE9&PID_1201
+%VID_0CE9&PID_1211.DeviceDesc%=Pico, USB\VID_0CE9&PID_1211
+%VID_0CE9&PID_1213.DeviceDesc%=Pico, USB\VID_0CE9&PID_1213
+%VID_0CE9&PID_1202.DeviceDesc%=Pico, USB\VID_0CE9&PID_1202
+%VID_0CE9&PID_1203.DeviceDesc%=Pico, USB\VID_0CE9&PID_1203
+%VID_0CE9&PID_1204.DeviceDesc%=Pico, USB\VID_0CE9&PID_1204
+%VID_0CE9&PID_1212.DeviceDesc%=Pico, USB\VID_0CE9&PID_1212
+%VID_0CE9&PID_1214.DeviceDesc%=Pico, USB\VID_0CE9&PID_1214
+
+[PicoDevice.NTIA64]
+[PicoDevice.NTamd64.6.2]
+[PicoDevice.NTx86.6.2]
+
+[PICO.NT]
+CopyFiles=PICO.Files.Ext
+AddReg=Pico.AddReg
+
+[PICO.NT.HW]
+AddReg=PICO.AddReg.Guid
+
+[PICO.NT.Services]
+Addservice = CYUSB3,2,CYUSB3.AddService
+
+
+[PICO.NTx86]
+CopyFiles=PICO.Files.Ext
+AddReg=Pico.AddReg
+
+[PICO.NTx86.HW]
+AddReg=PICO.AddReg.Guid
+
+[PICO.NTx86.Services]
+Addservice = CYUSB3,2,CYUSB3.AddService
+
+[PICO.NTamd64]
+CopyFiles=PICO.Files.Ext
+AddReg=Pico.AddReg
+
+[PICO.NTamd64.HW]
+AddReg=PICO.AddReg.Guid
+
+[PICO.NTamd64.Services]
+Addservice = CYUSB3,2,CYUSB3.AddService
+
+
+[PICO.AddReg]
+HKR,,DriverBase,,CYUSB3.sys
+HKR,,FriendlyName,,%PICO_Description%
+
+[CYUSB3.AddService]
+DisplayName    = %PICO_Description%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\CYUSB3.sys
+AddReg         = PICO.AddReg
+LoadOrderGroup = Base
+
+[PICO.Files.Ext]
+CYUSB3.sys
+
+[PICO.AddReg.Guid]
+HKR,,DriverGUID,,%PICO.GUID%
+
+;-------------- WDF Coinstaller installation
+[SourceDisksFiles]
+WdfCoInstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+[DestinationDirs]
+CoInstaller_CopyFiles = 11
+
+[PICO.NTamd64.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[PICO.NTx86.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[PICO.NTamd64.Wdf]
+KmdfService = CYUSB3, CYUSB3_wdfsect
+
+[PICO.NTx86.Wdf]
+KmdfService = CYUSB3, CYUSB3_wdfsect
+
+[CYUSB3_wdfsect]
+KmdfLibraryVersion = 1.9
+
+; ========== DataAcquisitionDevices Class ===========
+
+[ClassInstall32]
+AddReg=DevicesClass_RegistryAdd
+
+[DevicesClass_RegistryAdd]
+HKR,,,,%ClassName%
+HKR,,Icon,,"-20"
+
+; =================== Strings =================== 
+[Strings]
+Pico_Provider    = "Pico"
+PICO_Company     = "Pico Technology"
+PICO_Description = "Pico CyUsb3 Driver"
+PICO_DisplayName = "Pico CyUSB3 driver service"
+PICO_Install     = "Pico CYUSB3.0 Driver Installation Disk"
+
+VID_0CE9&PID_1200.DeviceDesc="PicoScope 2000 series PC Oscilloscope"
+VID_0CE9&PID_1201.DeviceDesc="PicoScope 3000 series PC Oscilloscope"
+VID_0CE9&PID_1211.DeviceDesc="PicoScope 3000 series PC Oscilloscope"
+VID_0CE9&PID_1213.DeviceDesc="PicoScope 3000 series PC Oscilloscope"
+VID_0CE9&PID_1202.DeviceDesc="PicoScope 4000 series PC Oscilloscope"
+VID_0CE9&PID_1212.DeviceDesc="PicoScope 4000 series PC Oscilloscope"
+VID_0CE9&PID_1203.DeviceDesc="PicoScope 5000 series PC Oscilloscope"
+VID_0CE9&PID_1204.DeviceDesc="PicoScope 6000 series PC Oscilloscope"
+VID_0CE9&PID_1214.DeviceDesc="PicoScope 4000 series PC Oscilloscope"
+
+ClassName="Pico Technology Instruments"
+
+PICO.GUID="{4AA176D7-28A1-4D0D-85A7-F989D9B40741}"
