@@ -1,0 +1,7 @@
+{
+	"Host":"localhost",
+	"Port":"3306",
+	"DbName":"ecf_php",
+	"Login":"root",
+	"Pwd":""
+}
