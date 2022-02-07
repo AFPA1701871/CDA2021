@@ -25,7 +25,7 @@ switch ($_GET['mode']) {
 	}
 }
 
-header("location:index.php?page=ListeArticles");
+//header("location:index.php?page=ListeArticles");
 
 function chargerImage()
 {

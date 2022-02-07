@@ -58,6 +58,8 @@ $routes = [
 	"ListeUtilisateurs" => ["PHP/VIEW/LISTE/", "ListeUtilisateurs", "Liste Clients", 2, false],
 	"FormUtilisateurs" => ["PHP/VIEW/FORM/", "FormUtilisateurs", "Formulaire Clients", 2, false],
 	"ActionUtilisateurs" => ["PHP/CONTROLLER/ACTION/", "ActionUtilisateurs", "Action Utilisateurs", 2, false],
+	
+	"404" => ["PHP/VIEW/GENERAL/", "Erreur", "404", 0, false],
 
 ];
 
@@ -68,7 +70,7 @@ if (isset($_GET["page"])) {
 	if (isset($routes[$page])) {
 		AfficherPage($routes[$page]);
 	} else {
-		AfficherPage($routes["Default"]);
+		AfficherPage($routes["404"]);
 	}
 } else {
 	AfficherPage($routes["Default"]);

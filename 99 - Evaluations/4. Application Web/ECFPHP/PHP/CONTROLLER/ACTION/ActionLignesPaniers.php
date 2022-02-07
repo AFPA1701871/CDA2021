@@ -3,10 +3,10 @@ $elm = new LignesPaniers($_POST);
 /* On cherche si une Panier est en cours, sinon on la crée */
 $cmd = PaniersManager::getList(null, ["idClient" => $_SESSION['utilisateur']->getIdUtilisateur()]);
 if (!$cmd) {
-	var_dump($_SESSION['utilisateur']->getIdUtilisateur());
+	//var_dump($_SESSION['utilisateur']->getIdUtilisateur());
 	PaniersManager::add(new Paniers(["idClient" => $_SESSION['utilisateur']->getIdUtilisateur()]));
 	$cmd = PaniersManager::getList(null, ["idClient" => $_SESSION['utilisateur']->getIdUtilisateur()]);
-	var_dump($cmd);
+	//var_dump($cmd);
 }
 $elm->setIdPanier($cmd[0]->getIdPanier());
 
