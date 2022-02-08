@@ -71,7 +71,7 @@ CREATE TABLE `products` (
 ) ;
 
 
-CREATE TABLE `order details` (
+CREATE TABLE `orderdetails` (
   `OrderID` int(11) NOT NULL,
   `ProductID` int(11) NOT NULL,
   `UnitPrice` decimal(10,4) NOT NULL DEFAULT 0.0000,
@@ -1129,7 +1129,7 @@ INSERT INTO `orders` (`OrderID`, `CustomerID`, `EmployeeID`, `OrderDate`, `Requi
 
 
 
-INSERT INTO `order details` (`OrderID`, `ProductID`, `UnitPrice`, `Quantity`, `Discount`) VALUES
+INSERT INTO `orderdetails` (`OrderID`, `ProductID`, `UnitPrice`, `Quantity`, `Discount`) VALUES
 	(10248, 11, 14.0000, 12, 0),
 	(10248, 42, 9.8000, 10, 0),
 	(10248, 72, 34.8000, 5, 0),
