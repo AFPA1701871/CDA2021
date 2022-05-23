@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Martine Application météo</string>
+    <string name="action_settings_gb">Anglais</string>
+    <string name="action_settings_fr">Français</string>
+    <string name="btn_search">Rechercher</string>
+    <string name="no_network">Votre réseau n\'est pas opérationnel. Veuillez redémarrer l\'application quand le réseau sera opérationnel.</string>
+    <string name="no_online">Votre accès internet n\'est pas disponible. Veuillez redémarrer l\'application quand cet accès internet sera rétabli.</string>
+    <string name="pressure">Pression</string>
+    <string name="humidity">Humidité</string>
+    <string name="wind">Vent</string>
+    <string name ="invite">Saisir une ville</string>
+    <string name="nowLab">En ce moment à</string>
+    <string name="notFound">Ville non trouvée</string>
+
+
+</resources>

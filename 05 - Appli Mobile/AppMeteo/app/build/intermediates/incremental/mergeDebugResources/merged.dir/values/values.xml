@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="action_settings_fr">Français</string>
+    <string name="action_settings_gb">Anglais</string>
+    <string name="app_name">Martine Application météo</string>
+    <string name="btn_search">Rechercher</string>
+    <string name="humidity">Humidité</string>
+    <string name="invite">Saisir une ville</string>
+    <string name="no_network">Votre réseau n\'est pas opérationnel. Veuillez redémarrer l\'application quand le réseau sera opérationnel.</string>
+    <string name="no_online">Votre accès internet n\'est pas disponible. Veuillez redémarrer l\'application quand cet accès internet sera rétabli.</string>
+    <string name="notFound">Ville non trouvée</string>
+    <string name="nowLab">En ce moment à</string>
+    <string name="pressure">Pression</string>
+    <string name="wind">Vent</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="button_save_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+    <style name="tempMax" parent="@android:style/TextAppearance.Medium">	    
+	    <item name="android:textColor">#FF0000</item>	   	   	    
+   </style>
+    <style name="tempMin" parent="@android:style/TextAppearance.Medium">	    
+	    <item name="android:textColor">#000000</item>
+   </style>
+    <style name="tempStyle" parent="@android:style/TextAppearance.Large">	    
+	    <item name="android:textColor">#2E9000</item>
+	    <item name="android:textStyle">bold</item>	   
+	</style>
+    <style name="valData" parent="@android:style/TextAppearance.Medium">	    
+	    <item name="android:textColor">#74DF00</item>	
+	    <item name="android:textStyle">bold</item>   	   	    
+   </style>
+</resources>

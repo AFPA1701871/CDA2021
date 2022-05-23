@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tuOfI5b+rH+ZxKfSAyTDcyUQCfMyCLMjI1+p23CPx0/nflyfPCCU0263jSimr5v2dARLRVs3NYBrg7ZUakWYbw==",
+  "dgSpecHash": "PIWQ0atN53Lgk4BDq7w8KVEBtggWALF3CfMXSAYCvTIl1x+Lhp1Cnt/gjRFQ8Y3k31QeszL8TqkQluvYnyFnaA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\1701871\\Documents\\GIT CDA 21\\_Reference\\02 - Composants d'interface\\3 - Accès aux données\\DemoEF\\DemoEF\\DemoEF.csproj",
+  "projectFilePath": "U:\\GRP-07\\Reference\\02 - Composants d'interface\\3 - Accès aux données\\2. DemoEF\\DemoEF\\DemoEF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\1701871\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\1701871\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

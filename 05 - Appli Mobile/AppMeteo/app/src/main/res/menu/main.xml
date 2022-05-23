@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/action_gb"
+        android:title="@string/action_settings_gb"
+        android:icon="@drawable/gb"
+        android:showAsAction="always"
+        />
+    <item
+        android:id="@+id/action_fr"
+        android:title="@string/action_settings_fr"
+        android:icon="@drawable/fr"
+        android:showAsAction="always"
+        />
+
+</menu>

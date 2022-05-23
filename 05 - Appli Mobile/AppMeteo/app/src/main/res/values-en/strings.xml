@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">Weather Application</string>
+<string name="action_settings_gb">English</string>
+<string name="action_settings_fr">French</string>
+<string name="btn_search">Search</string>
+<string name="no_network">Your network isn\'t avalaible. Restart your application when your network is avalaible.</string>
+<string name="no_online">Your internet access isn\'t avalaible. Restart your application when your internet access is avalaible.</string>
+<string name="pressure">Pressure</string>
+<string name="humidity">Humidity</string>
+<string name="wind">Wind</string>
+<string name="invite">Town please</string>
+<string name="nowLab">Now in </string>
+    <string name="notFound">Town not found</string>
+</resources>

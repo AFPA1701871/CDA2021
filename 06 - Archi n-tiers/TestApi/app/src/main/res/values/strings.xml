@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TestApi</string>
+    <string name="no_network">Pas de réseau</string>
+    <string name="no_online">pas de réponse réseau</string>
+</resources>
